@@ -1473,25 +1473,23 @@ nav {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #8e44ad 0%, #357abd 100%);
-    color: white;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .feature-card .feature-icon,
 .feature-card .stat {
-    color: white;
+    color: #6a0dad;
 }
 
 .feature-card .feature-list li::before {
-    color: white;
+    color: #6a0dad;
 }
 
 .feature-card .stat {
-    background: linear-gradient(135deg, #fff 0%, #fff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: #6a0dad;
+    font-weight: 700;
 }
 
 .feature-card i {
@@ -1507,12 +1505,14 @@ nav {
 .feature-card h3 {
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
+    color: #6a0dad;
 }
 
 .feature-card p {
     font-size: 0.9rem;
-    opacity: 0.9;
+    color: #555;
+    line-height: 1.6;
 }
 
 /* Portfolio Section */
