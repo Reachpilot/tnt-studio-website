@@ -982,8 +982,6 @@ nav {
     font-weight: 400;
 }
 
-
-
 /* Profile Pages */
 .profile-section {
     padding: 6rem 5%;
@@ -1217,8 +1215,157 @@ nav {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* ==========================================================================
+   Responsive Design - Mobile First Approach
+   ========================================================================== */
+
+/* Small devices (phones, 600px and up) */
+@media (min-width: 600px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .features-grid,
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .hero {
+        padding: 8rem 2rem 6rem;
+    }
+    
+    .hero-content {
+        padding: 3rem;
+    }
+    
+    .features,
+    .services {
+        padding: 6rem 0;
+    }
+    
+    .features-grid,
+    .services-grid {
+        gap: 2.5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    
+    .features-grid,
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+    
+    .hero .slogan {
+        font-size: 1.75rem;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 767px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 1rem 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .hero {
+        padding: 6rem 1rem 4rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .slogan {
+        font-size: 1.25rem;
+    }
+    
+    .features,
+    .services {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .gdpr-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+}
     .profile-header {
         padding: 2rem 1.5rem;
     }
@@ -3011,8 +3158,7 @@ nav {
     object-fit: cover;
 }
 
-
-
+/* Video Overlay */
 .video-overlay {
     position: absolute;
     bottom: 0;
