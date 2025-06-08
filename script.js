@@ -1,10 +1,30 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth scrolling for navigation links and handle favicon
+document.querySelectorAll('a[href^="#"], a[href^="./"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        // If it's a hash link (same page)
+        if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        // If it's a page link, preserve the favicon
+        else if (this.getAttribute('href').startsWith('./') || 
+                !this.getAttribute('href').startsWith('http')) {
+            // Add a small delay to ensure favicon is loaded
+            setTimeout(() => {
+                const favicon = document.querySelector('link[rel*="icon"]') || document.createElement('link');
+                favicon.rel = 'icon';
+                favicon.type = 'image/png';
+                favicon.href = 'favicon.png';
+                document.getElementsByTagName('head')[0].appendChild(favicon);
+                
+                const shortcutIcon = document.querySelector('link[rel*="shortcut"]') || document.createElement('link');
+                shortcutIcon.rel = 'shortcut icon';
+                shortcutIcon.href = 'favicon.png';
+                document.getElementsByTagName('head')[0].appendChild(shortcutIcon);
+            }, 100);
+        }
     });
 });
 
