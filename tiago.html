@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiago Esteves - TnT Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .exclusive-content {
+            margin: 4rem auto 0;
+            padding: 2.5rem;
+            background: linear-gradient(145deg, #f8f9fa 0%, #fff 100%);
+            border-radius: 20px;
+            border-left: 4px solid #4a90e2;
+            max-width: 1000px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .exclusive-content h3 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .exclusive-content h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #4a90e2, #9b59b6);
+            border-radius: 3px;
+        }
+        .exclusive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+        .exclusive-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+            transition: none !important;
+            border-top: 3px solid #4a90e2;
+            transform: none !important;
+        }
+        /* Removed hover effects */
+        .exclusive-item i {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            background: linear-gradient(135deg, #4a90e2, #9b59b6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background-color: #f0f7ff;
+        }
+        .exclusive-item h4 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .exclusive-item p {
+            color: #6c757d;
+            line-height: 1.7;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0 2.5rem;
+        }
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .contact-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .whatsapp-icon {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        .email-icon {
+            background: linear-gradient(135deg, #4a90e2, #2c3e50);
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+        .skill-tag {
+            background: #f0f7ff;
+            color: #2c3e50;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e1f0ff;
+        }
+        .skill-tag.webdesign {
+            background-color: #0047FF;
+            color: white;
+        }
+        .skill-tag.marketing {
+            background-color: #AC2EFF;
+            color: white;
+        }
+        .skill-tag.entwicklung {
+            background-color: #0047FF;
+            color: white;
+        }
+        .skill-tag.seo {
+            background-color: #00C896;
+            color: white;
+        }
+        .skill-tag.strategie {
+            background-color: #FFD300;
+            color: #333;
+        }
+        .team {
+            padding: 6rem 0;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+        .team-content {
+            padding: 2.5rem 0;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .team-avatar {
+            width: 150px;
+            height: 150px;
+            margin: 2rem auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #f0f7ff 0%, #e0f0ff 100%);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border: 4px solid #4a90e2;
+            color: #4a90e2;
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+            transition: none !important;
+        }
+        .team-avatar i {
+            color: white;
+        }
+        .team-details {
+            margin: 2rem auto;
+            text-align: center;
+            max-width: 700px;
+        }
+        .team-responsibilities {
+            list-style: none;
+            padding: 0;
+            margin: 2rem auto 0;
+            text-align: center;
+            display: inline-block;
+            text-align: left;
+        }
+        .team-responsibilities li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 768px) {
+            .exclusive-grid {
+                grid-template-columns: 1fr;
+            }
+            .exclusive-content {
+                padding: 1.5rem;
+                margin: 2rem 1rem;
+            }
+            .contact-icons {
+                margin: 1.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="team">
+            <div class="container">
+                <div class="team-grid" style="justify-content: center;">
+                    <div class="team-card" style="max-width: 900px;">
+                        <div class="team-avatar" style="--avatar-color: #4a90e2">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="team-content">
+                            <h3>Tiago Esteves</h3>
+                            <span class="team-role">Founder & Managing Director</span>
+                            <div class="skills-container">
+                                <span class="skill-tag webdesign">Web Design</span>
+                                <span class="skill-tag marketing">Digital Strategy</span>
+                                <span class="skill-tag entwicklung">Web Development</span>
+                                <span class="skill-tag seo">SEO & SEA</span>
+                                <span class="skill-tag strategie">Content Marketing</span>
+                            </div>
+                            <div class="contact-icons">
+                                <a href="https://wa.me/491772272211" class="contact-icon whatsapp-icon" target="_blank" rel="noopener" title="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="mailto:tandtstudioo@gmail.com" class="contact-icon email-icon" title="Email senden">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                            <div class="team-details">
+                                <p>As the founder and managing director of TnT Studio, I bring extensive experience in web development and digital strategy. My passion lies in creating innovative digital solutions that help businesses succeed online.</p>
+                                <ul class="team-responsibilities">
+                                    <li><i class="fas fa-check"></i> Client Contact & Consulting</li>
+                                    <li><i class="fas fa-check"></i> Web Design & Development</li>
+                                    <li><i class="fas fa-check"></i> Search Engine Optimization</li>
+                                    <li><i class="fas fa-check"></i> Digital Marketing Strategies</li>
+                                </ul>
+                            </div>
+
+
+                            <div class="exclusive-content">
+                                <h3>Exclusive Insights & Creativity</h3>
+                                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Discover my unique approach to digital solutions and benefit from my expertise in the following areas:</p>
+                                <div class="exclusive-grid">
+                                    <div class="exclusive-item">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <h4>Responsive Web Design</h4>
+                                        <p>Modern websites that look and perform perfectly on all devices.</p>
+                                    </div>
+                                    <div class="exclusive-item">
+                                        <i class="fas fa-search"></i>
+                                        <h4>SEO & Search Engine Marketing</h4>
+                                        <p>Increased visibility in search engines through tailored SEO strategies.</p>
+                                    </div>
+                                    <div class="exclusive-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <h4>Digital Strategy</h4>
+                                        <p>Holistic concepts for your sustainable online success.</p>
+                                    </div>
+                                    <div class="exclusive-item">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <h4>E-Commerce Solutions</h4>
+                                        <p>Powerful online shops that showcase your products perfectly.</p>
+                                    </div>
+                                    <div class="exclusive-item">
+                                        <i class="fas fa-paint-brush"></i>
+                                        <h4>UI/UX Design</h4>
+                                        <p>Intuitive user interfaces for outstanding user experiences.</p>
+                                    </div>
+                                    <div class="exclusive-item">
+                                        <i class="fas fa-rocket"></i>
+                                        <h4>Content Marketing</h4>
+                                        <p>Compelling content that excites and engages your target audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TnT STUDIO</h3>
+                <p>Your Partner for Digital Solutions</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TnT STUDIO. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
