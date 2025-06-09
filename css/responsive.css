@@ -83,65 +83,65 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 60px;
+        height: 44px; /* Standard iOS navigation bar height */
         z-index: 1000;
         background-color: #ffffff;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        display: flex;
+        justify-content: flex-start; /* Align items to the start (left) */
         align-items: center;
-        padding: 0 20px;
+        padding: 0 15px;
     }
     
     /* Add padding to body to account for fixed header */
     body {
-        padding-top: 60px; /* Height of header */
+        padding-top: 44px; /* Height of header */
     }
     
     /* Mobile menu button */
     .mobile-menu-btn {
         background: none;
         border: none;
-        font-size: 28px;
+        font-size: 24px;
         color: #333;
         cursor: pointer;
-        padding: 10px;
+        padding: 8px 0 8px 15px; /* Add left padding for better touch target */
         margin: 0;
         display: flex;
         align-items: center;
-        justify-self: end;
-        grid-column: 3;
+        margin-left: auto; /* Push to the far right */
     }
     
-    .mobile-menu-btn:focus {
-        outline: 2px solid #8a2be2;
-        outline-offset: 2px;
-        border-radius: 4px;
+    .mobile-menu-btn:focus,
+    .mobile-menu-btn:active,
+    .mobile-menu-btn:focus-visible {
+        outline: none !important;
+        box-shadow: none !important;
+        -webkit-tap-highlight-color: transparent;
     }
     
     /* Logo in mobile header */
     .mobile-logo {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 700;
         color: #333;
         text-decoration: none;
-        letter-spacing: 1px;
-        justify-self: start;
-        grid-column: 1;
+        letter-spacing: 0.5px;
+        margin-right: auto; /* Push other elements to the right */
     }
     
     /* Mobile menu */
     .mobile-nav {
         position: fixed;
-        top: 60px; /* Height of the header */
+        top: 50px; /* Height of the header */
         right: -320px;
-        width: 300px;
-        height: calc(100% - 60px); /* Full height minus header */
+        width: 280px;
+        height: calc(100% - 50px); /* Full height minus header */
         background: #fff;
         box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
         transition: right 0.3s ease-in-out;
         z-index: 1000;
-        padding: 20px;
+        padding: 15px;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
@@ -170,9 +170,9 @@
     .mobile-nav-links a {
         color: #333;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 16px;
         display: block;
-        padding: 15px 0;
+        padding: 12px 0;
         transition: all 0.2s ease;
         position: relative;
     }
@@ -293,6 +293,7 @@
 
 /* Mobile specific styles */
 @media screen and (max-width: 767px) {
+    /* Base styles */
     .hero h1 {
         font-size: 2rem;
         line-height: 1.2;
@@ -308,6 +309,58 @@
         font-size: 1rem;
     }
     
+    /* Section title adjustments */
+    .section-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 3rem;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #0047FF, #00C6FB);
+    }
+    
+    /* Timeline adjustments */
+    .timeline .section-title {
+        margin-bottom: 4rem !important;
+    }
+    
+    .timeline-line {
+        left: 30px !important; /* Move line to the left */
+    }
+    
+    .timeline-item {
+        padding-left: 60px !important; /* Add padding for the line */
+        margin-bottom: 3rem !important;
+    }
+    
+    .timeline-dot-container {
+        left: 30px !important; /* Align with the line */
+    }
+    
+    .timeline-info {
+        width: 100% !important;
+        padding: 20px !important;
+    }
+    
+    /* Remove alternating layout on mobile */
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    /* Why Choose section */
     .why-choose-grid {
         grid-template-columns: 1fr;
     }
@@ -320,13 +373,19 @@
         font-size: 20px;
     }
     
+    /* Header adjustments */
     .mobile-menu-btn {
-        font-size: 28px;
-        right: 15px;
+        font-size: 24px;
+        padding: 8px;
     }
     
     .mobile-logo {
-        font-size: 22px;
-        padding: 15px 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    /* Ensure content doesn't go under fixed header */
+    main {
+        padding-top: 20px;
     }
 }
