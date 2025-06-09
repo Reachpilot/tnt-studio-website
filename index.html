@@ -156,15 +156,16 @@
 
     <main>
         <section class="hero">
-            <video autoplay muted loop playsinline id="hero-video" class="hero-video">
+            <video autoplay muted loop playsinline id="hero-video" class="hero-video" aria-label="Hintergrundvideo mit kreativen Design-Elementen">
                 <source src="videos/hero-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <img src="images/hero-fallback.jpg" alt="TnT Studio - Kreative Digitalagentur für Webdesign und Grafikdesign" loading="lazy">
+                Ihr Browser unterstützt das Video-Tag nicht.
             </video>
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>TnT STUDIO</h1>
                     <span class="slogan">EXPLOSIVE VISUALS</span>
-<div class="contact-info">
+                    <div class="contact-info">
                         <a href="tel:+4901772272211" class="contact-button">Contact</a>
                         <a href="services.html" class="services-button">Services</a>
                     </div>
@@ -294,15 +295,15 @@
             <div class="container">
                 <h2 class="section-title">Why Choose TnT Studio?</h2>
                 <div class="why-choose-grid">
-                    <div class="why-choose-card">
-                        <i class="fas fa-rocket"></i>
-                        <h3>Fast & Efficient</h3>
-                        <p>We deliver high-quality work quickly without compromising on quality. Our streamlined process ensures your project is completed on time and within budget.</p>
+                    <div class="why-choose-card" itemscope itemtype="https://schema.org/Service">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                        <h3 itemprop="name">Fast & Efficient</h3>
+                        <p itemprop="description">We deliver high-quality work quickly without compromising on quality. Our streamlined process ensures your project is completed on time and within budget.</p>
                     </div>
-                    <div class="why-choose-card">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>Creative Solutions</h3>
-                        <p>Our team of experts brings fresh, innovative ideas to every project, ensuring your brand stands out from the competition.</p>
+                    <div class="why-choose-card" itemscope itemtype="https://schema.org/Service">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <h3 itemprop="name">Creative Solutions</h3>
+                        <p itemprop="description">Our team of experts brings fresh, innovative ideas to every project, ensuring your brand stands out from the competition.</p>
                     </div>
                     <div class="why-choose-card">
                         <i class="fas fa-users"></i>
