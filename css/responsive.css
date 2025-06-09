@@ -1,0 +1,332 @@
+/* Responsive Styles for TnT Studio */
+
+/* Hide mobile elements by default */
+.mobile-menu-btn,
+.mobile-logo,
+.mobile-nav,
+.overlay {
+    display: none;
+}
+
+/* Desktop styles remain unchanged */
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 60px 0;
+}
+
+.why-choose-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.why-choose-us .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.why-choose-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.why-choose-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-choose-card i {
+    font-size: 40px;
+    color: #8a2be2;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.why-choose-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.why-choose-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Tablet and Mobile Navigation */
+@media screen and (max-width: 1024px) {
+    /* Hide desktop navigation */
+    .nav-links {
+        display: none;
+    }
+    
+    /* Show mobile menu button and logo */
+    .mobile-menu-btn,
+    .mobile-logo {
+        display: block;
+    }
+    
+    /* Mobile header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 1000;
+        background-color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    /* Add padding to body to account for fixed header */
+    body {
+        padding-top: 60px; /* Height of header */
+    }
+    
+    /* Mobile menu button */
+    .mobile-menu-btn {
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #333;
+        cursor: pointer;
+        padding: 10px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-self: end;
+        grid-column: 3;
+    }
+    
+    .mobile-menu-btn:focus {
+        outline: 2px solid #8a2be2;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+    
+    /* Logo in mobile header */
+    .mobile-logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #333;
+        text-decoration: none;
+        letter-spacing: 1px;
+        justify-self: start;
+        grid-column: 1;
+    }
+    
+    /* Mobile menu */
+    .mobile-nav {
+        position: fixed;
+        top: 60px; /* Height of the header */
+        right: -320px;
+        width: 300px;
+        height: calc(100% - 60px); /* Full height minus header */
+        background: #fff;
+        box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mobile-nav.active {
+        right: 0;
+    }
+    
+    .mobile-nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .mobile-nav-links li {
+        margin: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .mobile-nav-links li:last-child {
+        border-bottom: none;
+    }
+    
+    .mobile-nav-links a {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        padding: 15px 0;
+        transition: all 0.2s ease;
+        position: relative;
+    }
+    
+    .mobile-nav-links a:hover,
+    .mobile-nav-links a:focus {
+        color: #8a2be2;
+        padding-left: 10px;
+    }
+    
+    .mobile-nav-links a.active {
+        color: #8a2be2;
+        font-weight: 600;
+    }
+    
+    .mobile-nav-links a.active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 4px;
+        background: #8a2be2;
+        border-radius: 0 4px 4px 0;
+    }
+    
+    /* Overlay when menu is open */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(3px);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .overlay.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    /* Adjust main content padding */
+    main {
+        padding-top: 20px;
+    }
+    
+    /* Adjust hero section for mobile */
+    .hero {
+        padding: 80px 20px;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Adjust services grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Adjust footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* Tablet specific styles */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small desktop and large tablets */
+@media screen and (min-width: 1025px) and (max-width: 1399px) {
+    .why-choose-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large desktops */
+@media screen and (min-width: 1400px) {
+    .why-choose-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile specific styles */
+@media screen and (max-width: 767px) {
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-choose-card {
+        padding: 25px 20px;
+    }
+    
+    .why-choose-card h3 {
+        font-size: 20px;
+    }
+    
+    .mobile-menu-btn {
+        font-size: 28px;
+        right: 15px;
+    }
+    
+    .mobile-logo {
+        font-size: 22px;
+        padding: 15px 0;
+    }
+}
