@@ -8,12 +8,45 @@
     <meta http-equiv="Expires" content="0">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" href="favicon.png">
     
-    <title>Home - TnT STUDIO</title>
+    <title>TnT Studio - Kreative Digitalagentur</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Preload wichtige Schriftarten -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Meta Tags für SEO -->
+    <meta name="description" content="TnT Studio - Ihre kreative Digitalagentur für moderne Webentwicklung, Design und Marketinglösungen. Wir gestalten digitale Erlebnisse, die begeistern.">
+    <meta name="keywords" content="Webdesign, Grafikdesign, Digitalagentur, Webentwicklung, Marketing, TnT Studio">
+    <meta name="theme-color" content="#0047FF">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="TnT Studio - Kreative Digitalagentur">
+    <meta property="og:description" content="Wir gestalten digitale Erlebnisse, die begeistern. Webdesign, Grafikdesign und Marketing aus einer Hand.">
+    <meta property="og:image" content="https://deine-domain.de/images/og-image.jpg">
+    <meta property="og:url" content="https://deine-domain.de">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="TnT Studio">
+    
+    <!-- Dark Mode Farbe für die Adressleiste -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
     // Ensure favicon is always present
@@ -57,7 +90,7 @@
 
     <main>
         <section class="hero">
-            <video autoplay muted loop id="hero-video">
+            <video autoplay muted loop playsinline id="hero-video" class="hero-video">
                 <source src="videos/hero-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -65,7 +98,7 @@
                 <div class="hero-text">
                     <h1>TnT STUDIO</h1>
                     <span class="slogan">EXPLOSIVE VISUALS</span>
-                    <div class="contact-info">
+<div class="contact-info">
                         <a href="tel:+4901772272211" class="contact-button">Contact</a>
                         <a href="services.html" class="services-button">Services</a>
                     </div>
@@ -338,7 +371,40 @@
 
     <script src="js/counter.js"></script>
     <script src="js/cookie-banner.js"></script>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="dark-mode-toggle">
+            <input type="checkbox" id="dark-mode-toggle" class="theme-switch__input">
+            <div class="slider round"></div>
+        </label>
+    </div>
+    
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Zurück nach oben">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
     <script src="js/favicon-fix.js"></script>
     <script src="js/mobile-menu.js"></script>
+    <script src="js/animations.js" defer></script>
+    
+    <!-- Lazy Loading für Bilder -->
+    <script>
+        if ('loading' in HTMLImageElement.prototype) {
+            document.addEventListener('DOMContentLoaded', function() {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    img.loading = 'lazy';
+                });
+            });
+        }
+    </script>
 </body>
 </html>
