@@ -215,202 +215,132 @@
     </script>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="nav-container">
-            <!-- Logo -->
-            <a href="/" class="logo">
-                <img src="images/logo.svg" alt="TnT Studio Logo">
-                <span class="logo-text">TnT Studio</span>
-            </a>
-
-            <!-- Desktop Navigation -->
-            <nav class="desktop-nav">
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <!-- CTA Buttons -->
-            <div class="nav-cta">
-                <a href="#contact" class="button secondary">Get a Quote</a>
-                <a href="tel:+491772272211" class="button">
-                    <i class="fas fa-phone-alt"></i> Call Us
-                </a>
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div class="mobile-nav">
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="mobile-cta">
-                    <a href="#contact" class="button secondary">Get a Quote</a>
-                    <a href="tel:+491772272211" class="button">
-                        <i class="fas fa-phone-alt"></i> Call Us
-                    </a>
-                </li>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/about.html">About</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-overlay"></div>
-
     <main>
-        <!-- Hero Section -->
         <section class="hero">
+            <video autoplay muted loop playsinline id="hero-video" class="hero-video" aria-label="Hintergrundvideo mit kreativen Design-Elementen">
+                <source src="videos/hero-video.mp4" type="video/mp4">
+                <img src="images/hero-fallback.jpg" alt="TnT Studio - Kreative Digitalagentur für Webdesign und Grafikdesign" loading="lazy">
+                Ihr Browser unterstützt das Video-Tag nicht.
+            </video>
             <div class="hero-content">
-                <div class="container">
-                    <div class="hero-text">
-                        <span class="subtitle">Kreative Digitalagentur</span>
-                        <h1>Wir gestalten digitale Erlebnisse, die begeistern</h1>
-                        <p class="hero-description">Von Webdesign bis Social Media Marketing - wir helfen Ihrem Unternehmen, online zu wachsen und Ihre Ziele zu erreichen.</p>
-                        <div class="hero-buttons">
-                            <a href="#contact" class="button primary">Kostenloses Angebot anfordern</a>
-                            <a href="#services" class="button secondary">
-                                <i class="fas fa-arrow-right"></i> Unsere Leistungen
-                            </a>
-                        </div>
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <span class="stat-number" data-count="150">0</span>+
-                                <span class="stat-label">Zufriedene Kunden</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" data-count="250">0</span>+
-                                <span class="stat-label">Projekte</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" data-count="10">0</span>+
-                                <span class="stat-label">Jahre Erfahrung</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="hero-image-wrapper">
-                            <img src="images/hero-illustration.svg" alt="Digitale Lösungen" class="hero-illustration">
-                            <div class="floating-shape shape-1"></div>
-                            <div class="floating-shape shape-2"></div>
-                            <div class="floating-shape shape-3"></div>
-                        </div>
+                <div class="hero-text">
+                    <h1>TnT STUDIO</h1>
+                    <span class="slogan">EXPLOSIVE VISUALS</span>
+                    <div class="contact-info">
+                        <a href="tel:+4901772272211" class="contact-button">Contact</a>
+                        <a href="services.html" class="services-button">Services</a>
                     </div>
                 </div>
             </div>
-            
-            <!-- Scroll Down Indicator -->
-            <a href="#services" class="scroll-down" aria-label="Scroll down">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 5v14M19 12l-7 7-7-7"/>
-                </svg>
-            </a>
-            
-            <!-- Animated Background Elements -->
-            <div class="hero-bg-elements">
-                <div class="bg-circle circle-1"></div>
-                <div class="bg-circle circle-2"></div>
-                <div class="bg-circle circle-3"></div>
-            </div>
-        </section>
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="services section-padding">
+        <section class="services">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">Our Expertise</span>
-                    <h2 class="section-title">Comprehensive Digital Solutions</h2>
-                    <p class="section-description">We deliver end-to-end digital solutions that drive growth and transform businesses.</p>
-                </div>
-
+                <h2 class="section-title">Our Services</h2>
                 <div class="services-grid">
-                    <!-- Service Card 1 -->
-                    <div class="service-card" data-aos="fade-up">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3 class="service-title">Web Design & Development</h3>
-                        <p class="service-description">Custom, responsive websites that look stunning and perform exceptionally across all devices.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Responsive Design</li>
-                            <li><i class="fas fa-check"></i> E-commerce Solutions</li>
+                    <!-- Webdesign -->
+                    <div class="service-card webdesign">
+                        <h3>Web Design</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Custom Development</li>
+                            <li><i class="fas fa-check"></i> Responsive Websites</li>
+                            <li><i class="fas fa-check"></i> E-Commerce Solutions</li>
                             <li><i class="fas fa-check"></i> UI/UX Design</li>
+                            <li><i class="fas fa-check"></i> SEO Optimization</li>
+                            <li><i class="fas fa-check"></i> Technical SEO</li>
+                            <li><i class="fas fa-check"></i> Ranking Optimization</li>
+                            <li><i class="fas fa-check"></i> Mobile First Design</li>
                             <li><i class="fas fa-check"></i> Performance Optimization</li>
                         </ul>
-                        <a href="services.html#webdesign" class="service-link">
-                            Learn More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <div class="service-hover-bg"></div>
                     </div>
-
-                    <!-- Service Card 2 -->
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-icon">
-                            <i class="fas fa-hashtag"></i>
-                        </div>
-                        <h3 class="service-title">Social Media Marketing</h3>
-                        <p class="service-description">Strategic social media campaigns that increase engagement and drive conversions.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Content Strategy</li>
-                            <li><i class="fas fa-check"></i> Community Management</li>
-                            <li><i class="fas fa-check"></i> Paid Advertising</li>
-                            <li><i class="fas fa-check"></i> Analytics & Reporting</li>
+                    
+                    <!-- Social Media Marketing -->
+                    <div class="service-card socialmedia">
+                        <h3>Social Media Marketing</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Social Media Strategy</li>
+                            <li><i class="fas fa-check"></i> Content Marketing</li>
+                            <li><i class="fas fa-check"></i> Influencer Marketing</li>
+                            <li><i class="fas fa-check"></i> Social Media Ads</li>
+                            <li><i class="fas fa-check"></i> Video Content</li>
+                            <li><i class="fas fa-check"></i> TikTok Marketing</li>
+                            <li><i class="fas fa-check"></i> Instagram Stories</li>
                         </ul>
-                        <a href="services.html#socialmedia" class="service-link">
-                            Learn More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <div class="service-hover-bg"></div>
                     </div>
-
-                    <!-- Service Card 3 -->
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h3 class="service-title">Branding & Design</h3>
-                        <p class="service-description">Compelling visual identities that tell your brand's unique story.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Logo & Identity</li>
-                            <li><i class="fas fa-check"></i> Print Design</li>
-                            <li><i class="fas fa-check"></i> Brand Guidelines</li>
-                            <li><i class="fas fa-check"></i> Marketing Materials</li>
+                    
+                    <!-- Grafikdesign -->
+                    <div class="service-card grafikdesign">
+                        <h3>Graphic Design</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Corporate Design</li>
+                            <li><i class="fas fa-check"></i> Logo Design</li>
+                            <li><i class="fas fa-check"></i> Branding</li>
+                            <li><i class="fas fa-check"></i> Packaging Design</li>
+                            <li><i class="fas fa-check"></i> Flyers & Brochures</li>
+                            <li><i class="fas fa-check"></i> Illustrations</li>
+                            <li><i class="fas fa-check"></i> Social Media Graphics</li>
                         </ul>
-                        <a href="services.html#branding" class="service-link">
-                            Learn More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <div class="service-hover-bg"></div>
                     </div>
-
-                    <!-- Service Card 4 -->
-                    <div class="service-card" data-aos="fade-up">
-                        <div class="service-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3 class="service-title">SEO & Content</h3>
-                        <p class="service-description">Data-driven strategies to improve your online visibility and rankings.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Keyword Research</li>
-                            <li><i class="fas fa-check"></i> On-Page SEO</li>
+                    
+                    <!-- Product Photography -->
+                    <div class="service-card productphotography">
+                        <h3 style="color: var(--content-color);">Product Photography</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> E-commerce Product Shots</li>
+                            <li><i class="fas fa-check"></i> White Background Imagery</li>
+                            <li><i class="fas fa-check"></i> 360° Product Views</li>
+                            <li><i class="fas fa-check"></i> Lifestyle Photography</li>
+                            <li><i class="fas fa-check"></i> Product Detail Shots</li>
+                            <li><i class="fas fa-check"></i> Packshot Photography</li>
+                            <li><i class="fas fa-check"></i> Professional Editing</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Content Creation -->
+                    <div class="service-card content">
+                        <h3>Content Creation</h3>
+                        <ul class="service-list">
                             <li><i class="fas fa-check"></i> Content Strategy</li>
-                            <li><i class="fas fa-check"></i> Technical SEO</li>
+                            <li><i class="fas fa-check"></i> Content Marketing</li>
+                            <li><i class="fas fa-check"></i> Video Content</li>
+                            <li><i class="fas fa-check"></i> Podcast Production</li>
+                            <li><i class="fas fa-check"></i> Storytelling</li>
+                            <li><i class="fas fa-check"></i> Visual Storytelling</li>
+                            <li><i class="fas fa-check"></i> Explainer Videos</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Branding -->
+                    <div class="service-card branding">
+                        <h3>Branding & Development</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Brand Strategy</li>
+                            <li><i class="fas fa-check"></i> Brand Identity</li>
+                            <li><i class="fas fa-check"></i> Branding Guidelines</li>
+                            <li><i class="fas fa-check"></i> Brand Positioning</li>
+                            <li><i class="fas fa-check"></i> Corporate Design</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Copywriting -->
+                    <div class="service-card copywriting">
+                        <h3>Copywriting & Content</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Headlines & CTAs</li>
+                            <li><i class="fas fa-check"></i> SEO-Optimized Content</li>
+                            <li><i class="fas fa-check"></i> Product Descriptions</li>
                             <li><i class="fas fa-check"></i> Marketing Copy</li>
                         </ul>
                     </div>
