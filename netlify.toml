@@ -3,18 +3,6 @@
   command = ""
 
 [[redirects]]
-  from = "/lackmann"
-  to = "https://lackmann-tnt.netlify.app"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/lackmann/*"
-  to = "https://lackmann-tnt.netlify.app/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
