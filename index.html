@@ -1,549 +1,110 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#" itemScope itemType="http://schema.org/WebPage">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.png">
-    
-    <title>TnT Studio - Kreative Digitalagentur</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
-    
-    <!-- Preload wichtige Schriftarten -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="alternate icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    
-    <!-- Meta Tags für SEO -->
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="TnT Studio | Creative Digital Agency & Web Design Experts">
-    <meta name="description" content="TnT Studio - Award-winning digital agency specializing in web design, branding, and digital marketing. Serving businesses globally from our base in Wuppertal, Germany. ☎ +49 177 2272211">
-    <meta name="keywords" content="Webdesign Wuppertal, Webseite Wuppertal, Webagentur Wuppertal, Grafikdesign Wuppertal, Tiago Esteves Wuppertal, Theo Spingys Wuppertal, SEO Wuppertal, Suchmaschinenoptimierung Wuppertal, Online Marketing Wuppertal, Social Media Wuppertal, Webentwicklung Wuppertal, E-Commerce Wuppertal, Responsive Webdesign Wuppertal, Mobile Webseite Wuppertal, WordPress Wuppertal, Shop Entwicklung Wuppertal, Google Ads Wuppertal, Facebook Marketing Wuppertal, Instagram Marketing Wuppertal, Corporate Design Wuppertal, Logo Design Wuppertal, Visitenkarten Wuppertal, Digitale Agentur Wuppertal, Kreativagentur Wuppertal, Webdesigner Wuppertal, Webdesign aus Wuppertal, Webdesign in Wuppertal, Webdesign Firma Wuppertal, Webdesign Büro Wuppertal, Webdesign Studio Wuppertal, Webdesign Dienstleister Wuppertal, Webdesign Experten Wuppertal, Webdesign Profis Wuppertal, Webdesign Spezialisten Wuppertal, Webdesign Agentur Wuppertal, Webdesign Unternehmen Wuppertal, Webdesign Team Wuppertal, Webdesign Dienstleistungen Wuppertal, Webdesign Lösungen Wuppertal, Webdesign Service Wuppertal, Webdesign Beratung Wuppertal, Webdesign Konzept Wuppertal, Webdesign Realisierung Wuppertal, Webdesign Programmierung Wuppertal, Webdesign Umsetzung Wuppertal, Webdesign Erstellung Wuppertal, Webdesign Gestaltung Wuppertal, Webdesign Layout Wuppertal, Webdesign Templates Wuppertal, Webdesign Themes Wuppertal, Webdesign Plugins Wuppertal, Webdesign Erweiterungen Wuppertal, Webdesign Anpassungen Wuppertal, Webdesign Individualisierung Wuppertal, Webdesign Relaunch Wuppertal, Webdesign Redesign Wuppertal, Webdesign Überarbeitung Wuppertal, Webdesign Aktualisierung Wuppertal, Webdesign Wartung Wuppertal, Webdesign Pflege Wuppertal, Webdesign Betreuung Wuppertal, Webdesign Support Wuppertal, Webdesign Hilfe Wuppertal, Webdesign Beratung in Wuppertal, Webdesign Konzept in Wuppertal, Webdesign Realisierung in Wuppertal, Webdesign Programmierung in Wuppertal, Webdesign Umsetzung in Wuppertal, Webdesign Erstellung in Wuppertal, Webdesign Gestaltung in Wuppertal, Webdesign Layout in Wuppertal, Webdesign Templates in Wuppertal, Webdesign Themes in Wuppertal, Webdesign Plugins in Wuppertal, Webdesign Erweiterungen in Wuppertal, Webdesign Anpassungen in Wuppertal, Webdesign Individualisierung in Wuppertal, Webdesign Relaunch in Wuppertal, Webdesign Redesign in Wuppertal, Webdesign Überarbeitung in Wuppertal, Webdesign Aktualisierung in Wuppertal, Webdesign Wartung in Wuppertal, Webdesign Pflege in Wuppertal, Webdesign Betreuung in Wuppertal, Webdesign Support in Wuppertal, Webdesign Hilfe in Wuppertal, Webdesign aus Wuppertal, Webdesign in Wuppertal, Webdesign aus Wuppertal, Webdesign in Wuppertal">
-    <meta name="author" content="TnT Studio - Tiago Esteves & Theo Spingys">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="revisit-after" content="7 days">
-    <meta name="language" content="Deutsch">
-    <meta name="geo.region" content="DE-NW">
-    <meta name="geo.placename" content="Wuppertal">
-    <meta name="geo.position" content="51.2562;7.1508">
-    <meta name="ICBM" content="51.2562, 7.1508">
-    <link rel="canonical" href="https://tnt-studio.de/">
-    
-    <!-- Hreflang Tags -->
-    <link rel="alternate" hreflang="en" href="https://tnt-studio.de/" />
-    <link rel="alternate" hreflang="de" href="https://tnt-studio.de/de/" />
-    <link rel="alternate" hreflang="x-default" href="https://tnt-studio.de/" />
-    
-    <!-- Language Alternates for Social Media -->
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="de_DE">
-    <meta name="theme-color" content="#0047FF">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tnt-studio.de/">
-    <meta property="og:title" content="TnT Studio | Creative Digital Agency & Web Design Experts">
-    <meta property="og:description" content="Award-winning digital agency specializing in web design, branding, and digital marketing. Serving businesses globally from our base in Wuppertal, Germany.">
-    <meta property="og:image" content="https://tnt-studio.de/images/og-image.jpg">
-    <meta property="og:site_name" content="TnT Studio - Webdesign Wuppertal">
-    <meta property="og:locale" content="de_DE">
-    <meta property="og:region" content="DE-NW">
-    <meta property="og:locality" content="Wuppertal">
-    <meta property="og:postal-code" content="42103">
-    <meta property="og:country-name" content="Deutschland">
-    <meta property="og:email" content="info@tnt-studio.de">
-    <meta property="og:phone_number" content="+4901772272211">
-    <meta property="og:latitude" content="51.2562">
-    <meta property="og:longitude" content="7.1508">
-    <meta property="place:location:latitude" content="51.2562">
-    <meta property="place:location:longitude" content="7.1508">
-    
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171717" />
+    <meta name="description" content="TnT Studio — Medienagentur von Tiago Esteves & Theo Spingys. Web Design, Social Media, Content Creation, Branding & Produktfotografie für Marken mit Anspruch." />
+    <meta name="keywords" content="Medienagentur Wuppertal, Web Design, Social Media Marketing, Content Creation, Branding, Produktfotografie, Webagentur NRW" />
+    <meta name="author" content="TnT Studio" />
+    <meta name="robots" content="index, follow" />
+
+    <title>TnT Studio — Medienagentur Wuppertal</title>
+    <link rel="canonical" href="https://tnt-studio.de/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tnt-studio.de/" />
+    <meta property="og:title" content="TnT Studio — Medienagentur Wuppertal" />
+    <meta property="og:description" content="Wir bauen Marken, die Eindruck hinterlassen. Web Design, Marketing, Content Creation & Branding aus einer Hand." />
+    <meta property="og:site_name" content="TnT Studio" />
+    <meta property="og:image" content="https://tnt-studio.de/og-image.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://tnt-studio.de/">
-    <meta name="twitter:title" content="Webdesign Wuppertal | TnT Studio - Ihre Digitale Agentur in Wuppertal">
-    <meta name="twitter:description" content="✅ Professionelle Webdesign Agentur in Wuppertal - TnT Studio erstellt moderne Webseiten & Grafikdesign für Unternehmen aus Wuppertal">
-    <meta name="twitter:image" content="https://tnt-studio.de/images/twitter-card.jpg">
-    <meta name="twitter:site" content="@tntstudio">
-    <meta name="twitter:creator" content="@tntstudio">
-    <meta name="twitter:label1" content="Standort">
-    <meta name="twitter:data1" content="Wuppertal, Deutschland">
-    <meta name="twitter:label2" content="Telefon">
-    <meta name="twitter:data2" content="+49 177 2272211">
-    <meta name="twitter:label3" content="Öffnungszeiten">
-    <meta name="twitter:data3" content="Mo-Fr: 9-18 Uhr">
-    
-    <!-- Additional Meta Tags -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="TnT Studio">
-    <meta name="application-name" content="TnT Studio">
-    <meta name="msapplication-TileColor" content="#0047FF">
-    <meta name="msapplication-config" content="/browserconfig.xml">
-    <meta name="format-detection" content="telephone=yes">
-    
-    <!-- Structured Data / Schema.org -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TnT Studio — Medienagentur Wuppertal" />
+    <meta name="twitter:description" content="Wir bauen Marken, die Eindruck hinterlassen. Web Design, Marketing, Content Creation & Branding aus einer Hand." />
+    <meta name="twitter:image" content="https://tnt-studio.de/og-image.webp" />
+
+    <!-- Preconnects -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta property="og:locale" content="de_DE" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- LocalBusiness Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [
+      "@type": "ProfessionalService",
+      "name": "TnT Studio",
+      "url": "https://tnt-studio.de/",
+      "logo": "https://tnt-studio.de/favicon.png",
+      "email": "mailto:info@tnt-studio.de",
+      "areaServed": "Wuppertal, NRW, Deutschland",
+      "description": "Medienagentur für Web Design, Social Media Marketing, Content Creation, Branding und Produktfotografie.",
+      "founder": [
         {
-          "@type": ["ProfessionalService", "LocalBusiness", "Organization"],
-          "@id": "https://tnt-studio.de/#organization",
-          "name": "TnT Studio - Webdesign Agentur Wuppertal",
-          "url": "https://tnt-studio.de",
-          "logo": "https://tnt-studio.de/images/logo.png",
-          "image": "https://tnt-studio.de/images/og-image.jpg",
-          "description": "Professionelle Webdesign Agentur in Wuppertal - Wir erstellen moderne Webseiten & Grafikdesign für Unternehmen aus Wuppertal und Umgebung",
-          "telephone": "+4901772272211",
-          "email": "info@tnt-studio.de",
-          "priceRange": "€€-€€€",
-          "areaServed": ["Wuppertal", "Solingen", "Remscheid", "Düsseldorf", "Köln", "NRW"],
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Musterstraße 123",
-            "addressLocality": "Wuppertal",
-            "addressRegion": "Nordrhein-Westfalen",
-            "postalCode": "42103",
-            "addressCountry": "DE"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.2562,
-            "longitude": 7.1508
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "09:00",
-              "closes": "18:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Saturday",
-              "opens": "10:00",
-              "closes": "14:00"
-            }
-          ]
+          "@type": "Person",
+          "name": "Tiago Esteves",
+          "jobTitle": "Founder & CEO",
+          "sameAs": "https://www.linkedin.com/in/tiagoesteves3/"
         },
         {
-          "@type": "WebSite",
-          "@id": "https://tnt-studio.de/#website",
-          "url": "https://tnt-studio.de",
-          "name": "TnT Studio - Webdesign Wuppertal",
-          "description": "Professionelle Webdesign Agentur in Wuppertal - Moderne Webseiten & Grafikdesign",
-          "publisher": {
-            "@id": "https://tnt-studio.de/#organization"
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://tnt-studio.de/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
+          "@type": "Person",
+          "name": "Theo Spingys",
+          "jobTitle": "Co-Founder & Marketing Lead",
+          "sameAs": "https://www.linkedin.com/in/theo-spingys-43450741b/"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/tnt_studio.de/"
+      ]
+    }
+    </script>
+
+    <!-- FAQPage Schema (AEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was macht TnT Studio?",
+          "acceptedAnswer": { "@type": "Answer", "text": "TnT Studio ist eine Medienagentur aus Wuppertal. Wir bieten Web Design, Social Media Marketing, Content Creation, Branding, Produktfotografie und Software Development aus einer Hand — und arbeiten dabei komplett remote." }
         },
         {
-          "@type": "WebPage",
-          "@id": "https://tnt-studio.de/#webpage",
-          "url": "https://tnt-studio.de",
-          "inLanguage": "de-DE",
-          "name": "Webdesign Wuppertal | TnT Studio - Ihre Digitale Agentur",
-          "description": "Professionelle Webdesign Agentur in Wuppertal - Wir erstellen moderne Webseiten & Grafikdesign für Unternehmen aus Wuppertal und Umgebung",
-          "isPartOf": {
-            "@id": "https://tnt-studio.de/#website"
-          },
-          "about": {
-            "@id": "https://tnt-studio.de/#organization"
-          },
-          "primaryImageOfPage": {
-            "@id": "https://tnt-studio.de/images/og-image.jpg"
-          },
-          "datePublished": "2023-01-01T00:00:00+01:00",
-          "dateModified": "2025-06-10T00:00:00+02:00"
+          "@type": "Question",
+          "name": "Für wen ist TnT Studio die richtige Agentur?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Für Unternehmen, die mehr wollen als einzelne Dienstleistungen. Wir verkaufen keine Produkte, sondern entwickeln ganzheitliche Business-Lösungen: von der Marke über die Website bis zum laufenden Content." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie arbeitet TnT Studio mit Kunden zusammen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten remote — über Video-Calls, Figma, Slack und geteilte Projektboards. Das ist schneller und effektiver als klassische Büro-Termine." }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet eine Website bei TnT Studio?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Projekt-Websites starten bei 2.500€, E-Commerce ab 5.000€. Jedes Projekt ist individuell und wird im ersten Call transparent kalkuliert." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wer sind die Gründer von TnT Studio?",
+          "acceptedAnswer": { "@type": "Answer", "text": "TnT Studio wurde von Tiago Esteves (Founder & CEO) und Theo Spingys (Co-Founder & Marketing Lead) gegründet. Beide sind 17 Jahre alt und seit dem 15. Lebensjahr in der Agentur-Branche aktiv. Tiago führt das Unternehmen als CEO und verantwortet Strategie sowie Produkt." }
         }
       ]
     }
     </script>
-    
-    <!-- PWA -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="TnT Studio">
-    
-    <!-- Dark Mode Farbe für die Adressleiste -->
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>
-    // Ensure favicon is always present
-    document.addEventListener('DOMContentLoaded', function() {
-        // Create favicon if it doesn't exist
-        if (!document.querySelector('link[rel*="icon"]')) {
-            const favicon = document.createElement('link');
-            favicon.rel = 'icon';
-            favicon.type = 'image/png';
-            favicon.href = 'favicon.png';
-            document.head.appendChild(favicon);
-        }
-        
-        // Also add shortcut icon if it doesn't exist
-        if (!document.querySelector('link[rel*="shortcut"]')) {
-            const shortcutIcon = document.createElement('link');
-            shortcutIcon.rel = 'shortcut icon';
-            shortcutIcon.href = 'favicon.png';
-            document.head.appendChild(shortcutIcon);
-        }
-    });
-    </script>
-    <script>
-        function showPhoneNumber() {
-            const phoneNumber = document.getElementById('phone-number');
-            phoneNumber.style.display = 'block';
-        }
-    </script>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="/services.html">Services</a></li>
-                <li><a href="/portfolio.html">Portfolio</a></li>
-                <li><a href="/about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <video autoplay muted loop playsinline id="hero-video" class="hero-video" aria-label="Hintergrundvideo mit kreativen Design-Elementen">
-                <source src="videos/hero-video.mp4" type="video/mp4">
-                <img src="images/hero-fallback.jpg" alt="TnT Studio - Kreative Digitalagentur für Webdesign und Grafikdesign" loading="lazy">
-                Ihr Browser unterstützt das Video-Tag nicht.
-            </video>
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>TnT STUDIO</h1>
-                    <span class="slogan">EXPLOSIVE VISUALS</span>
-                    <div class="contact-info">
-                        <a href="tel:+4901772272211" class="contact-button">Contact</a>
-                        <a href="services.html" class="services-button">Services</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services">
-            <div class="container">
-                <h2 class="section-title">Our Services</h2>
-                <div class="services-grid">
-                    <!-- Webdesign -->
-                    <div class="service-card webdesign">
-                        <h3>Web Design</h3>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check"></i> Custom Development</li>
-                            <li><i class="fas fa-check"></i> Responsive Websites</li>
-                            <li><i class="fas fa-check"></i> E-Commerce Solutions</li>
-                            <li><i class="fas fa-check"></i> UI/UX Design</li>
-                            <li><i class="fas fa-check"></i> SEO Optimization</li>
-                            <li><i class="fas fa-check"></i> Technical SEO</li>
-                            <li><i class="fas fa-check"></i> Ranking Optimization</li>
-                            <li><i class="fas fa-check"></i> Mobile First Design</li>
-                            <li><i class="fas fa-check"></i> Performance Optimization</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Social Media Marketing -->
-                    <div class="service-card socialmedia">
-                        <h3>Social Media Marketing</h3>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check"></i> Social Media Strategy</li>
-                            <li><i class="fas fa-check"></i> Content Marketing</li>
-                            <li><i class="fas fa-check"></i> Influencer Marketing</li>
-                            <li><i class="fas fa-check"></i> Social Media Ads</li>
-                            <li><i class="fas fa-check"></i> Video Content</li>
-                            <li><i class="fas fa-check"></i> TikTok Marketing</li>
-                            <li><i class="fas fa-check"></i> Instagram Stories</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Grafikdesign -->
-                    <div class="service-card grafikdesign">
-                        <h3>Graphic Design</h3>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check"></i> Corporate Design</li>
-                            <li><i class="fas fa-check"></i> Logo Design</li>
-                            <li><i class="fas fa-check"></i> Branding</li>
-                            <li><i class="fas fa-check"></i> Packaging Design</li>
-                            <li><i class="fas fa-check"></i> Flyers & Brochures</li>
-                            <li><i class="fas fa-check"></i> Illustrations</li>
-                            <li><i class="fas fa-check"></i> Social Media Graphics</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Product Photography -->
-                    <div class="service-card productphotography">
-                        <h3 style="color: var(--content-color);">Product Photography</h3>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check"></i> E-commerce Product Shots</li>
-                            <li><i class="fas fa-check"></i> White Background Imagery</li>
-                            <li><i class="fas fa-check"></i> 360° Product Views</li>
-                            <li><i class="fas fa-check"></i> Lifestyle Photography</li>
-                            <li><i class="fas fa-check"></i> Product Detail Shots</li>
-                            <li><i class="fas fa-check"></i> Packshot Photography</li>
-                            <li><i class="fas fa-check"></i> Professional Editing</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Content Creation -->
-                    <div class="service-card content">
-                        <h3>Content Creation</h3>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check"></i> Content Strategy</li>
-                            <li><i class="fas fa-check"></i> Content Marketing</li>
-                            <li><i class="fas fa-check"></i> Video Content</li>
-                            <li><i class="fas fa-check"></i> Podcast Production</li>
-                            <li><i class="fas fa-check"></i> Storytelling</li>
-                            <li><i class="fas fa-check"></i> Visual Storytelling</li>
-                            <li><i class="fas fa-check"></i> Explainer Videos</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Branding -->
-                    <div class="service-card branding">
-                        <h3>Branding & Development</h3>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check"></i> Brand Strategy</li>
-                            <li><i class="fas fa-check"></i> Brand Identity</li>
-                            <li><i class="fas fa-check"></i> Branding Guidelines</li>
-                            <li><i class="fas fa-check"></i> Brand Positioning</li>
-                            <li><i class="fas fa-check"></i> Corporate Design</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Copywriting -->
-                    <div class="service-card copywriting">
-                        <h3>Copywriting & Content</h3>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check"></i> Headlines & CTAs</li>
-                            <li><i class="fas fa-check"></i> SEO-Optimized Content</li>
-                            <li><i class="fas fa-check"></i> Product Descriptions</li>
-                            <li><i class="fas fa-check"></i> Marketing Copy</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Digital Marketing & Analytics -->
-                    <div class="service-card marketing">
-                        <h3>Digital Marketing & Analytics</h3>
-                        <ul class="service-list">
-                            <li><i class="fas fa-check"></i> Google Analytics</li>
-                            <li><i class="fas fa-check"></i> Web Analytics</li>
-                            <li><i class="fas fa-check"></i> Campaign Tracking</li>
-                            <li><i class="fas fa-check"></i> SEO Monitoring</li>
-                            <li><i class="fas fa-check"></i> Social Media Analytics</li>
-                            <li><i class="fas fa-check"></i> Conversion Tracking</li>
-                            <li><i class="fas fa-check"></i> Data-Driven Marketing</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us Section -->
-        <section class="why-choose-us">
-            <div class="container">
-                <h2 class="section-title">Why Choose TnT Studio?</h2>
-                <div class="why-choose-grid">
-                    <div class="why-choose-card" itemscope itemtype="https://schema.org/Service">
-                        <i class="fas fa-rocket" aria-hidden="true"></i>
-                        <h3 itemprop="name">Fast & Efficient</h3>
-                        <p itemprop="description">We deliver high-quality work quickly without compromising on quality. Our streamlined process ensures your project is completed on time and within budget.</p>
-                    </div>
-                    <div class="why-choose-card" itemscope itemtype="https://schema.org/Service">
-                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                        <h3 itemprop="name">Creative Solutions</h3>
-                        <p itemprop="description">Our team of experts brings fresh, innovative ideas to every project, ensuring your brand stands out from the competition.</p>
-                    </div>
-                    <div class="why-choose-card">
-                        <i class="fas fa-users"></i>
-                        <h3>Client-Focused</h3>
-                        <p>Your satisfaction is our top priority. We work closely with you to understand your needs and deliver results that exceed your expectations.</p>
-                    </div>
-                    <div class="why-choose-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Proven Results</h3>
-                        <p>Our track record speaks for itself. We've helped numerous businesses achieve their goals through our expert services.</p>
-                    </div>
-                    <div class="why-choose-card">
-                        <i class="fas fa-medal"></i>
-                        <h3>Industry Expertise</h3>
-                        <p>With years of experience across various industries, we bring valuable insights and best practices to every project we undertake.</p>
-                    </div>
-                    <div class="why-choose-card">
-                        <i class="fas fa-headset"></i>
-                        <h3>24/7 Support</h3>
-                        <p>Our dedicated support team is available around the clock to address any questions or concerns you may have about your project.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats">
-            <div class="container">
-                <h2 class="section-title">Our Achievements</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="stat-number counter" data-target="84">0</div>
-                        <div class="stat-label">Projects Completed</div>
-                        <div class="stat-details">Successfully delivered projects across various industries</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="stat-number counter" data-target="100">0</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                        <div class="stat-details">Satisfaction guaranteed on every project</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="stat-number counter" data-target="100">0</div>
-                        <div class="stat-label">Happy Clients</div>
-                        <div class="stat-details">Satisfied clients who trust us</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Transform Your Digital Presence?</h2>
-                    <p>Let's create something amazing together!</p>
-                    <div class="contact-links">
-                        <p>Contact us:</p>
-                        <a href="tiago.html" class="team-member-link">Tiago</a>
-                        <span>or</span>
-                        <a href="theo.html" class="team-member-link">Theo</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content">
-            <p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies. <a href="privacy-policy.html">Learn more</a></p>
-            <div class="cookie-buttons">
-                <button id="accept-cookies" class="btn btn-primary">Accept</button>
-                <button id="decline-cookies" class="btn btn-secondary">Decline</button>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h1 class="footer-logo">TnT STUDIO</h1>
-                <p class="tagline">EXPLOSIVE VISUALS</p>
-                <p>Your creative partner for digital excellence</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/tnt_studio.de/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:tandtstudioo@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="imprint.html">Imprint</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms & Conditions</a></li>
-                    <li><a href="cookies.html">Cookie Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-envelope"></i> tandtstudioo@gmail.com</p>
-                <p><i class="fas fa-user-tie"></i> Owners: Theo Spingys & Tiago Esteves</p>
-                <p><i class="fas fa-building"></i> TnT Studio</p>
-                <p><i class="fas fa-euro-sign"></i> Small business according to §19 UStG (Germany)</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 TnT STUDIO. All rights reserved.</p>
-            <div class="gdpr-links">
-                <a href="legal-notice.html">Legal Notice</a>
-                <a href="data-protection.html">Data Protection</a>
-                <a href="cookies-policy.html">Cookies Policy</a>
-                <a href="contact.html">Contact Information</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/counter.js"></script>
-    <script src="js/cookie-banner.js"></script>
-    <!-- Dark Mode Toggle -->
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="dark-mode-toggle">
-            <input type="checkbox" id="dark-mode-toggle" class="theme-switch__input">
-            <div class="slider round"></div>
-        </label>
-    </div>
-    
-    <!-- Progress Bar -->
-    <div class="progress-container">
-        <div class="progress-bar"></div>
-    </div>
-    
-    <!-- Back to Top Button -->
-    <button class="back-to-top" aria-label="Zurück nach oben">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    
-    <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
-    <script src="js/favicon-fix.js"></script>
-    <script src="js/mobile-menu.js"></script>
-    <script src="js/animations.js" defer></script>
-    
-    <!-- Lazy Loading für Bilder -->
-    <script>
-        if ('loading' in HTMLImageElement.prototype) {
-            document.addEventListener('DOMContentLoaded', function() {
-                const images = document.querySelectorAll('img[loading="lazy"]');
-                images.forEach(img => {
-                    img.loading = 'lazy';
-                });
-            });
-        }
-    </script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

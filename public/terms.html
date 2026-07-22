@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <title>AGB — TnT Studio</title>
+    <meta name="description" content="Allgemeine Geschäftsbedingungen von TnT Studio. Regelungen für die Inanspruchnahme unserer Leistungen.">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #ffffff;
+            --text: #0a0a0a;
+            --muted: #737373;
+            --border: #e5e5e5;
+            --accent: #6366f1;
+            --font: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.7;
+        }
+        .top-bar {
+            position: sticky; top: 0; z-index: 50;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .top-bar-inner {
+            max-width: 800px; margin: 0 auto; padding: 1rem 1.5rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--text); }
+        .logo-bold { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.05em; }
+        .logo-sub { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+        .back-link { font-size: 0.875rem; font-weight: 600; color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+        .back-link:hover { opacity: 0.7; }
+        .hero { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem 2rem; }
+        .hero-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+        .hero p { color: var(--muted); font-size: 1rem; max-width: 500px; }
+        .accent-line { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+        .accent-line::after { content: ''; display: block; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899); opacity: 0.6; }
+        .content { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+        .card {
+            background: #fafafa; border: 1px solid var(--border);
+            border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem;
+            transition: border-color 0.2s;
+        }
+        .card:hover { border-color: #d4d4d4; }
+        .card h2 {
+            font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .card h2::before { content: ''; width: 4px; height: 1.25rem; border-radius: 2px; background: var(--accent); flex-shrink: 0; }
+        .card p, .card li { font-size: 0.9375rem; color: #404040; margin-bottom: 0.5rem; }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li { padding-left: 1.25rem; position: relative; }
+        .card ul li::before { content: '—'; position: absolute; left: 0; color: var(--muted); }
+        .card a { color: var(--accent); text-decoration: none; }
+        .card a:hover { text-decoration: underline; }
+        .footer { border-top: 1px solid var(--border); background: #fafafa; padding: 2rem 1.5rem; text-align: center; }
+        .footer p { font-size: 0.8125rem; color: var(--muted); }
+        .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-top: 0.75rem; }
+        .footer-links a { font-size: 0.8125rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text); }
+        @media (max-width: 640px) { .card { padding: 1.5rem; } }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="/" class="logo">
+            <span class="logo-bold">TnT</span>
+            <span class="logo-sub">Studio</span>
+        </a>
+        <a href="/" class="back-link">← Zurück zur Startseite</a>
+    </div>
+</div>
+
+<section class="hero">
+    <p class="hero-label">Rechtliches</p>
+    <h1>Allgemeine Geschäftsbedingungen</h1>
+    <p>Stand: Juli 2025. Regelungen für die Inanspruchnahme unserer Leistungen.</p>
+</section>
+
+<div class="accent-line"></div>
+
+<div class="content">
+
+    <div class="card">
+        <h2>1. Geltungsbereich</h2>
+        <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen TnT Studio (nachfolgend „Auftragnehmer") und dem Kunden über die Erbringung von Dienstleistungen, insbesondere Web Design, Social Media Marketing, Content Creation, Branding, Produktfotografie und Print Design.</p>
+    </div>
+
+    <div class="card">
+        <h2>2. Leistungen</h2>
+        <p>Der Umfang der jeweils zu erbringenden Leistungen ergibt sich aus dem jeweiligen Angebot bzw. der Auftragsbestätigung. Der Auftragnehmer erbringt die Leistungen nach den Vorgaben und Wünschen des Kunden.</p>
+    </div>
+
+    <div class="card">
+        <h2>3. Angebot und Vertragsschluss</h2>
+        <p>Alle Angebote des Auftragnehmers sind freibleibend. Ein Vertrag kommt zustande durch die schriftliche Auftragsbestätigung des Auftragnehmers oder durch Beginn der Leistungserbringung.</p>
+    </div>
+
+    <div class="card">
+        <h2>4. Preise und Zahlung</h2>
+        <p>Es gelten die im jeweiligen Angebot genannten Preise. Alle Preise verstehen sich zuzüglich der gesetzlichen Umsatzsteuer, sofern ausgewiesen. Rechnungen sind innerhalb von 14 Tagen ohne Abzug fällig.</p>
+    </div>
+
+    <div class="card">
+        <h2>5. Mitwirkungspflicht des Kunden</h2>
+        <p>Der Kunde stellt dem Auftragnehmer alle für die Leistungserbringung erforderlichen Informationen, Materialien und Zugänge rechtzeitig und in geeigneter Form zur Verfügung.</p>
+    </div>
+
+    <div class="card">
+        <h2>6. Urheberrecht und Nutzungsrechte</h2>
+        <p>Alle erstellten Werke unterliegen dem Urheberrecht. Die Nutzungsrechte gehen erst nach vollständiger Bezahlung auf den Kunden über. Der Umfang der Nutzungsrechte ergibt sich aus dem jeweiligen Vertrag.</p>
+    </div>
+
+    <div class="card">
+        <h2>7. Gewährleistung</h2>
+        <p>Der Auftragnehmer gewährleistet die vertragsgemäße Erbringung der Leistungen. Mängel werden im Rahmen der gesetzlichen Gewährleistung nachgebessert.</p>
+    </div>
+
+    <div class="card">
+        <h2>8. Haftung</h2>
+        <p>Der Auftragnehmer haftet unbeschränkt für Vorsatz und grobe Fahrlässigkeit. Für leichte Fahrlässigkeit haftet der Auftragnehmer nur bei Verletzung wesentlicher Vertragspflichten und nur in Höhe des typischerweise entstehenden Schadens.</p>
+    </div>
+
+    <div class="card">
+        <h2>9. Widerrufsrecht</h2>
+        <p>Bei Fernabsatzverträgen steht dem Verbraucher ein gesetzliches Widerrufsrecht zu. Die Widerrufsbelehrung wird separat mitgeteilt.</p>
+    </div>
+
+    <div class="card">
+        <h2>10. Schlussbestimmungen</h2>
+        <p>Es gilt deutsches Recht. Gerichtsstand ist Wuppertal, soweit gesetzlich zulässig. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+    </div>
+
+    <div class="card">
+        <h2>Kontakt</h2>
+        <p>TnT Studio</p>
+        <p>Tiago Esteves & Theo Spingys</p>
+        <p>Julius-Lucas-Weg 90, 42113 Wuppertal</p>
+        <p><a href="mailto:info@tnt-studio.de">info@tnt-studio.de</a></p>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 TnT Studio. Tiago Esteves & Theo Spingys. Alle Rechte vorbehalten.</p>
+    <div class="footer-links">
+        <a href="/">Startseite</a>
+        <a href="/imprint.html">Impressum</a>
+        <a href="/privacy-policy.html">Datenschutz</a>
+    </div>
+</footer>
+
+</body>
+</html>

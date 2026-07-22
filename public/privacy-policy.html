@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <title>Datenschutz — TnT Studio</title>
+    <meta name="description" content="Datenschutzerklärung von TnT Studio gemäß DSGVO. Informationen über Verarbeitung und Schutz Ihrer personenbezogenen Daten.">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #ffffff;
+            --text: #0a0a0a;
+            --muted: #737373;
+            --border: #e5e5e5;
+            --accent: #6366f1;
+            --font: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.7;
+        }
+        .top-bar {
+            position: sticky; top: 0; z-index: 50;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .top-bar-inner {
+            max-width: 800px; margin: 0 auto; padding: 1rem 1.5rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--text); }
+        .logo-bold { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.05em; }
+        .logo-sub { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+        .back-link { font-size: 0.875rem; font-weight: 600; color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+        .back-link:hover { opacity: 0.7; }
+        .hero { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem 2rem; }
+        .hero-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+        .hero p { color: var(--muted); font-size: 1rem; max-width: 500px; }
+        .accent-line { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+        .accent-line::after { content: ''; display: block; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899); opacity: 0.6; }
+        .content { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+        .card {
+            background: #fafafa; border: 1px solid var(--border);
+            border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem;
+            transition: border-color 0.2s;
+        }
+        .card:hover { border-color: #d4d4d4; }
+        .card h2 {
+            font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .card h2::before { content: ''; width: 4px; height: 1.25rem; border-radius: 2px; background: var(--accent); flex-shrink: 0; }
+        .card h3 { font-size: 0.9375rem; font-weight: 600; margin: 1.25rem 0 0.5rem; color: var(--text); }
+        .card p, .card li { font-size: 0.9375rem; color: #404040; margin-bottom: 0.5rem; }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li { padding-left: 1.25rem; position: relative; }
+        .card ul li::before { content: '—'; position: absolute; left: 0; color: var(--muted); }
+        .card a { color: var(--accent); text-decoration: none; }
+        .card a:hover { text-decoration: underline; }
+        .footer { border-top: 1px solid var(--border); background: #fafafa; padding: 2rem 1.5rem; text-align: center; }
+        .footer p { font-size: 0.8125rem; color: var(--muted); }
+        .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-top: 0.75rem; }
+        .footer-links a { font-size: 0.8125rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text); }
+        @media (max-width: 640px) { .card { padding: 1.5rem; } }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="/" class="logo">
+            <span class="logo-bold">TnT</span>
+            <span class="logo-sub">Studio</span>
+        </a>
+        <a href="/" class="back-link">← Zurück zur Startseite</a>
+    </div>
+</div>
+
+<section class="hero">
+    <p class="hero-label">Rechtliches</p>
+    <h1>Datenschutzerklärung</h1>
+    <p>Stand: Juli 2025. Wir nehmen den Schutz Ihrer personenbezogenen Daten ernst.</p>
+</section>
+
+<div class="accent-line"></div>
+
+<div class="content">
+
+    <div class="card">
+        <h2>1. Verantwortlicher</h2>
+        <p>TnT Studio</p>
+        <p>Tiago Esteves & Theo Spingys</p>
+        <p>Julius-Lucas-Weg 90, 42113 Wuppertal, Deutschland</p>
+        <p>E-Mail: <a href="mailto:info@tnt-studio.de">info@tnt-studio.de</a></p>
+    </div>
+
+    <div class="card">
+        <h2>2. Allgemeines zur Datenverarbeitung</h2>
+        <p>Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist. Die Verarbeitung erfolgt regelmäßig nur nach Einwilligung der Nutzer.</p>
+    </div>
+
+    <div class="card">
+        <h2>3. Server-Logfiles</h2>
+        <p>Beim Aufruf unserer Website erhebt unser Server automatisiert Daten und Informationen, die in sogenannten Logfiles gespeichert werden:</p>
+        <ul>
+            <li>Browsertyp und verwendete Version</li>
+            <li>Betriebssystem des Nutzers</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>IP-Adresse (anonymisiert)</li>
+            <li>Website, von der aus der Nutzer auf unsere Website gelangt</li>
+        </ul>
+        <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Speicherdauer: 7 Tage.</p>
+    </div>
+
+    <div class="card">
+        <h2>4. Cookies</h2>
+        <p>Unsere Website verwendet Cookies. Cookies sind Textdateien, die im Internetbrowser bzw. vom Internetbrowser auf dem Rechner des Nutzers gespeichert werden. Wir unterscheiden zwischen notwendigen Cookies und optionalen Cookies.</p>
+        <h3>Notwendige Cookies</h3>
+        <p>Diese sind für die Funktion der Website erforderlich und können nicht abgeschaltet werden. Sie werden nur in Ihrem Browser gespeichert, wenn Sie der Verwendung zustimmen.</p>
+        <h3>Optionale Cookies</h3>
+        <p>Dazu gehören Analyse- und Marketing-Cookies (z. B. Google Analytics, Meta Pixel). Diese werden nur nach ausdrücklicher Einwilligung aktiviert. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO.</p>
+    </div>
+
+    <div class="card">
+        <h2>5. Kontaktformular & E-Mail</h2>
+        <p>Wenn Sie uns über das Kontaktformular oder per E-Mail kontaktieren, werden die von Ihnen gemachten Angaben zum Zwecke der Bearbeitung Ihrer Anfrage gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung).</p>
+    </div>
+
+    <div class="card">
+        <h2>6. Google Analytics</h2>
+        <p>Wir nutzen Google Analytics zur Analyse des Nutzerverhaltens. Der Datenverarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Die IP-Adresse wird vor der Übertragung anonymisiert. Sie können die Einwilligung jederzeit widerrufen.</p>
+    </div>
+
+    <div class="card">
+        <h2>7. Meta Pixel (Facebook)</h2>
+        <p>Wir nutzen den Meta Pixel zur Reichweitenmessung und Optimierung unserer Werbekampagnen. Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können die Einwilligung jederzeit widerrufen.</p>
+    </div>
+
+    <div class="card">
+        <h2>8. Ihre Rechte</h2>
+        <p>Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+        <ul>
+            <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+            <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+            <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+            <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+            <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+            <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
+            <li>Recht auf Widerruf einer erteilten Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>9. Widerspruch</h2>
+        <p>Wenn Ihre personenbezogenen Daten auf Grundlage von berechtigten Interessen gemäß Art. 6 Abs. 1 lit. f DSGVO verarbeitet werden, haben Sie das Recht, Widerspruch gegen die Verarbeitung einzulegen. Verarbeiten wir Ihre Daten für Direktwerbung, können Sie jederzeit Widerspruch einlegen.</p>
+    </div>
+
+    <div class="card">
+        <h2>10. Beschwerderecht</h2>
+        <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren.</p>
+        <p>Zuständig: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">www.ldi.nrw.de</a></p>
+    </div>
+
+    <div class="card">
+        <h2>11. SSL-Verschlüsselung</h2>
+        <p>Diese Seite nutzt aus Gründen der Sicherheit und zum Schutz der Übertragung vertraulicher Inhalte eine SSL/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+    </div>
+
+    <div class="card">
+        <h2>12. Aktualität</h2>
+        <p>Diese Datenschutzerklärung hat den Stand Juli 2025. Durch die Weiterentwicklung unserer Website oder geänderte gesetzliche Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen.</p>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 TnT Studio. Tiago Esteves & Theo Spingys. Alle Rechte vorbehalten.</p>
+    <div class="footer-links">
+        <a href="/">Startseite</a>
+        <a href="/imprint.html">Impressum</a>
+        <a href="/terms.html">AGB</a>
+    </div>
+</footer>
+
+</body>
+</html>

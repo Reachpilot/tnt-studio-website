@@ -1,0 +1,136 @@
+# TnT Studio — Vollständige AI-Dokumentation
+
+## Kurzprofil
+
+**TnT Studio** ist eine Medienagentur aus Wuppertal, gegründet von Tiago Esteves und Theo Spingys. Das Studio bietet Web Design, Social Media Marketing, Content Creation, Produktfotografie, Branding und Software Development aus einer Hand an. Besonderheit: alle Leistungen werden remote und ganzheitlich abgedeckt — vom ersten Konzept bis zur laufenden Content-Produktion. Technologie: React, TypeScript, Tailwind CSS, Node.js. Hosting: Netlify/Vercel mit globalem CDN. DSGVO-konform.
+
+---
+
+## Gründer
+
+- **Tiago Esteves** — Founder & CEO. Gründete TnT Studio und führt Strategie, Web Design, Software Development und Markenführung. Betreut Kunden von der Ehrenstraße bis nach Amerika.
+- **Theo Spingys** — Co-Founder & Marketing Lead. Experte für Social Media Marketing, Content Creation, Vertrieb und das Aufbauen der Recruiting-Sparte Esteves Recruiting.
+
+---
+
+## Leistungen im Detail
+
+### Web Design
+Massgeschneiderte Websites, die nicht nur gut aussehen, sondern konvertieren. Schwerpunkte: Custom Development mit React & TypeScript, Responsive Design, E-Commerce, UI/UX Design, Performance-Optimierung (LCP < 1s, Lighthouse 95+), SEO-Grundlagen (semantisches HTML, Schema Markup, Sitemap), Headless CMS-Integration (Sanity, Strapi, Decap) und Conversion-Optimierung. Websites starten bei 2.500€.
+
+### Social Media Marketing
+Strategische Social-Media-Präsenz mit Content-Strategie, Social Media Ads (Meta Ads mit Pixel & Conversions API), Instagram & TikTok, Community Management, Influencer Marketing, Analytics & Reporting, A/B Testing und Hashtag-Strategie. Pakete ab 800€/Monat.
+
+### Content Creation
+Hochwertiger Video-Content, Fotoshootings, Storytelling, Reels & TikToks, Explainer Videos, Imagefilme, Produktvideos und Behind-the-Scenes-Material. 4K-Qualität, 48h-Lieferung für Reels. Content-Pakete mit 10+ Videos/Monat.
+
+### Produktfotografie
+Professionelle Produktfotos für E-Commerce, Amazon, eBay und Print: White Background, Lifestyle Photography, 360° Views, Professional Editing und Print-ready-Lieferung. Ab 30€ pro Produkt. Express-Service (24h).
+
+### Branding
+Markenidentitäten aus einer Hand: Brand Strategy, Logo Design, Corporate Design, Brand Guidelines, Brand Positioning, Farbsysteme, Typografie und Verpackungsdesign. Komplettes Branding ab 2.500€.
+
+### Software Development
+Massgeschneiderte Softwarelösungen: ausführbare PDFs (HTML/CSS), API-Integrationen (HubSpot, Pipedrive, Notion), DSGVO-konforme Tools, Google Maps & Analytics, CRM-Anbindungen, Automatisierungen und Dashboard-Entwicklung. EU-Hosting auf AWS (Frankfurt) oder Vercel.
+
+---
+
+## Referenzen (Portfolio)
+
+- **Esteves Recruiting** — Web Design, Branding, SEO & Social Media (https://esteves-recruiting.com)
+- **Lackmann Gruppe** — Content Creation & Video (https://lackmangruppe.de)
+- **Noi** — Speisekarten, Website, Visitenkarten
+- **Zkittelz** — Eintrittskarten, Print Design & Branding
+- **Skylady** — Produkt-Shooting, Produktfotografie
+- **Bauvision** — Visitenkarten, Branding & Print Design
+- **meinfachmann.de & Fairclaim FC GmbH** — Software Development & Print, Schadensbericht-Vorlagen
+- **Cosi Brautmoden** — Web Design
+- **Dexamon** — Web Design
+- **Tiato** — Logo Design
+
+---
+
+## Recruiting Venture
+
+Neben TnT Studio wird **Esteves Recruiting** aufgebaut, eine Recruiting-Sparte mit Fokus auf Logistik, Gesundheitswesen und Automotive. Website: https://esteves-recruiting.com
+
+---
+
+## Kontakt
+
+- Adresse: Julius-Lucas-Weg 90, 42113 Wuppertal, NRW, Deutschland
+- E-Mail: info@tnt-studio.de
+- Instagram: https://www.instagram.com/tnt_studio.de/
+- LinkedIn Tiago: https://www.linkedin.com/in/tiagoesteves3/
+- LinkedIn Theo: https://www.linkedin.com/in/theo-spingys-43450741b/
+- Website: https://tnt-studio.de/
+
+---
+
+## Blog-Themen (36 Beiträge)
+
+### Web Design Cluster
+- Warum die meisten Agenturen versagen (und wir nicht)
+- Web Design Trends 2025: Was wirklich funktioniert
+- Agentur für Webdesign Wuppertal: Wie man die richtige findet
+- Responsive Webdesign Agentur: Mobile-First ist Standard
+- Webdesign Preise 2025: Was eine Website kostet
+- Website Relaunch Schritt für Schritt
+- E-Commerce Website: Online Shop Wuppertal
+
+### SEO Cluster
+- Core Web Vitals: Website Speed als Ranking-Faktor
+- DSGVO-konforme Website: Rechtssicher 2025
+- Conversion Rate Optimierung: Mehr Kunden aus bestehendem Traffic
+- Local SEO Wuppertal: Google Business Profile Optimierung
+- SEO Grundlagen 2025: Anfänger-Guide
+- Keyword Recherche: So findest du die richtigen Keywords
+- Schema Markup: Strukturierte Daten für mehr Sichtbarkeit
+- On-Page SEO Checkliste 2025
+- Content Marketing Strategie für KMU
+- Google Ads (SEA): Werbung für KMU
+- Website Speed Optimierung: Ladezeiten reduzieren
+
+### Social Media Cluster
+- Social Media Strategie, die wirklich wirkt
+- Social Media Marketing Wuppertal: Lokale Marken aufbauen
+- Instagram Strategie 2025: Reels, Algorithmus & Wachstum
+- Meta Ads Agentur: Facebook & Instagram Werbung
+- TikTok Marketing für Unternehmen 2025 Guide
+- Employer Branding: Talente über Social Media gewinnen
+
+### Content Creation Cluster
+- Produktfotografie, die verkauft
+- Content Creation Wuppertal: Imagefilm bis Reel
+- Produktfotografie Wuppertal: Shop & Social Media
+
+### Branding Cluster
+- Branding für KMU mit kleinem Budget
+- Branding: Corporate Identity — Marke aufbauen
+- Copywriting: Texte, die verkaufen
+
+### AI & SEO Cluster (GEO/AEO)
+- GEO: Website für ChatGPT, Perplexity & Gemini optimieren
+- AEO: Answer Engine Optimization — Featured Snippets & Voice Search
+- KI-Suchmaschinen 2025: ChatGPT, Perplexity, Google AI Overviews
+- Voice Search Optimierung: Siri, Alexa & Google Assistant
+- llms.txt & robots.txt: AI-Crawler konfigurieren
+
+### Agentur-Insights
+- Recruiting im Wandel
+
+---
+
+## Technische SEO- und GEO-Daten
+
+- Sprache: Deutsch
+- Region: Wuppertal, NRW, Deutschland
+- Rechtsform: Kleinunternehmen nach §19 UStG
+- Technologie: React, TypeScript, Tailwind CSS, Vite
+- Hosting: Netlify/Vercel mit globalem CDN
+- robots.txt: erlaubt alle gängigen AI-Crawler (GPTBot, OAI-SearchBot, ClaudeBot, Claude-SearchBot, CCBot, PerplexityBot, Perplexity-User, Google-Extended, cohere-ai, Bytespider, Applebot-Extended)
+- Schema Markup: Article, FAQPage, BreadcrumbList, Organization, LocalBusiness, Service, CollectionPage
+- llms.txt: https://tnt-studio.de/llms.txt
+- Sitemap: https://tnt-studio.de/sitemap.xml
+- Lighthouse Score: 95+
+- LCP: < 1 Sekunde

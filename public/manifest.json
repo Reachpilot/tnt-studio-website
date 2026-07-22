@@ -1,0 +1,16 @@
+{
+  "name": "TnT Studio",
+  "short_name": "TnT Studio",
+  "description": "Medienagentur für Web Design, Social Media, Content Creation, Branding und Produktfotografie.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#171717",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

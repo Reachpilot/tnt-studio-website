@@ -1,0 +1,56 @@
+# TnT Studio — Medienagentur Wuppertal
+
+> Wir bauen Marken, die Eindruck hinterlassen. Web Design, Social Media Marketing, Content Creation, Branding & Produktfotografie — aus einer Hand. Custom Websites mit React, SEO-optimiert, DSGVO-konform.
+
+## Über uns
+
+TnT Studio ist die Medienagentur von Tiago Esteves & Theo Spingys mit Sitz in Wuppertal, NRW. Wir arbeiten remote und ganzheitlich — vom ersten Konzept bis zur laufenden Content-Produktion. Wir verkaufen keine einzelnen Produkte, sondern komplette Business-Lösungen.
+
+## Leistungen
+
+- Web Design — Massgeschneiderte Websites mit React & TypeScript, die konvertieren. Responsive, SEO-optimiert, DSGVO-konform.
+- Social Media Marketing — Strategische Social-Media-Präsenz mit Content-Strategie, Meta Ads, Reels & Community Management.
+- Content Creation — Video-Content, Fotoshootings, Reels, Imagefilme, Explainer Videos und Event-Dokumentation.
+- Produktfotografie — E-Commerce- und Lifestyle-Shootings, Amazon-konform, 360° Views, Bulk-Bearbeitung.
+- Branding — Markenidentitäten: Logo Design, Corporate Design, Brand Guidelines, Brand Positioning.
+- Software Development — Ausführbare PDFs, API-Anbindungen, Automatisierungen, DSGVO-konforme Tools.
+
+## Unternehmensdaten
+
+- Name: TnT Studio
+- Gründer: Tiago Esteves (Founder & CEO) & Theo Spingys (Co-Founder & Marketing Lead)
+- Sitz: Julius-Lucas-Weg 90, 42113 Wuppertal, NRW, Deutschland
+- E-Mail: info@tnt-studio.de
+- Instagram: https://www.instagram.com/tnt_studio.de/
+- LinkedIn: https://www.linkedin.com/in/tiagoesteves3/
+- Website: https://tnt-studio.de/
+
+## Projekte & Ventures
+
+- Esteves Recruiting: https://esteves-recruiting.com
+- Lackmann Gruppe: https://lackmangruppe.de
+- Kunden: Lackmann, Cosi Brautmoden, Dexamon, Noi, Skylady, Bauvision, meinfachmann.de, Fairclaim FC, Tiato
+
+## Blog-Themen (36 Beiträge)
+
+- Web Design: Agentur für Webdesign Wuppertal, Responsive Webdesign, Webdesign Preise 2025, Website Relaunch, E-Commerce Website
+- SEO: Core Web Vitals, DSGVO-konforme Website, Conversion Rate Optimierung, Local SEO Wuppertal, SEO Grundlagen, Keyword Recherche, Schema Markup, On-Page SEO, Content Marketing, Google Ads, Website Speed
+- Social Media: Social Media Marketing Wuppertal, Instagram Strategie 2025, Meta Ads, TikTok Marketing, Employer Branding
+- Content Creation: Imagefilm bis Reel, Produktfotografie Wuppertal
+- Branding: Corporate Identity, Branding für KMU, Copywriting
+- AI & SEO: GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), KI-Suchmaschinen 2025, Voice Search Optimierung, llms.txt & robots.txt KI-Crawler
+- Agentur-Insights: Warum die meisten Agenturen versagen, Web Design Trends 2025, Recruiting im Wandel
+
+## Technische SEO- & GEO-Daten
+
+- Sprache: Deutsch
+- Region: Wuppertal, NRW, Deutschland
+- robots.txt: erlaubt alle gängigen AI-Crawler (GPTBot, OAI-SearchBot, ClaudeBot, Claude-SearchBot, CCBot, PerplexityBot, Google-Extended, Applebot-Extended)
+- Schema Markup: Article, FAQPage, BreadcrumbList, Organization, LocalBusiness, Service, CollectionPage
+- Sitemap: https://tnt-studio.de/sitemap.xml
+
+## Details
+
+Vollständige AI-Dokumentation mit allen Leistungen, Referenzen und Blog-Themen:
+
+- Details: https://tnt-studio.de/llms-full.txt
