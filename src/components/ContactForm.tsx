@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { services } from '../data/services'
 
 const steps = ['Du', 'Projekt', 'Details', 'Fertig']
@@ -36,6 +36,15 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('form') === 'sent') {
+      setSubmitted(true)
+      setStep(steps.length - 1)
+      window.history.replaceState({}, '', window.location.pathname + window.location.hash)
+    }
+  }, [])
+
   const update = (key: keyof typeof data, value: unknown) => {
     setData((d) => ({ ...d, [key]: value }))
   }
@@ -65,26 +74,14 @@ export default function ContactForm() {
 
   const prev = () => setStep((s) => Math.max(s - 1, 0))
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = (e: React.FormEvent) => {
     if (!step2Valid) {
+      e.preventDefault()
       setTouched({ ...touched, [step]: true })
       return
     }
+    // Valid: allow native submission to FormSubmit
     setSubmitting(true)
-    const form = e.target as HTMLFormElement
-    const formData = new FormData(form)
-    try {
-      await fetch('/', {
-        method: 'POST',
-        body: formData,
-      })
-    } catch {
-      // Netlify forms fail in local dev — still show success
-    }
-    setSubmitting(false)
-    setSubmitted(true)
-    setStep(steps.length - 1)
   }
 
   if (submitted) {
@@ -118,16 +115,13 @@ export default function ContactForm() {
     <form
       name="kontakt"
       method="POST"
-      action="/"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
+      action="https://formsubmit.co/info@tnt-studio.de"
       onSubmit={handleSubmit}
       className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-2xl"
     >
-      <input type="hidden" name="form-name" value="kontakt" />
-      <div className="hidden">
-        <input name="bot-field" />
-      </div>
+      <input type="hidden" name="_next" value="https://tnt-studio.de/?form=sent#contact" />
+      <input type="hidden" name="_subject" value="Neue Projektanfrage via TnT Studio Website" />
+      <input type="hidden" name="_captcha" value="false" />
 
       {/* Progress */}
       <div className="border-b border-neutral-100 bg-neutral-50/50 px-6 py-6 sm:px-10">
