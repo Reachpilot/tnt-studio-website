@@ -12,24 +12,19 @@ Production deploy happens via Netlify from the GitHub repo `Reachpilot/tnt-studi
 Build command: `npm run build`
 Publish directory: `dist`
 
-## Contact Form — Netlify Setup
+## Contact Form — FormSubmit
 
-The multi-step contact form (`src/components/ContactForm.tsx`) submits to **Netlify Forms**:
+The multi-step contact form (`src/components/ContactForm.tsx`) posts to **FormSubmit** at `https://formsubmit.co/info@tnt-studio.de`.
 
-- Form name: `kontakt`
-- Honeypot field: `bot-field`
-- Action: POST to `/`
+On first use, FormSubmit sends an activation email to **info@tnt-studio.de**. The inbox owner must click the activation link. After that, every form submission is forwarded directly to that address.
 
-To make sure submissions arrive at **info@tnt-studio.de**:
+FormSubmit fields used:
+- `_next`: redirect back to `https://tnt-studio.de/?form=sent#contact`
+- `_subject`: email subject line
+- `_captcha`: disabled (`false`) for smoother UX
+- Standard fields: `name`, `email`, `phone`, `company`, `website`, `service`, `budget`, `timeline`, `message`, `consent`
 
-1. Open the Netlify dashboard → Site → Forms
-2. Make sure "Form submissions" are enabled
-3. Go to "Notifications" → "Form notifications"
-4. Add an email notification for the form named `kontakt`
-5. Set recipient to: `info@tnt-studio.de`
-6. (Optional) Customize subject line, e.g. `Neue Projektanfrage von {{name}}`
-
-Netlify uses the `email` field automatically as reply-to address.
+A fallback form for non-JS users is included in `index.html`.
 
 ## SEO / AEO Strategy
 
