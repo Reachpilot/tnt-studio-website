@@ -162,16 +162,17 @@ export default function Navbar() {
               Projekt anfragen
             </a>
 
-            {/* Mobile toggle — clean hamburger */}
+            {/* Mobile toggle — premium pill */}
             <button
-              className="relative flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900/5 lg:hidden"
+              className="group relative flex h-11 items-center gap-2 rounded-full bg-neutral-900 px-4 py-2 text-white shadow-lg shadow-neutral-900/20 transition-all hover:bg-neutral-800 hover:shadow-xl lg:hidden"
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Menu"
+              aria-label={menuOpen ? 'Menü schliessen' : 'Menü öffnen'}
             >
-              <div className="flex flex-col items-center justify-center gap-[5px]">
-                <span className={`block h-0.5 w-5 rounded-full bg-neutral-900 transition-all duration-300 ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`} />
-                <span className={`block h-0.5 w-5 rounded-full bg-neutral-900 transition-all duration-300 ${menuOpen ? 'opacity-0' : 'opacity-100'}`} />
-                <span className={`block h-0.5 w-5 rounded-full bg-neutral-900 transition-all duration-300 ${menuOpen ? '-translate-y-[7px] -rotate-45' : ''}`} />
+              <span className="text-xs font-bold tracking-wide">{menuOpen ? 'Schliessen' : 'Menu'}</span>
+              <div className="relative flex h-3.5 w-4 flex-col justify-between">
+                <span className={`block h-0.5 rounded-full bg-current transition-all duration-300 ${menuOpen ? 'w-4 translate-y-[5px] rotate-45' : 'w-3.5'}`} />
+                <span className={`block h-0.5 w-4 rounded-full bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : 'opacity-100'}`} />
+                <span className={`block h-0.5 rounded-full bg-current transition-all duration-300 ${menuOpen ? 'w-4 -translate-y-[5px] -rotate-45' : 'w-2.5 ml-auto'}`} />
               </div>
             </button>
           </div>
@@ -180,97 +181,131 @@ export default function Navbar() {
 
       {/* Mobile menu — full-screen overlay */}
       <div
-        className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="absolute inset-0 bg-white flex flex-col items-center justify-center">
-          {/* Close button */}
-          <button
-            className="absolute top-6 right-6 flex h-11 w-11 items-center justify-center rounded-full bg-neutral-100"
-            onClick={() => setMenuOpen(false)}
-            aria-label="Schliessen"
-          >
-            <svg className="h-6 w-6 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+        <div className="absolute inset-0 bg-white/95 backdrop-blur-xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_40%)]" />
 
+        <div className="relative z-10 flex h-full flex-col px-8 pt-28 pb-10">
           {/* Links */}
-          <nav aria-label="TnT Studio Medienagentur Wuppertal — Mobile Navigation" className="flex flex-col items-center gap-5">
+          <nav aria-label="TnT Studio Medienagentur Wuppertal — Mobile Navigation" className="flex flex-1 flex-col justify-center gap-4">
             {links.map((l, i) => {
               const isLinkActive = isActive(l.href, l.id)
-              const className = `text-3xl font-black tracking-tight transition-all ${
-                isLinkActive ? 'text-indigo-600' : 'text-neutral-900'
+              const baseClass = `group flex items-center justify-between rounded-2xl px-5 py-4 text-2xl font-black tracking-tight transition-all duration-300 ${
+                isLinkActive ? 'bg-neutral-900 text-white' : 'text-neutral-900 hover:bg-neutral-100'
               }`
               const style = {
-                transitionDelay: menuOpen ? `${i * 80 + 100}ms` : '0ms',
+                transitionDelay: menuOpen ? `${i * 60 + 80}ms` : '0ms',
                 opacity: menuOpen ? 1 : 0,
-                transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
+                transform: menuOpen ? 'translateX(0)' : 'translateX(-30px)',
               }
               if (l.label === 'Leistungen') {
                 return (
-                  <div key={l.href} style={style} className="flex flex-col items-center gap-3">
+                  <div key={l.href} style={style} className="space-y-2">
                     <button
                       onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                      className={className}
+                      className={baseClass}
                     >
-                      {l.label}
+                      <span>{l.label}</span>
+                      <svg
+                        className={`h-5 w-5 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
                     </button>
                     <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                      <div className="flex flex-col items-center gap-2 py-2">
+                      <div className="space-y-1 pl-4">
                         {services.map((s) => (
                           <Link
                             key={s.title}
                             to={`/leistungen/${slugify(s.title)}/`}
                             onClick={() => setMenuOpen(false)}
-                            className="text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-900"
+                            className="block rounded-xl px-4 py-2 text-sm font-semibold text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
                           >
                             {s.title}
                           </Link>
                         ))}
+                        <a
+                          href="/#services"
+                          onClick={() => setMenuOpen(false)}
+                          className="block rounded-xl px-4 py-2 text-sm font-semibold text-indigo-600 transition-colors hover:bg-indigo-50"
+                        >
+                          Alle Leistungen
+                        </a>
                       </div>
                     </div>
                   </div>
                 )
               }
+              const content = (
+                <>
+                  <span>{l.label}</span>
+                  <svg
+                    className={`h-5 w-5 transition-all duration-300 ${isLinkActive ? 'text-white' : 'text-neutral-400 opacity-0 group-hover:opacity-100'} ${menuOpen ? 'translate-x-0' : '-translate-x-2'}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </>
+              )
               return l.isRoute ? (
                 <Link
                   key={l.href}
                   to={l.href}
                   onClick={() => setMenuOpen(false)}
-                  className={className}
+                  className={baseClass}
                   style={style}
                 >
-                  {l.label}
+                  {content}
                 </Link>
               ) : (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setMenuOpen(false)}
-                  className={className}
+                  className={baseClass}
                   style={style}
                 >
-                  {l.label}
+                  {content}
                 </a>
               )
             })}
           </nav>
 
-          {/* CTA */}
+          {/* Bottom CTA */}
           <a
             href="/#contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-10 rounded-full bg-neutral-900 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-neutral-700"
+            className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-base font-bold text-white shadow-xl shadow-neutral-900/20 transition-all hover:bg-neutral-700"
             style={{
-              transitionDelay: menuOpen ? `${links.length * 80 + 200}ms` : '0ms',
+              transitionDelay: menuOpen ? `${links.length * 60 + 160}ms` : '0ms',
               opacity: menuOpen ? 1 : 0,
               transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
             }}
           >
             Projekt anfragen
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </a>
+          <p
+            className="mt-4 text-center text-xs text-neutral-400"
+            style={{
+              transitionDelay: menuOpen ? `${links.length * 60 + 220}ms` : '0ms',
+              opacity: menuOpen ? 1 : 0,
+            }}
+          >
+            info@tnt-studio.de · Wuppertal
+          </p>
         </div>
       </div>
     </>

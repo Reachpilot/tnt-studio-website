@@ -1,20 +1,20 @@
 export default function Founders() {
   return (
-    <section id="founders" className="bg-neutral-50/50 py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mb-16 text-center">
+    <section id="founders" className="bg-neutral-50/50 py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
+        <div className="mb-12 text-center lg:mb-16">
           <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">Team</p>
-          <h2 className="text-balance text-4xl font-black tracking-tight text-neutral-900 sm:text-5xl">
+          <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
             Die Two-Men-Show.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-500">
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-neutral-500 sm:text-base">
             Mit 15 haben wir gelernt: Agenturen reden viel, liefern wenig. Wir machen es anders — Partner statt Dienstleister.
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-4xl gap-8 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2 lg:gap-8">
           {/* Tiago */}
-          <div className="group rounded-3xl bg-white p-8 shadow-sm transition-all hover:shadow-xl">
+          <div className="group rounded-3xl bg-white p-6 shadow-sm transition-all hover:shadow-xl sm:p-8">
             <div className="mb-6 aspect-square overflow-hidden rounded-2xl bg-neutral-100">
               <img
                 src="/founder/tiago-esteves.webp"
@@ -43,7 +43,7 @@ export default function Founders() {
           </div>
 
           {/* Theo */}
-          <div className="group rounded-3xl bg-white p-8 shadow-sm transition-all hover:shadow-xl">
+          <div className="group rounded-3xl bg-white p-6 shadow-sm transition-all hover:shadow-xl sm:p-8">
             <div className="mb-6 aspect-square overflow-hidden rounded-2xl bg-neutral-100">
               <img
                 src="/founder/theo-spingys.webp"

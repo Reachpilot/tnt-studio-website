@@ -48,13 +48,117 @@ function breadcrumb(items) {
   }
 }
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'TnT Studio',
+  url: 'https://tnt-studio.de/',
+  logo: 'https://tnt-studio.de/og-image.webp',
+  description: 'Medienagentur in Wuppertal für Web Design, Social Media Marketing, Content Creation, Branding und Produktfotografie.',
+  founders: [
+    { '@type': 'Person', name: 'Tiago Esteves', jobTitle: 'Founder & CEO' },
+    { '@type': 'Person', name: 'Theo Spingys', jobTitle: 'Co-Founder & Marketing Lead' },
+  ],
+  sameAs: [
+    'https://www.instagram.com/tnt_studio.de/',
+    'https://www.linkedin.com/in/tiagoesteves3/',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'info@tnt-studio.de',
+    contactType: 'customer service',
+    availableLanguage: ['German', 'English'],
+  },
+}
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'TnT Studio',
+  image: 'https://tnt-studio.de/og-image.webp',
+  url: 'https://tnt-studio.de/',
+  telephone: '+49',
+  email: 'info@tnt-studio.de',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Julius-Lucas-Weg 90',
+    addressLocality: 'Wuppertal',
+    postalCode: '42113',
+    addressCountry: 'DE',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '51.2562',
+    longitude: '7.1508',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Wuppertal' },
+    { '@type': 'AdministrativeArea', name: 'Nordrhein-Westfalen' },
+    { '@type': 'Country', name: 'Deutschland' },
+  ],
+  priceRange: '€€',
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00',
+    closes: '18:00',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Medienagentur Leistungen',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Design', description: 'Massgeschneiderte, conversion-optimierte Websites mit React, TypeScript und Tailwind CSS.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Marketing', description: 'Strategie, Content-Produktion und Paid Social für Instagram, TikTok, LinkedIn und Meta.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Content Creation', description: 'Reels, Imagefilme, Produktvideos und Fotoshootings inklusive Schnitt und Color-Grading.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Produktfotografie', description: 'Professionelle Produktbilder für Online-Shops, Kataloge und Social Media.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding', description: 'Logos, Corporate Design, Markenstrategie und komplette Markenauftritte.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Software Development', description: 'Individuelle Web-Applikationen, Tools und Automatisierungen mit modernem Stack.' } },
+    ],
+  },
+}
+
+const faqPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Was macht TnT Studio?', acceptedAnswer: { '@type': 'Answer', text: 'TnT Studio ist eine Medienagentur aus Wuppertal. Wir bieten Web Design, Social Media Marketing, Content Creation, Branding, Produktfotografie und Software Development aus einer Hand — und arbeiten dabei komplett remote für Kunden in Deutschland, Europa und den USA.' } },
+    { '@type': 'Question', name: 'Für wen ist TnT Studio die richtige Agentur?', acceptedAnswer: { '@type': 'Answer', text: 'Für Unternehmen, Startups und Marken, die mehr wollen als einzelne Dienstleistungen. Wir entwickeln ganzheitliche Business-Lösungen: von der Marke über die Website bis zum laufenden Content und Paid Social.' } },
+    { '@type': 'Question', name: 'Wie arbeitet TnT Studio mit Kunden zusammen?', acceptedAnswer: { '@type': 'Answer', text: 'Wir arbeiten remote — über Video-Calls, Figma, Slack und geteilte Projektboards. Das ist schneller, transparenter und effektiver als klassische Büro-Termine. Bei Bedarf kommen wir auch vor Ort in Wuppertal, Düsseldorf, Köln und dem gesamten Rheinland.' } },
+    { '@type': 'Question', name: 'Was kostet eine Website bei TnT Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Projekt-Websites starten bei 2.500 €, E-Commerce-Plattformen ab 5.000 €, umfangreiche Softwarelösungen werden individuell nach Aufwand kalkuliert. Jedes Projekt ist transparent — wir geben dir nach dem ersten kostenlosen Call ein Fixpreis-Angebot.' } },
+    { '@type': 'Question', name: 'Wer sind die Gründer von TnT Studio?', acceptedAnswer: { '@type': 'Answer', text: 'TnT Studio wurde von Tiago Esteves (Founder & CEO) und Theo Spingys (Co-Founder & Marketing Lead) gegründet. Beide sind 17 Jahre alt und seit dem 15. Lebensjahr in der Agentur-Branche aktiv.' } },
+    { '@type': 'Question', name: 'Warum sollte ich TnT Studio statt einer grossen Agentur wählen?', acceptedAnswer: { '@type': 'Answer', text: 'Wir sind schneller, persönlicher und direkter. Du sprichst direkt mit den Gründern, die dein Projekt selbst steuern. Das spart Budget und beschleunigt Entscheidungen.' } },
+    { '@type': 'Question', name: 'Bietet TnT Studio auch Social Media Marketing in Wuppertal an?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wir betreuen Instagram, TikTok, LinkedIn und Meta Ads für lokale Unternehmen in Wuppertal, Solingen, Remscheid und dem gesamten Bergischen Land.' } },
+    { '@type': 'Question', name: 'Wie schnell ist eine neue Website online?', acceptedAnswer: { '@type': 'Answer', text: 'Eine typische Business-Website ist in 2–4 Wochen live. E-Commerce-Projekte dauern in der Regel 4–8 Wochen. Wir arbeiten mit klaren Meilensteinen und wöchentlichen Updates.' } },
+    { '@type': 'Question', name: 'Was ist AEO und warum ist es wichtig?', acceptedAnswer: { '@type': 'Answer', text: 'AEO steht für Answer Engine Optimization. Wir strukturieren Inhalte so, dass Google, KI-Assistenten und Sprachsuche deine Antworten bevorzugen.' } },
+    { '@type': 'Question', name: 'Kann ich Inhalte auf meiner Website selbst ändern?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wir integrieren ein Headless CMS wie Sanity, Strapi oder Decap CMS, damit du Texte, Bilder und Blog-Beiträge selbst verwalten kannst.' } },
+  ],
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'TnT Studio',
+  url: 'https://tnt-studio.de/',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://tnt-studio.de/blog/?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
+}
+
 const routes = [
   {
     file: 'index.html',
-    title: 'TnT Studio — Medienagentur Wuppertal',
-    description: 'TnT Studio — Medienagentur von Tiago Esteves & Theo Spingys. Web Design, Social Media, Content Creation, Branding & Produktfotografie für Marken mit Anspruch.',
+    title: 'TnT Studio — Medienagentur Wuppertal | Web Design, Social Media & Content',
+    description: 'TnT Studio ist die Medienagentur in Wuppertal für Web Design, Social Media Marketing, Content Creation, Branding & Produktfotografie. Zwei Gründer, eine Vision: Marken, die Eindruck hinterlassen.',
     canonical: 'https://tnt-studio.de/',
-    jsonLd: [breadcrumb([{ name: 'Startseite', item: 'https://tnt-studio.de/' }])],
+    jsonLd: [
+      organizationSchema,
+      localBusinessSchema,
+      faqPageSchema,
+      websiteSchema,
+      breadcrumb([{ name: 'Startseite', item: 'https://tnt-studio.de/' }]),
+    ],
   },
   {
     file: 'blog/index.html',

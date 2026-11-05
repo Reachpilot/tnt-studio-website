@@ -17,9 +17,11 @@ export default {
       animation: {
         'marquee': 'marquee 30s linear infinite',
         'fade-in': 'fadeIn 0.6s ease-out forwards',
-        'fade-up': 'fadeUp 0.7s ease-out forwards',
+        'fade-up': 'fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'slide-left': 'slideLeft 0.8s ease-out forwards',
         'scale-in': 'scaleIn 0.5s ease-out forwards',
+        'blob': 'blob 8s infinite',
+        'float': 'float 6s ease-in-out infinite',
       },
       keyframes: {
         marquee: {
@@ -41,6 +43,15 @@ export default {
         scaleIn: {
           '0%': { opacity: '0', transform: 'scale(0.9)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        blob: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-12px)' },
         },
       },
     },

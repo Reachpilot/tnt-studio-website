@@ -2,12 +2,12 @@ import { portfolioItems } from '../data/portfolio'
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mb-16 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+    <section id="portfolio" className="py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
+        <div className="mb-10 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end lg:mb-16">
           <div className="max-w-2xl">
             <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">Portfolio</p>
-            <h2 className="text-balance text-4xl font-black tracking-tight text-neutral-900 sm:text-5xl">
+            <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
               Referenzen, die für sich sprechen.
             </h2>
           </div>
@@ -17,11 +17,11 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [column-fill:_balance]">
+        <div className="columns-1 gap-3 sm:gap-4 sm:columns-2 lg:columns-3 [column-fill:_balance]">
           {portfolioItems.map((item) => (
             <figure
               key={item.brand}
-              className="group relative mb-4 break-inside-avoid overflow-hidden rounded-2xl bg-neutral-100"
+              className="group relative mb-3 break-inside-avoid overflow-hidden rounded-2xl bg-neutral-100 shadow-sm transition-all hover:shadow-xl sm:mb-4"
             >
               {item.mediaType === 'video' && item.videoSrc ? (
                 <video

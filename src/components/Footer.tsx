@@ -4,8 +4,8 @@ export default function Footer() {
       {/* Accent line */}
       <div className="absolute left-0 right-0 top-0 h-1 tnt-accent opacity-60" />
 
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <div className="grid gap-12 md:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-10 lg:py-16">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2">

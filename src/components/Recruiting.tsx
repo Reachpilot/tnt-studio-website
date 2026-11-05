@@ -1,25 +1,26 @@
 export default function Recruiting() {
   return (
-    <section id="recruiting" className="relative overflow-hidden py-24 lg:py-32">
+    <section id="recruiting" className="relative overflow-hidden py-20 lg:py-32">
       <div className="absolute inset-0 tnt-grid-bg opacity-40" />
+      <div className="absolute -right-32 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-gradient-to-l from-indigo-100/30 to-transparent blur-3xl" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
           <div>
             <img
               src="/images/portfolio/logo.webp"
               alt="Esteves Recruiting Logo"
-              className="mb-6 h-16 w-auto object-contain"
+              className="mb-5 h-12 w-auto object-contain sm:mb-6 sm:h-16"
               loading="lazy"
               decoding="async"
             />
             <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">Venture</p>
-            <h2 className="text-balance text-4xl font-black tracking-tight text-neutral-900 sm:text-5xl">
+            <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
               Nebenbei bauen wir
               <br />
               <span className="gradient-text">Esteves Recruiting</span>.
             </h2>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-neutral-500">
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-neutral-500 sm:text-lg lg:mt-6">
               Das Recruiting-Game verändert sich. Wir verbinden Logistik, Gesundheitswesen und Automotive mit den richtigen Talenten — kombiniert mit unserem Marketing-Wissen.
             </p>
             <a

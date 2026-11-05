@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#171717" />
-    <meta name="description" content="TnT Studio — Medienagentur von Tiago Esteves & Theo Spingys. Web Design, Social Media, Content Creation, Branding & Produktfotografie für Marken mit Anspruch." />
-    <meta name="keywords" content="Medienagentur Wuppertal, Web Design, Social Media Marketing, Content Creation, Branding, Produktfotografie, Webagentur NRW" />
+    <meta name="description" content="TnT Studio ist die Medienagentur in Wuppertal für Web Design, Social Media Marketing, Content Creation, Branding & Produktfotografie. Zwei Gründer, eine Vision: Marken, die Eindruck hinterlassen." />
+    <meta name="keywords" content="Medienagentur Wuppertal, Webdesign Wuppertal, Webagentur Wuppertal, Social Media Agentur Wuppertal, Content Creation Wuppertal, Produktfotografie Wuppertal, Branding Agentur Wuppertal, Software Entwicklung Wuppertal, Online Marketing Wuppertal, Werbeagentur Wuppertal, SEO Agentur Wuppertal, Medienagentur NRW" />
     <meta name="author" content="TnT Studio" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-    <title>TnT Studio — Medienagentur Wuppertal</title>
+    <title>TnT Studio — Medienagentur Wuppertal | Web Design, Social Media & Content</title>
     <link rel="canonical" href="https://tnt-studio.de/" />
 
     <!-- Open Graph -->
@@ -37,74 +37,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-    <!-- LocalBusiness Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "TnT Studio",
-      "url": "https://tnt-studio.de/",
-      "logo": "https://tnt-studio.de/favicon.png",
-      "email": "mailto:info@tnt-studio.de",
-      "areaServed": "Wuppertal, NRW, Deutschland",
-      "description": "Medienagentur für Web Design, Social Media Marketing, Content Creation, Branding und Produktfotografie.",
-      "founder": [
-        {
-          "@type": "Person",
-          "name": "Tiago Esteves",
-          "jobTitle": "Founder & CEO",
-          "sameAs": "https://www.linkedin.com/in/tiagoesteves3/"
-        },
-        {
-          "@type": "Person",
-          "name": "Theo Spingys",
-          "jobTitle": "Co-Founder & Marketing Lead",
-          "sameAs": "https://www.linkedin.com/in/theo-spingys-43450741b/"
-        }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/tnt_studio.de/"
-      ]
-    }
-    </script>
+    <!-- Sitemap & RSS -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-    <!-- FAQPage Schema (AEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Was macht TnT Studio?",
-          "acceptedAnswer": { "@type": "Answer", "text": "TnT Studio ist eine Medienagentur aus Wuppertal. Wir bieten Web Design, Social Media Marketing, Content Creation, Branding, Produktfotografie und Software Development aus einer Hand — und arbeiten dabei komplett remote." }
-        },
-        {
-          "@type": "Question",
-          "name": "Für wen ist TnT Studio die richtige Agentur?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Für Unternehmen, die mehr wollen als einzelne Dienstleistungen. Wir verkaufen keine Produkte, sondern entwickeln ganzheitliche Business-Lösungen: von der Marke über die Website bis zum laufenden Content." }
-        },
-        {
-          "@type": "Question",
-          "name": "Wie arbeitet TnT Studio mit Kunden zusammen?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten remote — über Video-Calls, Figma, Slack und geteilte Projektboards. Das ist schneller und effektiver als klassische Büro-Termine." }
-        },
-        {
-          "@type": "Question",
-          "name": "Was kostet eine Website bei TnT Studio?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Projekt-Websites starten bei 2.500€, E-Commerce ab 5.000€. Jedes Projekt ist individuell und wird im ersten Call transparent kalkuliert." }
-        },
-        {
-          "@type": "Question",
-          "name": "Wer sind die Gründer von TnT Studio?",
-          "acceptedAnswer": { "@type": "Answer", "text": "TnT Studio wurde von Tiago Esteves (Founder & CEO) und Theo Spingys (Co-Founder & Marketing Lead) gegründet. Beide sind 17 Jahre alt und seit dem 15. Lebensjahr in der Agentur-Branche aktiv. Tiago führt das Unternehmen als CEO und verantwortet Strategie sowie Produkt." }
-        }
-      ]
-    }
-    </script>
+
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Hidden Netlify form for static detection (mirror of React contact form) -->
+    <form name="kontakt" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="company" />
+      <input type="url" name="website" />
+      <input type="text" name="service" />
+      <input type="text" name="budget" />
+      <input type="text" name="timeline" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="consent" />
+      <input name="bot-field" />
+    </form>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -22,23 +22,23 @@ const colorMap: Record<string, { bg: string; text: string; check: string }> = {
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mb-16 max-w-2xl">
+    <section id="services" className="py-20 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
+        <div className="mb-12 max-w-2xl lg:mb-16">
           <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">Leistungen</p>
-          <h2 className="text-balance text-4xl font-black tracking-tight text-neutral-900 sm:text-5xl">
+          <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
             Alles aus einer Hand.
             <br />
             <span className="text-neutral-400">Von der Idee bis zur Umsetzung.</span>
           </h2>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link
               key={service.title}
               to={`/leistungen/${serviceSlug(service.title)}/`}
-              className="group rounded-2xl border border-neutral-200 bg-white p-8 transition-all duration-300 hover:border-neutral-900 hover:shadow-xl"
+              className="group relative rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-900 hover:shadow-xl sm:p-8"
             >
               <div className={`mb-6 flex h-12 w-12 items-center justify-center rounded-xl ${colorMap[service.icon]?.bg || 'bg-neutral-900'} ${colorMap[service.icon]?.text || 'text-white'} transition-transform group-hover:scale-110`}>
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
