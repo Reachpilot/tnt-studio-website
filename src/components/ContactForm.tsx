@@ -118,6 +118,7 @@ export default function ContactForm() {
     <form
       name="kontakt"
       method="POST"
+      action="/"
       data-netlify="true"
       netlify-honeypot="bot-field"
       onSubmit={handleSubmit}

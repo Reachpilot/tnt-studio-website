@@ -46,7 +46,7 @@
     <div id="root"></div>
 
     <!-- Hidden Netlify form for static detection (mirror of React contact form) -->
-    <form name="kontakt" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <form name="kontakt" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" style="display:none">
       <input type="text" name="name" />
       <input type="email" name="email" />
       <input type="tel" name="phone" />
