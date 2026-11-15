@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { services } from '../data/services'
+import { trackLead } from '../lib/analytics'
 
 const steps = ['Du', 'Projekt', 'Details', 'Fertig']
 
@@ -41,6 +42,7 @@ export default function ContactForm() {
     if (params.get('form') === 'sent') {
       setSubmitted(true)
       setStep(steps.length - 1)
+      trackLead()
       window.history.replaceState({}, '', window.location.pathname + window.location.hash)
     }
   }, [])

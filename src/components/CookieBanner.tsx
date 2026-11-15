@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { initAnalytics } from '../lib/analytics'
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false)
@@ -13,8 +14,8 @@ export default function CookieBanner() {
 
   const handleAccept = () => {
     localStorage.setItem('tnt-cookie-consent', 'accepted')
+    initAnalytics()
     setVisible(false)
-    // Google Analytics & Meta Pixel werden hier geladen
   }
 
   const handleDecline = () => {

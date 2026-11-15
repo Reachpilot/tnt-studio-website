@@ -86,6 +86,16 @@ export default function Footer() {
             <a href="/imprint.html" className="text-xs text-neutral-400 hover:text-neutral-900">Impressum</a>
             <a href="/privacy-policy.html" className="text-xs text-neutral-400 hover:text-neutral-900">Datenschutz</a>
             <a href="/terms.html" className="text-xs text-neutral-400 hover:text-neutral-900">AGB</a>
+            <button
+              type="button"
+              onClick={() => {
+                localStorage.removeItem('tnt-cookie-consent')
+                window.location.reload()
+              }}
+              className="text-xs text-neutral-400 hover:text-neutral-900"
+            >
+              Cookie-Einstellungen
+            </button>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import Navbar from './components/Navbar'
 import ScrollToTop from './components/ScrollToTop'
+import RouteTracker from './components/RouteTracker'
 import Hero from './components/Hero'
 import LogoCarousel from './components/LogoCarousel'
 import Services from './components/Services'
@@ -59,6 +60,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <RouteTracker />
       <Navbar />
       <main>
         <Routes>
