@@ -130,11 +130,9 @@ export default function ServiceDetail() {
 
   const categoryMap: Record<string, string[]> = {
     'Web Design': ['Web Design', 'SEO'],
-    'Social Media Marketing': ['Social Media', 'SEO'],
-    'Content Creation': ['Content Creation', 'Social Media'],
-    'Produktfotografie': ['Content Creation', 'Web Design'],
-    'Branding': ['Branding', 'Web Design'],
-    'Software Development': ['Web Design', 'SEO'],
+    'KI-Sichtbarkeit & SEO': ['AI & SEO', 'SEO'],
+    'Social Media Marketing': ['Social Media', 'Copywriting'],
+    'Software Development': ['Web Design', 'SEO', 'Agentur-Insights'],
   }
   const relatedCategories = categoryMap[service.title] || []
   const relatedPosts = blogPosts
@@ -208,16 +206,6 @@ export default function ServiceDetail() {
           <p className="text-base leading-relaxed text-neutral-600">
             {service.longDescription}
           </p>
-        </div>
-
-        {/* Stats */}
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {service.stats.map((stat) => (
-            <div key={stat.label} className="rounded-2xl bg-neutral-900 p-6 text-center">
-              <p className="text-3xl font-black tracking-tight text-white">{stat.value}</p>
-              <p className="mt-1 text-xs font-medium tracking-wide text-neutral-400 uppercase">{stat.label}</p>
-            </div>
-          ))}
         </div>
 
         {/* Features */}

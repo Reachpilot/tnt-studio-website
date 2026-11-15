@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="top" className="relative flex min-h-screen items-center overflow-hidden bg-neutral-950">
+    <section id="top" className="relative flex min-h-screen items-center overflow-hidden bg-neutral-950" style={{ minHeight: '100dvh' }}>
       {/* Grid + glow background */}
       <div className="absolute inset-0 tnt-grid-bg opacity-40 [background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)]" />
       <div className="absolute -left-40 top-1/4 h-[500px] w-[500px] rounded-full bg-white/10 blur-[120px]" />

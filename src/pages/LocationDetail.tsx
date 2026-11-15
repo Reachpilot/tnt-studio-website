@@ -94,7 +94,7 @@ export default function LocationDetail() {
   })
 
   const title = `Medienagentur ${location.name}, Webdesign, Social Media & Content | TnT Studio`
-  const description = `${location.tagline} Web Design, Social Media Marketing, Content Creation, Branding & Software Development, remote oder vor Ort. Jetzt unverbindlich anfragen.`
+  const description = `${location.tagline} Web Design, KI-Sichtbarkeit & SEO, Social Media Marketing & Software Development, remote oder vor Ort. Jetzt unverbindlich anfragen.`
 
   return (
     <div className="pt-32 pb-24">

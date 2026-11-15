@@ -3,11 +3,6 @@ export interface ServiceStep {
   description: string
 }
 
-export interface ServiceStat {
-  value: string
-  label: string
-}
-
 export interface ServiceFAQ {
   question: string
   answer: string
@@ -29,7 +24,6 @@ export interface Service {
   features: string[]
   icon: string
   process: ServiceStep[]
-  stats: ServiceStat[]
   faqs: ServiceFAQ[]
   caseStudies: ServiceCaseStudy[]
 }
@@ -48,12 +42,6 @@ export const services: Service[] = [
       { title: 'Design & Prototyping', description: 'Wireframes werden zu High-Fidelity Designs. Wir bauen klickbare Prototypen in Figma, damit du das Erlebnis spürst, bevor eine Zeile Code geschrieben wird.' },
       { title: 'Development', description: 'Custom Development mit React, TypeScript und Tailwind CSS. Clean Code, semantische HTML-Struktur, optimiert für Speed und SEO.' },
       { title: 'Testing & Launch', description: 'Cross-Browser-Testing, Performance-Audits, Accessibility-Checks. Wir launchen erst, wenn alles perfekt ist, und bleiben danach für dich da.' },
-    ],
-    stats: [
-      { value: '100%', label: 'Custom Code' },
-      { value: '< 1s', label: 'Load Time' },
-      { value: '95+', label: 'Lighthouse Score' },
-      { value: '8+', label: 'Websites live' },
     ],
     faqs: [
       { question: 'Was kostet eine Website bei TnT Studio?', answer: 'Landingpages ab 500 €, Business-Websites ab 2.500 €, E-Commerce-Plattformen ab 5.000 €. Komplexe Softwarelösungen werden nach Aufwand kalkuliert. Jedes Projekt ist individuell, wir geben dir nach dem ersten Call ein Fixpreis-Angebot.' },
@@ -92,12 +80,6 @@ export const services: Service[] = [
       { title: 'Implementierung', description: 'llms.txt, Schema.org, robots.txt für AI-Crawler, Answer-First-Content, OnPage-SEO, Tracking & Attribution, alles sauber umgesetzt, nicht nur besprochen.' },
       { title: 'Messung & Skalierung', description: 'Monatliches Reporting: Rankings, organischer Traffic, KI-Erwähnungen, Anfragen. Wir sehen, was funktioniert, und skalieren, was bringt.' },
     ],
-    stats: [
-      { value: '4', label: 'KI-Systeme optimiert' },
-      { value: 'llms.txt', label: 'Standard bei uns' },
-      { value: '100%', label: 'Messbar' },
-      { value: '1', label: 'Ansprechpartner' },
-    ],
     faqs: [
       { question: 'Was ist GEO-Optimierung?', answer: 'GEO (Generative Engine Optimization) optimiert Ihre Website dafür, von KI-Systemen wie ChatGPT, Perplexity und Gemini empfohlen und zitiert zu werden. Das ist das neue SEO, für eine Welt, in der Kunden KI fragen statt googeln.' },
       { question: 'Was ist der Unterschied zwischen SEO und GEO?', answer: 'SEO optimiert für Suchmaschinen-Rankings und Klicks auf Links. GEO optimiert dafür, dass KI-Systeme Ihr Unternehmen als Antwort oder Empfehlung ausgeben. Die Grundlagen überschneiden sich, die Ziele nicht.' },
@@ -112,9 +94,7 @@ export const services: Service[] = [
       { question: 'Was ist Local SEO?', answer: 'Local SEO optimiert Ihre Sichtbarkeit für regionale Suchen: „Agentur in meiner Nähe", „[Service] + Stadt". Dazu gehören Google Business Profile, lokale Keywords, NAP-Konsistenz und Location-Seiten, wie unsere /standorte/-Seiten.' },
       { question: 'Wie messen Sie KI-Sichtbarkeit?', answer: 'Wir prüfen regelmässig, was ChatGPT, Perplexity und Gemini auf relevante Fragen antworten, ob Sie genannt werden, wie Sie positioniert sind, welche Wettbewerber zitiert werden. Plus klassisches Reporting: Rankings, Traffic, Anfragen, Conversion.' },
     ],
-    caseStudies: [
-      { client: 'TnT Studio (diese Website)', result: 'Vollständige GEO/AEO-Implementierung', description: 'llms.txt & llms-full.txt unter /.well-known/, Schema.org auf jeder Route (Organization, Service, FAQPage, Article, BreadcrumbList), AI-Crawler in robots.txt erlaubt, Answer-First-Blog mit 42 Fachartikeln, Consent-gated Analytics mit Attribution.', image: '/og-image.webp' },
-    ],
+    caseStudies: [],
   },
   {
     title: 'Social Media Marketing',
@@ -129,12 +109,6 @@ export const services: Service[] = [
       { title: 'Strategie & Pillars', description: 'Content-Pillar-Definition, Tonalität, Visual-Guidelines. Wir erstellen einen 90-Tage-Redaktionsplan mit klaren Themes pro Woche.' },
       { title: 'Content-Produktion', description: 'Wir produzieren Reels, Posts, Stories und TikToks, alles im Haus. Keine Koordination mit externen Fotografen, keine Verzögerungen.' },
       { title: 'Ads & Optimierung', description: 'Paid Social Campaigns mit A/B-Testing, Audience-Splitting und Budget-Optimierung. Wöchentliche Reports mit klaren KPIs.' },
-    ],
-    stats: [
-      { value: '50K+', label: 'Reichweite / Monat' },
-      { value: '4.8%', label: 'Ø Engagement Rate' },
-      { value: '3x', label: 'Follower-Wachstum' },
-      { value: '12+', label: 'Kanäle betreut' },
     ],
     faqs: [
       { question: 'Wie oft postet ihr?', answer: 'Mindestens 3x pro Woche auf Instagram, 2x auf TikTok. Je nach Paket auch täglich. Wir empfehlen Quality over Quantity, aber mit konsistenter Frequenz. Konsistenz ist wichtiger als Frequenz.' },
@@ -151,7 +125,7 @@ export const services: Service[] = [
       { question: 'Bietet ihr Meta Ads (Facebook/Instagram Werbung) an?', answer: 'Ja. Vollumfänglich: Strategie, Creative-Produktion, Kampagnen-Setup, Optimierung, Reporting. Mit Meta Pixel und Conversions API für genaues Tracking. Wöchentliche Reports mit ROAS, CPA und klaren KPIs.' },
       { question: 'Könnt ihr Influencer-Marketing machen?', answer: 'Ja. Wir identifizieren passende Influencer, verhandeln Konditionen, managen den Content und tracken Ergebnisse. Mikro-Influencer (5K-50K Follower) sind oft effektiver als Macro-Influencer, höhere Engagement Rate, geringere Kosten.' },
       { question: 'Was kostet Social Media Marketing bei TnT Studio?', answer: 'Pakete starten bei 1.200€/Monat (Basic: 3 Posts/Woche, 1 Plattform). Pro-Pakete ab 2.000€/Monat (5 Posts/Woche, 2 Plattformen, Ads-Management). Full-Service ab 4.000€/Monat. Ad-Budget kommt dazu.' },
-      { question: 'Könnt ihr Social Media für lackmangruppe.de übernehmen?', answer: 'Wir produzieren bereits Social Media Content für die Lackmann Gruppe. Regelmäßige Reels, Posts und Stories mit professionellem Editing und Color-Grading. Schau dir die Referenzen auf unserer Startseite an.' },
+      { question: 'Könnt ihr Social Media für die Lackmann Gruppe übernehmen?', answer: 'Wir produzieren bereits Social Media Content für die Lackmann Gruppe. Regelmäßige Reels, Posts und Stories mit professionellem Editing und Color-Grading. Schau dir die Referenzen auf unserer Startseite an.' },
     ],
     caseStudies: [
       { client: 'Lackmann GmbH', result: 'Instagram-Content & Video-Produktion', description: 'Regelmässige Content-Produktion inkl. Formentor-Shoot. Video-Content für Instagram Reels und Stories mit professionellem Editing.', image: '/videos/lackmann-poster.webp' },
@@ -172,12 +146,6 @@ export const services: Service[] = [
       { title: 'Development & Testing', description: 'Iterative Entwicklung in Sprints. Unit-Tests, Integration-Tests, Security-Checks. Clean Code, dokumentiert und wartbar.' },
       { title: 'Deployment & Wartung', description: 'Deployment auf AWS, Vercel oder deinem Server. Monitoring, Updates und Erweiterungen nach Bedarf.' },
     ],
-    stats: [
-      { value: '100%', label: 'Custom Code' },
-      { value: '0', label: 'Vendor Lock-in' },
-      { value: '99.9%', label: 'Uptime' },
-      { value: 'DSGVO', label: 'Konform' },
-    ],
     faqs: [
       { question: 'Was ist mit ausführbaren PDFs?', answer: 'Wir generieren PDFs dynamisch aus HTML/CSS, mit Formularfeldern, dynamischen Inhalten und interaktiven Elementen. Ideal für Verträge, Rechnungen, Schadensberichte.' },
       { question: 'Könnt ihr unsere CRM anbinden?', answer: 'Ja. Wir haben Erfahrung mit HubSpot, Pipedrive, Notion API und Custom-CRMs. Wir bauen synchronisierte Workflows und Automatisierungen.' },
@@ -196,7 +164,7 @@ export const services: Service[] = [
     ],
     caseStudies: [
       { client: 'meinfachmann.de', result: 'Schadensbericht-System', description: 'Ausführbare PDFs für Schadensreglementierung, HTML/CSS-basiert mit dynamischen Formularfeldern und automatischer Berechnung.', image: '/images/portfolio/meinfachmann.de 15.27.44.webp' },
-      { client: 'Fairclaim FC GmbH', result: 'Identisches Schadens-System', description: 'Gleiches System für einen zweiten Kunden aus der Schadensregulierung. Skaliert und an spezifische Workflows angepasst.', image: '/images/portfolio/meinfachmann.de 15.27.44.webp' },
+      { client: 'Fairclaim FC GmbH', result: 'Identisches Schadens-System', description: 'Gleiches System für einen zweiten Kunden aus der Schadensregulierung. Skaliert und an spezifische Workflows angepasst.' },
     ],
   },
 ]
