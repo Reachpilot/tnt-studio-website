@@ -15,7 +15,7 @@ export default function LocalSEO() {
             <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
               Medienagentur in Wuppertal.
               <br />
-              <span className="text-neutral-400">Wirkend für die Welt.</span>
+              <span className="text-neutral-500">Wirkend für die Welt.</span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-neutral-500 sm:text-lg">
               Wir sitzen in Wuppertal im Bergischen Land und betreuen Kunden vor Ort in Düsseldorf, Köln, Solingen,
@@ -61,7 +61,7 @@ export default function LocalSEO() {
               ))}
             </div>
             <div className="mt-6">
-              <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400">
+              <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-neutral-500">
                 Lokale Keywords
               </h4>
               <p className="text-sm leading-relaxed text-neutral-500">
@@ -69,7 +69,7 @@ export default function LocalSEO() {
               </p>
             </div>
             <div className="mt-6">
-              <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400">
+              <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-neutral-500">
                 Standorte
               </h4>
               <div className="flex flex-wrap gap-2">

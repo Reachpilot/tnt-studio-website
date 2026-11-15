@@ -18,7 +18,7 @@ export default function IndustryList() {
             <h1 className="text-balance text-4xl font-black tracking-tight text-neutral-900 sm:text-5xl">
               Wir kennen Ihre Branche.
               <br />
-              <span className="text-neutral-400">Nicht nur Websites.</span>
+              <span className="text-neutral-500">Nicht nur Websites.</span>
             </h1>
             <p className="mt-5 text-base leading-relaxed text-neutral-500 sm:text-lg">
               Jede Branche hat eigene Suchmuster, eigene Kunden und eigene Erwartungen.

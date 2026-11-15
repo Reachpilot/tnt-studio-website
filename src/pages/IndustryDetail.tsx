@@ -142,7 +142,7 @@ export default function IndustryDetail() {
 
               <div className="rounded-3xl bg-neutral-900 p-7 text-white">
                 <h3 className="text-lg font-black">Kostenloser Branch-Check</h3>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-400">
+                <p className="mt-2 text-sm leading-relaxed text-neutral-500">
                   Wir prüfen Ihre aktuelle Sichtbarkeit in Ihrer Branche, bei Google UND ChatGPT.
                 </p>
                 <a

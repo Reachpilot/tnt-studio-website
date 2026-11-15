@@ -22,7 +22,7 @@ export default function VideoSection() {
           <video
             controls
             playsInline
-            preload="metadata"
+            preload="none"
             poster="/founder/INTRO-TNT/INTRO-TNT-Cover.WEBP"
             className="w-full"
           >

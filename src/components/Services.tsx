@@ -36,7 +36,7 @@ export default function Services() {
           <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
             Nicht Einzelteile.
             <br />
-            <span className="text-neutral-400">Ein System, das Kunden bringt.</span>
+            <span className="text-neutral-500">Ein System, das Kunden bringt.</span>
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-500 sm:text-lg">
             Sichtbarkeit erzeugt Traffic, Vertrauen entscheidet über die Anfrage.

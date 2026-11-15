@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2">
               <img src="/favicon.png" alt="TnT Studio Logo" className="h-14 w-14 rounded-2xl object-cover" width="56" height="56" />
-              <span className="text-xs font-medium tracking-widest text-neutral-400 uppercase">Studio</span>
+              <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase">Studio</span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-neutral-500">
               TnT Studio, Design- & Marketing-Studio aus Wuppertal. Gegründet von Tiago Esteves & Theo Spingys.
@@ -81,20 +81,20 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 sm:flex-row">
-          <p className="text-xs text-neutral-400">
+          <p className="text-xs text-neutral-500">
             &copy; {new Date().getFullYear()} TnT Studio. Tiago Esteves & Theo Spingys. Alle Rechte vorbehalten.
           </p>
           <div className="flex gap-6">
-            <a href="/imprint.html" className="text-xs text-neutral-400 hover:text-neutral-900">Impressum</a>
-            <a href="/privacy-policy.html" className="text-xs text-neutral-400 hover:text-neutral-900">Datenschutz</a>
-            <a href="/terms.html" className="text-xs text-neutral-400 hover:text-neutral-900">AGB</a>
+            <a href="/imprint.html" className="text-xs text-neutral-500 hover:text-neutral-900">Impressum</a>
+            <a href="/privacy-policy.html" className="text-xs text-neutral-500 hover:text-neutral-900">Datenschutz</a>
+            <a href="/terms.html" className="text-xs text-neutral-500 hover:text-neutral-900">AGB</a>
             <button
               type="button"
               onClick={() => {
                 localStorage.removeItem('tnt-cookie-consent')
                 window.location.reload()
               }}
-              className="text-xs text-neutral-400 hover:text-neutral-900"
+              className="text-xs text-neutral-500 hover:text-neutral-900"
             >
               Cookie-Einstellungen
             </button>

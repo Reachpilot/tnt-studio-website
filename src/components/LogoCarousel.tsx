@@ -6,7 +6,7 @@ export default function LogoCarousel() {
   return (
     <section className="border-y border-neutral-100 py-16">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-12 text-center text-sm font-semibold tracking-widest text-neutral-400 uppercase">
+        <p className="mb-12 text-center text-sm font-semibold tracking-widest text-neutral-500 uppercase">
           Von Joyn bis zum lokalen Handwerker
         </p>
       </div>
@@ -21,6 +21,8 @@ export default function LogoCarousel() {
               <img
                 src={brand.logo}
                 alt={`${brand.name} Logo`}
+                width={brand.width}
+                height={brand.height}
                 className={`h-full w-auto max-w-[160px] object-contain ${brand.name === 'SKYLEDS' ? 'brightness-0' : ''}`}
                 loading="lazy"
                 decoding="async"

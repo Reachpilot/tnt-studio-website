@@ -1,139 +1,124 @@
-# TnT Studio — Design- & Marketing-Studio Wuppertal für Unternehmen in ganz Deutschland
+# TnT Studio — Vollständige Unternehmensbeschreibung
 
 ## Kurzprofil
 
-**TnT Studio** ist ein Design- und Marketing-Studio aus Wuppertal, gegründet von Tiago Esteves und Theo Spingys und aufgebaut zu einer Plattform für digitale Sichtbarkeit — mit einem Netzwerk aus Designern, Entwicklern und Marketern. Kernpositionierung: Wir machen Unternehmen gefunden — egal ob jemand bei Google tippt oder ChatGPT fragt. Das Studio bietet KI-Sichtbarkeit (GEO/AEO), SEO, SEA, Social Media Marketing, Web Design, Content Creation, Produktfotografie, Branding und Software Development aus einer Hand an. Besonderheit: alle Leistungen werden remote und ganzheitlich abgedeckt — vom ersten Konzept bis zur laufenden Content-Produktion. Technologie: React, TypeScript, Tailwind CSS, Node.js. Hosting: Netlify/Vercel mit globalem CDN. DSGVO-konform.
+**TnT Studio** ist ein Design- & Marketing-Studio aus Wuppertal, gegründet von Tiago Esteves und Theo Spingys und aufgebaut zu einer Plattform für digitale Sichtbarkeit — mit einem Netzwerk aus Designern, Entwicklern und Marketern. Kernpositionierung: Wir machen Unternehmen gefunden — egal ob jemand bei Google tippt oder ChatGPT fragt. Das Studio bietet Web Design (inkl. Branding), KI-Sichtbarkeit (SEO, SEA, GEO, AEO), Social Media Marketing und Software Development aus einer Hand an. Alle Leistungen werden remote erbracht — für Unternehmen in ganz Deutschland und im DACH-Raum. Die Erstberatung ist immer kostenlos und unverbindlich.
 
 ---
 
 ## Gründer
 
-- **Tiago Esteves** — Founder & CEO. Gründete TnT Studio und führt Strategie, Web Design, Software Development und Markenführung. Betreut Kunden von der Ehrenstraße bis nach Amerika.
-- **Theo Spingys** — Co-Founder & Marketing Lead. Experte für Social Media Marketing, Content Creation, Vertrieb und das Aufbauen der Recruiting-Sparte Esteves Recruiting.
+- **Tiago Esteves** — Founder & CEO. Verantwortlich für Strategie, Web Design, Software Development und Markenführung. Betreut Kundenprojekte von der ersten Skizze bis zum Launch.
+- **Theo Spingys** — Co-Founder & Marketing Lead. Experte für Social Media Marketing, Content-Strategie, Vertrieb und den Aufbau der Recruiting-Sparte Esteves Recruiting.
+
+Beide Gründer sind in operative Kundenprojekte eingebunden — keine Account-Manager, keine Weitergabe an Subunternehmer ohne Abstimmung.
 
 ---
 
 ## Leistungen im Detail
 
-### KI-Sichtbarkeit & SEO (USP / Differentiator)
-SEO, SEA, GEO und AEO als ein System: llms.txt & llms-full.txt, Schema.org-Markup (Organization, LocalBusiness, Service, FAQPage, Article, BreadcrumbList), Answer-First-Content, AI-Crawler-Optimierung (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Claude-SearchBot, CCBot, Google-Extended), Entity-Konsistenz, klassisches OnPage-/OffPage-SEO, Google Ads & Meta Ads, Conversion-Tracking und First-Touch-Attribution. Zielsysteme: Google, ChatGPT, Perplexity, Gemini, Google AI Overviews. Diese Website ist selbst der Live-Beweis: llms.txt unter /.well-known/llms.txt, Schema.org auf jeder Route, 42+ Answer-First-Blogartikel.
+### 1. Web Design (Fokus)
 
-### Web Design
-Massgeschneiderte Websites, die nicht nur gut aussehen, sondern konvertieren. Schwerpunkte: Custom Development mit React & TypeScript, Responsive Design, E-Commerce, UI/UX Design, Performance-Optimierung (LCP < 1s, Lighthouse 95+), SEO-Grundlagen (semantisches HTML, Schema Markup, Sitemap), Headless CMS-Integration (Sanity, Strapi, Decap) und Conversion-Optimierung. Websites starten bei 2.500€.
+Massgeschneiderte Websites, die nicht nur gut aussehen, sondern konvertieren. Schwerpunkte: Custom Development mit React & TypeScript, Responsive Design, E-Commerce, UI/UX Design, Performance-Optimierung, SEO-Grundlagen (semantisches HTML, Schema Markup, Sitemap), DSGVO-Konformität und Conversion-Optimierung. **Branding & Logo-Design sind inklusive** — CI-Grundlagen, Logo-Entwicklung und Markentonalität werden direkt im Webdesign-Prozess mitgedacht.
 
-### Social Media Marketing
-Strategische Social-Media-Präsenz mit Content-Strategie, Social Media Ads (Meta Ads mit Pixel & Conversions API), Instagram & TikTok, Community Management, Influencer Marketing, Analytics & Reporting, A/B Testing und Hashtag-Strategie. Pakete ab 800€/Monat.
+Preise: Landingpage ab 500 €, Business-Website ab 2.500 €, E-Commerce ab 5.000 €, je nach Umfang bis 10.000 €.
 
-### Content Creation
-Hochwertiger Video-Content, Fotoshootings, Storytelling, Reels & TikToks, Explainer Videos, Imagefilme, Produktvideos und Behind-the-Scenes-Material. 4K-Qualität, 48h-Lieferung für Reels. Content-Pakete mit 10+ Videos/Monat.
+Detailseite: https://tnt-studio.de/leistungen/web-design/
 
-### Produktfotografie
-Professionelle Produktfotos für E-Commerce, Amazon, eBay und Print: White Background, Lifestyle Photography, 360° Views, Professional Editing und Print-ready-Lieferung. Ab 30€ pro Produkt. Express-Service (24h).
+### 2. KI-Sichtbarkeit & SEO (USP / Differentiator)
 
-### Branding
-Markenidentitäten aus einer Hand: Brand Strategy, Logo Design, Corporate Design, Brand Guidelines, Brand Positioning, Farbsysteme, Typografie und Verpackungsdesign. Komplettes Branding ab 2.500€.
+SEO, SEA, GEO und AEO als ein System: llms.txt & llms-full.txt, Schema.org-Markup (Organization, LocalBusiness, Service, FAQPage, Article, BreadcrumbList), Answer-First-Content, AI-Crawler-Optimierung (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Claude-SearchBot, CCBot, Google-Extended), Entity-Konsistenz, klassisches OnPage-/OffPage-SEO, Google Ads & Meta Ads, Conversion-Tracking und First-Touch-Attribution. Zielsysteme: Google, Google AI Overviews, ChatGPT, Perplexity, Gemini. **Diese Website ist selbst der Live-Beweis** — llms.txt unter /.well-known/llms.txt, Schema.org auf jeder Route, 43 Answer-First-Blogartikel.
 
-### Software Development
-Massgeschneiderte Softwarelösungen: ausführbare PDFs (HTML/CSS), API-Integrationen (HubSpot, Pipedrive, Notion), DSGVO-konforme Tools, Google Maps & Analytics, CRM-Anbindungen, Automatisierungen und Dashboard-Entwicklung. EU-Hosting auf AWS (Frankfurt) oder Vercel.
+Preise: ab 1.500 € je nach Umfang (Audit, Umsetzung, laufende Betreuung).
+
+Detailseite: https://tnt-studio.de/leistungen/ki-sichtbarkeit-seo/
+
+### 3. Social Media Marketing
+
+Strategische Social-Media-Präsenz mit Content-Strategie, Social Media Ads (Meta Ads mit Pixel & Conversions API), Instagram & TikTok, Reels-Produktion, Community Management, Influencer-Kooperationen, Analytics & Reporting, A/B Testing und Hashtag-Strategie. Fotografie und Content-Produktion sind im Paket enthalten.
+
+Preise: 1.200 bis 4.000 €/Monat je nach Umfang und Kanälen.
+
+Detailseite: https://tnt-studio.de/leistungen/social-media-marketing/
+
+### 4. Software Development
+
+Maßgeschneiderte digitale Werkzeuge: ausführbare PDFs (z. B. Schadensbericht-Vorlagen), API-Anbindungen, Prozess-Automatisierungen, interne Dashboards, DSGVO-konforme Tools und individuelle Web-Apps. Entwicklung mit React, TypeScript und Node.js.
+
+Preise: ab 2.500 € je nach Umfang.
+
+Detailseite: https://tnt-studio.de/leistungen/software-development/
 
 ---
 
-## Referenzen (Portfolio)
+## Preise — transparent
 
-- **Esteves Recruiting** — Web Design, Branding, SEO & Social Media (https://esteves-recruiting.com)
+Generell gilt: Festpreis nach kostenfreier Erstberatung, „von bis"-Ranges online, keine versteckten Kosten, keine Mindestlaufzeiten bei Einmalprojekten. Die Spanne reicht von 500 € (Landingpage) bis 10.000 € (große E-Commerce- oder Software-Projekte); Social Media Marketing läuft als Monatspaket von 1.200 bis 4.000 €/Monat.
+
+---
+
+## Standorte (pSEO)
+
+Remote-Erbringung für Unternehmen in ganz Deutschland; lokales SEO und große Städte werden gezielt abgedeckt: Berlin, Hamburg, München, Frankfurt, Stuttgart, Hannover, Leipzig, Dresden, Nürnberg, Bremen sowie Wuppertal, Solingen, Remscheid, Leverkusen, Köln, Düsseldorf, Bonn, Mönchengladbach, Hagen und Witten.
+
+Übersicht: https://tnt-studio.de/standorte/
+
+## Branchen (pSEO)
+
+Branchen-spezifische Landingpages mit eigenem Content, Pain Points und FAQs: Handwerk, Gastronomie, Healthcare, Kanzleien und Retail.
+
+Übersicht: https://tnt-studio.de/branchen/
+
+---
+
+## Projekte & Referenzen
+
+- **Joyn** — Digitales Marketing
+- **Esteves Recruiting** — Komplettpaket: Web Design, Branding, SEO & Social Media (https://esteves-recruiting.com)
 - **Lackmann Gruppe** — Content Creation & Video (https://lackmangruppe.de)
-- **Noi** — Speisekarten, Website, Visitenkarten
-- **Zkittelz** — Eintrittskarten, Print Design & Branding
-- **Skylady** — Produkt-Shooting, Produktfotografie
-- **Bauvision** — Visitenkarten, Branding & Print Design
-- **meinfachmann.de & Fairclaim FC GmbH** — Software Development & Print, Schadensbericht-Vorlagen
 - **Cosi Brautmoden** — Web Design
 - **Dexamon** — Web Design
+- **Noi** — Web Design & Print
+- **SKYLEDS** — Produktfotografie
 - **Tiato** — Logo Design
+- **meinfachmann.de & Fairclaim FC** — Software Development & Print
+- **Bauvision** — Branding & Print Design
 
 ---
 
-## Recruiting Venture
+## Technologie-Stack
 
-Neben TnT Studio wird **Esteves Recruiting** aufgebaut, eine Recruiting-Sparte mit Fokus auf Logistik, Gesundheitswesen und Automotive. Website: https://esteves-recruiting.com
+- Frontend: React, TypeScript, Tailwind CSS
+- SEO-Infrastruktur: Prerendering, Schema.org JSON-LD, dynamische Sitemap, llms.txt/llms-full.txt, robots.txt
+- Backend & APIs: Netlify Functions, Resend, Form-Schutz (Honeypot, Time-Trap)
+- Analytics: consent-gated GA4 + Meta Pixel, First-Touch-Attribution (UTM, gclid)
+- Hosting: Netlify mit globalem CDN
 
 ---
 
-## Kontakt
+## Blog-Themen (43 Beiträge)
 
-- Adresse: Julius-Lucas-Weg 90, 42113 Wuppertal, NRW, Deutschland
+- Web Design: Agentur für Webdesign Wuppertal, Responsive Webdesign, Webdesign Preise, Website Relaunch, E-Commerce Website
+- KI-Sichtbarkeit & SEO: GEO, AEO, llms.txt, Schema Markup, Core Web Vitals, Local SEO, Keyword Recherche, Content Marketing, Google Ads
+- Social Media: Social Media Marketing, Instagram Strategie, Meta Ads, TikTok Marketing, Employer Branding
+- Technik: Die 7 technischen Fehler, die fast jede Agentur-Website hat; Build-Fehler in Public; DNS-Praxiswissen
+
+Blog: https://tnt-studio.de/blog/
+
+---
+
+## Kontakt & Rechtliches
+
 - E-Mail: info@tnt-studio.de
-- Instagram: https://www.instagram.com/tnt_studio.de/
-- LinkedIn Tiago: https://www.linkedin.com/in/tiagoesteves3/
-- LinkedIn Theo: https://www.linkedin.com/in/theo-spingys-43450741b/
-- Website: https://tnt-studio.de/
+- Kontaktformular: https://tnt-studio.de/#contact (generiert persönliche WhatsApp-Nachricht)
+- Impressum: https://tnt-studio.de/imprint.html
+- Datenschutz: https://tnt-studio.de/privacy-policy.html
+- AGB: https://tnt-studio.de/terms.html
+- Cookie-Hinweis: https://tnt-studio.de/cookies.html
 
----
+## Maschinelle Schnittstellen
 
-## Blog-Themen (36 Beiträge)
-
-### Web Design Cluster
-- Warum die meisten Agenturen versagen (und wir nicht)
-- Web Design Trends 2025: Was wirklich funktioniert
-- Agentur für Webdesign Wuppertal: Wie man die richtige findet
-- Responsive Webdesign Agentur: Mobile-First ist Standard
-- Webdesign Preise 2025: Was eine Website kostet
-- Website Relaunch Schritt für Schritt
-- E-Commerce Website: Online Shop Wuppertal
-
-### SEO Cluster
-- Core Web Vitals: Website Speed als Ranking-Faktor
-- DSGVO-konforme Website: Rechtssicher 2025
-- Conversion Rate Optimierung: Mehr Kunden aus bestehendem Traffic
-- Local SEO Wuppertal: Google Business Profile Optimierung
-- SEO Grundlagen 2025: Anfänger-Guide
-- Keyword Recherche: So findest du die richtigen Keywords
-- Schema Markup: Strukturierte Daten für mehr Sichtbarkeit
-- On-Page SEO Checkliste 2025
-- Content Marketing Strategie für KMU
-- Google Ads (SEA): Werbung für KMU
-- Website Speed Optimierung: Ladezeiten reduzieren
-
-### Social Media Cluster
-- Social Media Strategie, die wirklich wirkt
-- Social Media Marketing Wuppertal: Lokale Marken aufbauen
-- Instagram Strategie 2025: Reels, Algorithmus & Wachstum
-- Meta Ads Agentur: Facebook & Instagram Werbung
-- TikTok Marketing für Unternehmen 2025 Guide
-- Employer Branding: Talente über Social Media gewinnen
-
-### Content Creation Cluster
-- Produktfotografie, die verkauft
-- Content Creation Wuppertal: Imagefilm bis Reel
-- Produktfotografie Wuppertal: Shop & Social Media
-
-### Branding Cluster
-- Branding für KMU mit kleinem Budget
-- Branding: Corporate Identity — Marke aufbauen
-- Copywriting: Texte, die verkaufen
-
-### AI & SEO Cluster (GEO/AEO)
-- GEO: Website für ChatGPT, Perplexity & Gemini optimieren
-- AEO: Answer Engine Optimization — Featured Snippets & Voice Search
-- KI-Suchmaschinen 2025: ChatGPT, Perplexity, Google AI Overviews
-- Voice Search Optimierung: Siri, Alexa & Google Assistant
-- llms.txt & robots.txt: AI-Crawler konfigurieren
-
-### Agentur-Insights
-- Recruiting im Wandel
-
----
-
-## Technische SEO- und GEO-Daten
-
-- Sprache: Deutsch
-- Region: Wuppertal, NRW, Deutschland
-- Rechtsform: Kleinunternehmen nach §19 UStG
-- Technologie: React, TypeScript, Tailwind CSS, Vite
-- Hosting: Netlify/Vercel mit globalem CDN
-- robots.txt: erlaubt alle gängigen AI-Crawler (GPTBot, OAI-SearchBot, ClaudeBot, Claude-SearchBot, CCBot, PerplexityBot, Perplexity-User, Google-Extended, cohere-ai, Bytespider, Applebot-Extended)
-- Schema Markup: Article, FAQPage, BreadcrumbList, Organization, LocalBusiness, Service, CollectionPage
 - llms.txt: https://tnt-studio.de/llms.txt
+- llms-full.txt: https://tnt-studio.de/.well-known/llms-full.txt
 - Sitemap: https://tnt-studio.de/sitemap.xml
-- Lighthouse Score: 95+
-- LCP: < 1 Sekunde
+- robots.txt: https://tnt-studio.de/robots.txt

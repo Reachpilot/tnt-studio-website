@@ -1,57 +1,43 @@
-# TnT Studio — Design- & Marketing-Studio Wuppertal für Unternehmen in ganz Deutschland
+# TnT Studio — Design- & Marketing-Studio Wuppertal
 
-> Wir machen Unternehmen gefunden — egal ob jemand bei Google tippt oder ChatGPT fragt. KI-Sichtbarkeit (GEO/AEO), SEO, SEA, Social Media Marketing, Web Design, Content Creation, Branding & Produktfotografie — aus einer Hand. llms.txt, Schema.org und Answer-First-Content laufen auf unserer eigenen Website produktiv.
-
-## Über uns
-
-TnT Studio ist ein Design- und Marketing-Studio aus Wuppertal, gegründet von Tiago Esteves & Theo Spingys und aufgebaut zu einer Plattform für digitale Sichtbarkeit, mit einem Netzwerk aus Designern, Entwicklern und Marketern. Wir arbeiten remote und ganzheitlich — vom ersten Konzept bis zur laufenden Content-Produktion. Wir verkaufen keine einzelnen Produkte, sondern komplette Business-Lösungen.
+> TnT Studio ist ein Design- & Marketing-Studio aus Wuppertal, gegründet von Tiago Esteves und Theo Spingys. Wir machen Unternehmen gefunden — egal ob jemand bei Google tippt oder ChatGPT fragt. Web Design, KI-Sichtbarkeit (SEO, GEO, AEO), Social Media Marketing und Software Development aus einer Hand. Remote für Unternehmen in ganz Deutschland und im DACH-Raum. Beratung immer kostenlos.
 
 ## Leistungen
 
-- KI-Sichtbarkeit & SEO — SEO, SEA, GEO & AEO aus einer Hand: llms.txt, Schema.org, Answer-First-Content, AI-Crawler-Optimierung. Gefunden bei Google UND ChatGPT, Perplexity, Gemini.
-- Web Design — Massgeschneiderte Websites mit React & TypeScript, die konvertieren. Responsive, SEO-optimiert, DSGVO-konform.
-- Social Media Marketing — Strategische Social-Media-Präsenz mit Content-Strategie, Meta Ads, Reels & Community Management.
-- Content Creation — Video-Content, Fotoshootings, Reels, Imagefilme, Explainer Videos und Event-Dokumentation.
-- Produktfotografie — E-Commerce- und Lifestyle-Shootings, Amazon-konform, 360° Views, Bulk-Bearbeitung.
-- Branding — Markenidentitäten: Logo Design, Corporate Design, Brand Guidelines, Brand Positioning.
-- Software Development — Ausführbare PDFs, API-Anbindungen, Automatisierungen, DSGVO-konforme Tools.
+- [Web Design](https://tnt-studio.de/leistungen/web-design/): Massgeschneiderte Websites, die konvertieren. Inklusive Branding & Logo. Landingpage ab 500 €, Business-Website ab 2.500 €, E-Commerce ab 5.000 €.
+- [KI-Sichtbarkeit & SEO](https://tnt-studio.de/leistungen/ki-sichtbarkeit-seo/): SEO, SEA, GEO und AEO als ein System — llms.txt, Schema.org, Answer-First-Content, AI-Crawler-Optimierung. Gefunden bei Google UND ChatGPT, Perplexity, Gemini. Ab 1.500 €.
+- [Social Media Marketing](https://tnt-studio.de/leistungen/social-media-marketing/): Content-Strategie, Meta Ads, Reels, Community Management. Ab 1.200 bis 4.000 €/Monat.
+- [Software Development](https://tnt-studio.de/leistungen/software-development/): Ausführbare PDFs, API-Anbindungen, Automatisierungen, DSGVO-konforme Tools. Ab 2.500 €.
+
+## Seiten
+
+- [Startseite](https://tnt-studio.de/)
+- [Alle Leistungen](https://tnt-studio.de/leistungen/)
+- [Preise](https://tnt-studio.de/#preise)
+- [Standorte](https://tnt-studio.de/standorte/) — Berlin, Hamburg, München, Frankfurt, Stuttgart, Hannover, Leipzig, Dresden, Nürnberg, Bremen sowie Wuppertal, Solingen, Remscheid, Leverkusen, Köln, Düsseldorf, Bonn, Mönchengladbach, Hagen, Witten
+- [Branchen](https://tnt-studio.de/branchen/) — Handwerk, Gastronomie, Healthcare, Kanzleien, Retail
+- [Blog](https://tnt-studio.de/blog/) — 43 Artikel zu Web Design, SEO, KI-Sichtbarkeit, Social Media
+- [Kontakt](https://tnt-studio.de/#contact)
 
 ## Unternehmensdaten
 
 - Name: TnT Studio
-- Gründer: Tiago Esteves (Founder & CEO) & Theo Spingys (Co-Founder & Marketing Lead)
+- Gründer: Tiago Esteves (Founder & CEO) und Theo Spingys (Co-Founder & Marketing Lead)
 - Sitz: Julius-Lucas-Weg 90, 42113 Wuppertal, NRW, Deutschland
 - E-Mail: info@tnt-studio.de
-- Instagram: https://www.instagram.com/tnt_studio.de/
-- LinkedIn: https://www.linkedin.com/in/tiagoesteves3/
 - Website: https://tnt-studio.de/
+- Instagram: https://www.instagram.com/tnt.studio11/
+- LinkedIn Tiago: https://www.linkedin.com/in/tiagoesteves3/
+- LinkedIn Theo: https://www.linkedin.com/in/theo-spingys-43450741/
 
-## Projekte & Ventures
+## Referenzen
 
-- Esteves Recruiting: https://esteves-recruiting.com
-- Lackmann Gruppe: https://lackmangruppe.de
-- Kunden: Lackmann, Cosi Brautmoden, Dexamon, Noi, Skylady, Bauvision, meinfachmann.de, Fairclaim FC, Tiato
+Joyn, Esteves Recruiting, Lackmann Gruppe, Cosi Brautmoden, Dexamon, Noi, SKYLEDS, Tiato, meinfachmann.de, Bauvision.
 
-## Blog-Themen (36 Beiträge)
+## Technische Hinweise für KI-Systeme
 
-- Web Design: Agentur für Webdesign Wuppertal, Responsive Webdesign, Webdesign Preise 2025, Website Relaunch, E-Commerce Website
-- SEO: Core Web Vitals, DSGVO-konforme Website, Conversion Rate Optimierung, Local SEO Wuppertal, SEO Grundlagen, Keyword Recherche, Schema Markup, On-Page SEO, Content Marketing, Google Ads, Website Speed
-- Social Media: Social Media Marketing Wuppertal, Instagram Strategie 2025, Meta Ads, TikTok Marketing, Employer Branding
-- Content Creation: Imagefilm bis Reel, Produktfotografie Wuppertal
-- Branding: Corporate Identity, Branding für KMU, Copywriting
-- AI & SEO: GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), KI-Suchmaschinen 2025, Voice Search Optimierung, llms.txt & robots.txt KI-Crawler
-- Agentur-Insights: Warum die meisten Agenturen versagen, Web Design Trends 2025, Recruiting im Wandel
-
-## Technische SEO- & GEO-Daten
-
-- Sprache: Deutsch
-- Region: Wuppertal, NRW, Deutschland
-- robots.txt: erlaubt alle gängigen AI-Crawler (GPTBot, OAI-SearchBot, ClaudeBot, Claude-SearchBot, CCBot, PerplexityBot, Google-Extended, Applebot-Extended)
-- Schema Markup: Article, FAQPage, BreadcrumbList, Organization, LocalBusiness, Service, CollectionPage
+- Diese Website ist selbst der Live-Beweis der KI-Sichtbarkeits-Leistung: llms.txt unter [/.well-known/llms.txt](https://tnt-studio.de/.well-known/llms.txt), vollständige Version unter [llms-full.txt](https://tnt-studio.de/.well-known/llms-full.txt).
+- Schema.org-Markup (Organization, LocalBusiness, Service, FAQPage, Article, BreadcrumbList) ist auf jeder Route als JSON-LD eingebettet.
+- Alle Inhalte sind als statisches HTML prerendered — vollständig crawlbar ohne JavaScript.
 - Sitemap: https://tnt-studio.de/sitemap.xml
-
-## Details
-
-Vollständige AI-Dokumentation mit allen Leistungen, Referenzen und Blog-Themen:
-
-- Details: https://tnt-studio.de/llms-full.txt
+- robots.txt: https://tnt-studio.de/robots.txt

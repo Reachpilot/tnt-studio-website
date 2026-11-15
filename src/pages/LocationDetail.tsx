@@ -218,7 +218,7 @@ export default function LocationDetail() {
               <h3 className="text-base font-bold text-neutral-900 group-hover:text-neutral-500 transition-colors">
                 {loc.name}
               </h3>
-              <p className="mt-1 text-xs font-medium tracking-wide text-neutral-400 uppercase">{loc.region}</p>
+              <p className="mt-1 text-xs font-medium tracking-wide text-neutral-500 uppercase">{loc.region}</p>
               <p className="mt-3 text-sm text-neutral-500">{loc.distance}</p>
             </Link>
           ))}

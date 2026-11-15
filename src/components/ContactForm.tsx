@@ -187,7 +187,7 @@ export default function ContactForm() {
               </div>
               <span
                 className={`ml-2 hidden text-xs font-semibold sm:inline ${
-                  i <= step ? 'text-neutral-900' : 'text-neutral-400'
+                  i <= step ? 'text-neutral-900' : 'text-neutral-500'
                 }`}
               >
                 {label}
@@ -218,7 +218,7 @@ export default function ContactForm() {
                   value={data.name}
                   onChange={(e) => update('name', e.target.value)}
                   placeholder="Max Mustermann"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
                 />
                 {touched[0] && data.name.trim().length < 2 && (
                   <p className="mt-1.5 text-xs text-red-500">Bitte gib deinen Namen ein.</p>
@@ -232,7 +232,7 @@ export default function ContactForm() {
                   value={data.email}
                   onChange={(e) => update('email', e.target.value)}
                   placeholder="max@firma.de"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
                 />
                 {touched[0] && !validateEmail(data.email) && (
                   <p className="mt-1.5 text-xs text-red-500">Gültige E-Mail-Adresse erforderlich.</p>
@@ -246,7 +246,7 @@ export default function ContactForm() {
                   value={data.phone}
                   onChange={(e) => update('phone', e.target.value)}
                   placeholder="+49 123 456789"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
                 />
               </div>
               <div>
@@ -257,7 +257,7 @@ export default function ContactForm() {
                   value={data.company}
                   onChange={(e) => update('company', e.target.value)}
                   placeholder="Musterfirma GmbH"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
                 />
               </div>
             </div>
@@ -269,7 +269,7 @@ export default function ContactForm() {
                 value={data.website}
                 onChange={(e) => update('website', e.target.value)}
                 placeholder="https://..."
-                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
               />
             </div>
           </div>
@@ -410,14 +410,14 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-neutral-700">Details <span className="font-normal text-neutral-400">(optional)</span></label>
+              <label className="mb-1.5 block text-sm font-semibold text-neutral-700">Details <span className="font-normal text-neutral-500">(optional)</span></label>
               <textarea
                 name="message"
                 value={data.message}
                 onChange={(e) => update('message', e.target.value)}
                 placeholder="Worum geht es konkret? Link zur bestehenden Website? Besondere Wünsche?"
                 rows={3}
-                className="w-full resize-none rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                className="w-full resize-none rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
               />
             </div>
 
@@ -445,18 +445,18 @@ export default function ContactForm() {
             <p className="-mt-2 text-sm text-neutral-500">Prüfe deine Angaben. Ein Klick öffnet WhatsApp mit deiner fertigen Nachricht.</p>
             <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5 text-sm">
               <div className="grid gap-3 sm:grid-cols-2">
-                <div><span className="text-neutral-400">Name:</span> <span className="font-medium text-neutral-900">{data.name}</span></div>
-                <div><span className="text-neutral-400">E-Mail:</span> <span className="font-medium text-neutral-900">{data.email}</span></div>
-                <div><span className="text-neutral-400">Telefon:</span> <span className="font-medium text-neutral-900">{data.phone || 'k. A.'}</span></div>
-                <div><span className="text-neutral-400">Firma:</span> <span className="font-medium text-neutral-900">{data.company || 'k. A.'}</span></div>
-                <div className="sm:col-span-2"><span className="text-neutral-400">Leistungen:</span> <span className="font-medium text-neutral-900">{data.service.join(', ')}</span></div>
-                <div className="sm:col-span-2"><span className="text-neutral-400">Ziel:</span> <span className="font-medium text-neutral-900">{data.goals.join(', ') || 's. Details'}</span></div>
-                <div><span className="text-neutral-400">Budget:</span> <span className="font-medium text-neutral-900">{data.budget}</span></div>
-                <div><span className="text-neutral-400">Zeitrahmen:</span> <span className="font-medium text-neutral-900">{data.timeline || 'Sofort / unklar'}</span></div>
+                <div><span className="text-neutral-500">Name:</span> <span className="font-medium text-neutral-900">{data.name}</span></div>
+                <div><span className="text-neutral-500">E-Mail:</span> <span className="font-medium text-neutral-900">{data.email}</span></div>
+                <div><span className="text-neutral-500">Telefon:</span> <span className="font-medium text-neutral-900">{data.phone || 'k. A.'}</span></div>
+                <div><span className="text-neutral-500">Firma:</span> <span className="font-medium text-neutral-900">{data.company || 'k. A.'}</span></div>
+                <div className="sm:col-span-2"><span className="text-neutral-500">Leistungen:</span> <span className="font-medium text-neutral-900">{data.service.join(', ')}</span></div>
+                <div className="sm:col-span-2"><span className="text-neutral-500">Ziel:</span> <span className="font-medium text-neutral-900">{data.goals.join(', ') || 's. Details'}</span></div>
+                <div><span className="text-neutral-500">Budget:</span> <span className="font-medium text-neutral-900">{data.budget}</span></div>
+                <div><span className="text-neutral-500">Zeitrahmen:</span> <span className="font-medium text-neutral-900">{data.timeline || 'Sofort / unklar'}</span></div>
               </div>
               {data.message.trim() && (
                 <div className="mt-4 border-t border-neutral-200 pt-4">
-                  <span className="text-neutral-400">Details:</span>
+                  <span className="text-neutral-500">Details:</span>
                   <p className="mt-1 font-medium text-neutral-900">{data.message}</p>
                 </div>
               )}

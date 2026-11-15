@@ -7,7 +7,7 @@ export default function Founders() {
           <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
             Wir sind die Gründer.
             <br />
-            <span className="text-neutral-400">Keine Account-Manager. Keine Weitergabe.</span>
+            <span className="text-neutral-500">Keine Account-Manager. Keine Weitergabe.</span>
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-500 sm:text-lg">
             Mit 15 haben wir gelernt: Agenturen reden viel, liefern wenig.

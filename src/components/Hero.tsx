@@ -18,13 +18,13 @@ export default function Hero() {
               Für den Mittelstand im DACH · Remote aus Wuppertal
             </div>
 
-            <h1 className="animate-fade-up text-balance text-[2.75rem] font-black leading-[0.98] tracking-tighter text-white sm:text-6xl xl:text-[4.5rem]" style={{ animationDelay: '0.1s' }}>
+            <h1 className="animate-fade-up text-balance text-[2.75rem] font-black leading-[0.98] tracking-tighter text-white sm:text-6xl xl:text-[4.5rem]" style={{ animationDelay: '0s' }}>
               Wir machen Sie
               <br />
               <span className="bg-gradient-to-r from-neutral-200 via-white to-neutral-400 bg-clip-text text-transparent">gefunden.</span>
             </h1>
 
-            <p className="mt-6 max-w-xl animate-fade-up text-pretty text-base leading-relaxed text-neutral-400 sm:text-lg" style={{ animationDelay: '0.2s' }}>
+            <p className="mt-6 max-w-xl animate-fade-up text-pretty text-base leading-relaxed text-neutral-400 sm:text-lg" style={{ animationDelay: '0.05s' }}>
               Egal ob jemand bei <span className="font-semibold text-white">Google tippt</span> oder{' '}
               <span className="font-semibold text-white">ChatGPT fragt</span>, TnT Studio verbindet
               Web, SEO, Social Media und KI-Sichtbarkeit zu einem System,

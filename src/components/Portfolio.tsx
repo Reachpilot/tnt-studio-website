@@ -1,4 +1,53 @@
+import { useEffect, useRef, useState } from 'react'
 import { portfolioItems } from '../data/portfolio'
+
+function LazyVideo({ src, poster, width, height }: { src: string; poster: string; width?: number; height?: number }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [inView, setInView] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '300px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div ref={ref} className="w-full">
+      {inView ? (
+        <video
+          src={src}
+          className="w-full rounded-2xl"
+          poster={poster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+        />
+      ) : (
+        <img
+          src={poster}
+          alt=""
+          className="w-full rounded-2xl"
+          width={width}
+          height={height}
+          loading="lazy"
+          decoding="async"
+        />
+      )}
+    </div>
+  )
+}
 
 export default function Portfolio() {
   return (
@@ -11,7 +60,7 @@ export default function Portfolio() {
               Referenzen, die für sich sprechen.
             </h2>
           </div>
-          <p className="max-w-sm text-sm text-neutral-500">
+          <p className="max-w-sm text-sm text-neutral-600">
             Von Autohäusern über Brautmoden bis hin zu Kunden mit neunstelligen Jahresumsätzen —
             wir liefern Ergebnisse, die zählen.
           </p>
@@ -24,28 +73,21 @@ export default function Portfolio() {
               className="group relative mb-3 break-inside-avoid overflow-hidden rounded-2xl bg-neutral-100 shadow-sm transition-all hover:shadow-xl sm:mb-4"
             >
               {item.mediaType === 'video' && item.videoSrc ? (
-                <video
-                  src={item.videoSrc}
-                  className="w-full rounded-2xl"
-                  poster={item.image}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                />
+                <LazyVideo src={item.videoSrc} poster={item.image} width={item.width} height={item.height} />
               ) : (
                 <img
                   src={item.image}
                   alt={item.brand}
                   className="w-full rounded-2xl"
+                  width={item.width}
+                  height={item.height}
                   loading="lazy"
                   decoding="async"
                 />
               )}
               <figcaption className="p-3">
                 <p className="text-sm font-bold text-neutral-900">{item.brand}</p>
-                <p className="text-xs text-neutral-500">{item.service}</p>
+                <p className="text-xs text-neutral-600">{item.service}</p>
               </figcaption>
             </figure>
           ))}

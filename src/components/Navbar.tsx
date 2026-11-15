@@ -254,7 +254,7 @@ export default function Navbar() {
                 <>
                   <span>{l.label}</span>
                   <svg
-                    className={`h-5 w-5 transition-all duration-300 ${isLinkActive ? 'text-white' : 'text-neutral-400 opacity-0 group-hover:opacity-100'} ${menuOpen ? 'translate-x-0' : '-translate-x-2'}`}
+                    className={`h-5 w-5 transition-all duration-300 ${isLinkActive ? 'text-white' : 'text-neutral-500 opacity-0 group-hover:opacity-100'} ${menuOpen ? 'translate-x-0' : '-translate-x-2'}`}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -305,7 +305,7 @@ export default function Navbar() {
             </svg>
           </a>
           <p
-            className="mt-4 text-center text-xs text-neutral-400"
+            className="mt-4 text-center text-xs text-neutral-500"
             style={{
               transitionDelay: menuOpen ? `${links.length * 60 + 220}ms` : '0ms',
               opacity: menuOpen ? 1 : 0,

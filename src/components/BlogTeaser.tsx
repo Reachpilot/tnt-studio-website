@@ -45,7 +45,7 @@ export default function BlogTeaser() {
                 {post.title}
               </h3>
               <p className="mb-6 flex-1 text-sm leading-relaxed text-neutral-500">{post.excerpt}</p>
-              <div className="flex items-center justify-between text-xs text-neutral-400">
+              <div className="flex items-center justify-between text-xs text-neutral-500">
                 <span className="font-medium text-neutral-700">{post.author}</span>
                 <span>{post.readingTime}</span>
               </div>

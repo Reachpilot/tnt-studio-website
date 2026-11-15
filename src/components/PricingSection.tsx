@@ -51,7 +51,7 @@ export default function PricingSection() {
             <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
               Transparente Preise.
               <br />
-              <span className="text-neutral-400">Keine Überraschungen.</span>
+              <span className="text-neutral-500">Keine Überraschungen.</span>
             </h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-neutral-500 lg:text-base">

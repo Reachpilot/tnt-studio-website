@@ -1,0 +1,46 @@
+{
+  "name": "TnT Studio",
+  "description": "Design- & Marketing-Studio aus Wuppertal. Web Design, KI-Sichtbarkeit (SEO, GEO, AEO), Social Media Marketing und Software Development für Unternehmen in ganz Deutschland.",
+  "url": "https://tnt-studio.de/",
+  "provider": {
+    "name": "TnT Studio",
+    "url": "https://tnt-studio.de/"
+  },
+  "resources": [
+    {
+      "type": "website",
+      "url": "https://tnt-studio.de/",
+      "name": "TnT Studio — Web Design & KI-Sichtbarkeit"
+    },
+    {
+      "type": "service",
+      "url": "https://tnt-studio.de/leistungen/web-design/",
+      "name": "Web Design inkl. Branding"
+    },
+    {
+      "type": "service",
+      "url": "https://tnt-studio.de/leistungen/ki-sichtbarkeit-seo/",
+      "name": "KI-Sichtbarkeit & SEO (GEO, AEO)"
+    },
+    {
+      "type": "service",
+      "url": "https://tnt-studio.de/leistungen/social-media-marketing/",
+      "name": "Social Media Marketing"
+    },
+    {
+      "type": "service",
+      "url": "https://tnt-studio.de/leistungen/software-development/",
+      "name": "Software Development"
+    },
+    {
+      "type": "llms",
+      "url": "https://tnt-studio.de/llms.txt",
+      "name": "llms.txt"
+    },
+    {
+      "type": "sitemap",
+      "url": "https://tnt-studio.de/sitemap.xml",
+      "name": "XML Sitemap"
+    }
+  ]
+}

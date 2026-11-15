@@ -56,7 +56,7 @@ export default function LocationList() {
                   <h2 className="text-xl font-black text-neutral-900 group-hover:text-neutral-500 transition-colors">
                     {loc.name}
                   </h2>
-                  <p className="mt-1 text-xs font-semibold tracking-widest text-neutral-400 uppercase">
+                  <p className="mt-1 text-xs font-semibold tracking-widest text-neutral-500 uppercase">
                     {loc.region}
                   </p>
                 </div>

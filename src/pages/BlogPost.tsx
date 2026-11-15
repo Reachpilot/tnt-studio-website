@@ -156,7 +156,7 @@ export default function BlogPost() {
           {post.title}
         </h1>
 
-        <div className="mt-6 flex items-center gap-4 text-sm text-neutral-400">
+        <div className="mt-6 flex items-center gap-4 text-sm text-neutral-500">
           <span className="font-medium text-neutral-700">{post.author}</span>
           <span>·</span>
           <span>{new Date(post.date).toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })}</span>

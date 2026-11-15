@@ -199,7 +199,7 @@ export default function ServiceDetail() {
           <div className="mt-6 inline-flex items-center gap-3 rounded-full border border-neutral-200 bg-white px-5 py-2.5 shadow-sm">
             <span className="text-xs font-bold tracking-widest text-neutral-500 uppercase">Preis</span>
             <span className="text-lg font-black text-neutral-900">{priceMap[service.title]}</span>
-            <span className="text-xs text-neutral-400">Festpreis nach Check</span>
+            <span className="text-xs text-neutral-500">Festpreis nach Check</span>
           </div>
         )}
 

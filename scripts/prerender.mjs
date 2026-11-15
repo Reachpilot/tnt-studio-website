@@ -457,5 +457,6 @@ await fs.writeFile(path.join(__dirname, '../dist/sitemap.xml'), sitemap)
 await fs.mkdir(path.join(__dirname, '../dist/.well-known'), { recursive: true })
 await fs.copyFile(path.join(__dirname, '../public/llms.txt'), path.join(__dirname, '../dist/.well-known/llms.txt'))
 await fs.copyFile(path.join(__dirname, '../public/llms-full.txt'), path.join(__dirname, '../dist/.well-known/llms-full.txt'))
+await fs.copyFile(path.join(__dirname, '../public/ai-catalog.json'), path.join(__dirname, '../dist/.well-known/ai-catalog.json'))
 
 console.log(`Prerendered ${routes.length} routes into dist/`)
