@@ -3,23 +3,23 @@ import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { services } from '../data/services'
 import { blogPosts } from '../data/blog'
+import { serviceIcons } from '../components/serviceIcons'
 
-const iconMap: Record<string, string> = {
-  code: 'M10 20l4-16m4 4l4 4-4 4M6 8l-4 4 4 4',
-  social: 'M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M21 3H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z',
-  video: 'M23 7l-7 5 7 5V7zM1 5h15v14H1z',
-  camera: 'M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z',
-  palette: 'M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.5-.7 1.5-1.5 0-.4-.2-.8-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16c3.3 0 6-2.7 6-6 0-5-4.5-8-10-8z',
-  terminal: 'M4 17l6-6-6-6M12 19h8',
-}
 
 const colorMap: Record<string, { bg: string; text: string }> = {
-  code: { bg: 'bg-indigo-500', text: 'text-indigo-600' },
-  social: { bg: 'bg-rose-500', text: 'text-rose-600' },
-  video: { bg: 'bg-purple-500', text: 'text-purple-600' },
-  camera: { bg: 'bg-amber-500', text: 'text-amber-600' },
-  palette: { bg: 'bg-emerald-500', text: 'text-emerald-600' },
-  terminal: { bg: 'bg-cyan-500', text: 'text-cyan-600' },
+  code: { bg: 'bg-neutral-1000', text: 'text-neutral-900' },
+  social: { bg: 'bg-neutral-300', text: 'text-neutral-300' },
+  video: { bg: 'bg-neutral-300', text: 'text-neutral-300' },
+  camera: { bg: 'bg-neutral-300', text: 'text-neutral-300' },
+  palette: { bg: 'bg-neutral-400', text: 'text-neutral-400' },
+  terminal: { bg: 'bg-neutral-300', text: 'text-neutral-300' },
+}
+
+const priceMap: Record<string, string> = {
+  'Web Design': 'ab 500 €',
+  'KI-Sichtbarkeit & SEO': 'ab 1.500 €',
+  'Social Media Marketing': 'ab 1.200 €/Monat',
+  'Software Development': 'ab 2.500 €',
 }
 
 const slugify = (title: string) =>
@@ -125,8 +125,8 @@ export default function ServiceDetail() {
   const colors = colorMap[service.icon] || colorMap.code
   const otherServices = services.filter((s) => s.title !== service.title).slice(0, 3)
   const canonical = `https://tnt-studio.de/leistungen/${slugify(service.title)}/`
-  const metaTitle = service.metaTitle || `${service.title} — TnT Studio | Medienagentur Wuppertal`
-  const metaDescription = service.metaDescription || `${service.description} TnT Studio — Medienagentur in Wuppertal. Jetzt kostenlos beraten lassen.`
+  const metaTitle = service.metaTitle || `${service.title}, TnT Studio | Medienagentur Wuppertal`
+  const metaDescription = service.metaDescription || `${service.description} TnT Studio, Medienagentur in Wuppertal. Jetzt kostenlos beraten lassen.`
 
   const categoryMap: Record<string, string[]> = {
     'Web Design': ['Web Design', 'SEO'],
@@ -184,8 +184,8 @@ export default function ServiceDetail() {
 
         {/* Hero */}
         <div className={`mb-8 flex h-16 w-16 items-center justify-center rounded-2xl ${colors.bg} text-white`}>
-          <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d={iconMap[service.icon] || iconMap.code} />
+          <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+            {serviceIcons[service.icon] || serviceIcons.code}
           </svg>
         </div>
 
@@ -195,6 +195,13 @@ export default function ServiceDetail() {
         <p className="mt-6 text-xl leading-relaxed text-neutral-500">
           {service.description}
         </p>
+        {priceMap[service.title] && (
+          <div className="mt-6 inline-flex items-center gap-3 rounded-full border border-neutral-200 bg-white px-5 py-2.5 shadow-sm">
+            <span className="text-xs font-bold tracking-widest text-neutral-500 uppercase">Preis</span>
+            <span className="text-lg font-black text-neutral-900">{priceMap[service.title]}</span>
+            <span className="text-xs text-neutral-400">Festpreis nach Check</span>
+          </div>
+        )}
 
         {/* Long description */}
         <div className="mt-12 rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10">
@@ -232,7 +239,7 @@ export default function ServiceDetail() {
 
         {/* Process */}
         <h2 className="mt-16 text-3xl font-black tracking-tight text-neutral-900">Unser Prozess</h2>
-        <p className="mt-3 text-neutral-500">So arbeiten wir — transparent, strukturiert, ergebnisorientiert.</p>
+        <p className="mt-3 text-neutral-500">So arbeiten wir, transparent, strukturiert, ergebnisorientiert.</p>
         <div className="mt-8 space-y-4">
           {service.process.map((step, i) => (
             <div key={step.title} className="flex gap-6 rounded-2xl border border-neutral-200 bg-white p-6">
@@ -259,7 +266,7 @@ export default function ServiceDetail() {
                     <div className="w-full overflow-hidden bg-neutral-50 p-4">
                       <img
                         src={cs.image}
-                        alt={`${cs.client} — ${cs.result}`}
+                        alt={`${cs.client}, ${cs.result}`}
                         className="mx-auto max-h-[400px] w-full object-contain transition-transform duration-700 hover:scale-105"
                         loading="lazy"
                         decoding="async"
@@ -267,7 +274,7 @@ export default function ServiceDetail() {
                     </div>
                   )}
                   <div className="p-6">
-                    <p className="text-sm font-semibold text-indigo-600">{cs.client}</p>
+                    <p className="text-sm font-semibold text-neutral-900">{cs.client}</p>
                     <h3 className="mt-2 text-lg font-bold text-neutral-900">{cs.result}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-neutral-500">{cs.description}</p>
                   </div>
@@ -309,11 +316,11 @@ export default function ServiceDetail() {
                 className="group rounded-2xl border border-neutral-200 bg-white p-6 transition-all hover:shadow-lg hover:border-neutral-900"
               >
                 <div className={`mb-4 flex h-10 w-10 items-center justify-center rounded-xl ${sColors.bg} text-white`}>
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d={iconMap[s.icon] || iconMap.code} />
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                    {serviceIcons[s.icon] || serviceIcons.code}
                   </svg>
                 </div>
-                <h3 className="text-base font-bold text-neutral-900 group-hover:text-indigo-600 transition-colors">{s.title}</h3>
+                <h3 className="text-base font-bold text-neutral-900 group-hover:text-neutral-500 transition-colors">{s.title}</h3>
                 <p className="mt-2 text-sm text-neutral-500">{s.description}</p>
               </Link>
             )
@@ -336,7 +343,7 @@ export default function ServiceDetail() {
                     <span className="text-2xl">{r.emoji}</span>
                     <span className="text-xs font-semibold text-neutral-500">{r.category}</span>
                   </div>
-                  <h3 className="text-base font-bold text-neutral-900 group-hover:text-indigo-600 transition-colors">
+                  <h3 className="text-base font-bold text-neutral-900 group-hover:text-neutral-500 transition-colors">
                     {r.title}
                   </h3>
                   <p className="mt-2 text-sm text-neutral-500">{r.readingTime} Lesezeit</p>

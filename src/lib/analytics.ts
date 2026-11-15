@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// TnT Studio — Consent-basiertes Tracking (GA4 + Meta Pixel)
+// TnT Studio, Consent-basiertes Tracking (GA4 + Meta Pixel)
 // Tracking-IDs hier eintragen. Solange ein Feld leer ist, wird der
 // jeweilige Dienst nicht geladen und alle Events sind No-Ops.
 // ------------------------------------------------------------------
@@ -78,7 +78,7 @@ export function trackMetaEvent(name: string, params?: Record<string, unknown>) {
   window.fbq('track', name, params)
 }
 
-// Meta Pixel hat kein Auto-Tracking für SPA-Routenwechsel — wird von
+// Meta Pixel hat kein Auto-Tracking für SPA-Routenwechsel, wird von
 // RouteTracker bei jedem clientseitigen Navigationswechsel gefeuert.
 // GA4 deckt das über "Erweiterte Messung → Seitenaufrufe bei
 // Browser-Verlaufsereignissen" (standardmäßig aktiv) ab.

@@ -14,7 +14,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
       >
         <span className="text-base font-semibold text-neutral-900">{question}</span>
         <svg
-          className={`h-5 w-5 shrink-0 text-indigo-500 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -107,14 +107,14 @@ export default function BlogPost() {
   return (
     <div className="pt-32 pb-24">
       <Helmet>
-        <title>{`${post.title} — TnT Studio Blog`}</title>
+        <title>{`${post.title}, TnT Studio Blog`}</title>
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonical} />
-        <meta property="og:title" content={`${post.title} — TnT Studio Blog`} />
+        <meta property="og:title" content={`${post.title}, TnT Studio Blog`} />
         <meta property="og:description" content={post.excerpt} />
-        <meta name="twitter:title" content={`${post.title} — TnT Studio Blog`} />
+        <meta name="twitter:title" content={`${post.title}, TnT Studio Blog`} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta property="og:image" content="https://tnt-studio.de/og-image.webp" />
         <meta name="twitter:image" content="https://tnt-studio.de/og-image.webp" />
@@ -147,7 +147,7 @@ export default function BlogPost() {
 
         <div className="mb-6 flex items-center gap-3">
           <span className="text-4xl">{post.emoji}</span>
-          <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold text-indigo-700">
+          <span className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-700">
             {post.category}
           </span>
         </div>
@@ -164,7 +164,7 @@ export default function BlogPost() {
           <span>{post.readingTime} Lesezeit</span>
         </div>
 
-        <p className="mt-8 text-xl leading-relaxed text-neutral-600 border-l-4 border-indigo-500 pl-6 italic">
+        <p className="mt-8 text-xl leading-relaxed text-neutral-600 border-l-4 border-neutral-900 pl-6 italic">
           {post.excerpt}
         </p>
 
@@ -183,7 +183,7 @@ export default function BlogPost() {
                 <ul className="mt-4 space-y-3">
                   {section.list.map((item, k) => (
                     <li key={k} className="flex items-start gap-3 text-base text-neutral-600">
-                      <svg className="mt-1 h-5 w-5 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <svg className="mt-1 h-5 w-5 shrink-0 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                       {item}
@@ -244,7 +244,7 @@ export default function BlogPost() {
                     <span className="text-2xl">{r.emoji}</span>
                     <span className="text-xs font-semibold text-neutral-500">{r.category}</span>
                   </div>
-                  <h4 className="text-base font-bold text-neutral-900 group-hover:text-indigo-600 transition-colors">
+                  <h4 className="text-base font-bold text-neutral-900 group-hover:text-neutral-500 transition-colors">
                     {r.title}
                   </h4>
                   <p className="mt-2 text-sm text-neutral-500">{r.readingTime} Lesezeit</p>

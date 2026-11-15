@@ -1,8 +1,8 @@
-# TnT Studio — Vollständige AI-Dokumentation
+# TnT Studio — Design- & Marketing-Studio Wuppertal für Unternehmen in ganz Deutschland
 
 ## Kurzprofil
 
-**TnT Studio** ist eine Medienagentur aus Wuppertal, gegründet von Tiago Esteves und Theo Spingys. Das Studio bietet Web Design, Social Media Marketing, Content Creation, Produktfotografie, Branding und Software Development aus einer Hand an. Besonderheit: alle Leistungen werden remote und ganzheitlich abgedeckt — vom ersten Konzept bis zur laufenden Content-Produktion. Technologie: React, TypeScript, Tailwind CSS, Node.js. Hosting: Netlify/Vercel mit globalem CDN. DSGVO-konform.
+**TnT Studio** ist ein Design- und Marketing-Studio aus Wuppertal, gegründet von Tiago Esteves und Theo Spingys und aufgebaut zu einer Plattform für digitale Sichtbarkeit — mit einem Netzwerk aus Designern, Entwicklern und Marketern. Kernpositionierung: Wir machen Unternehmen gefunden — egal ob jemand bei Google tippt oder ChatGPT fragt. Das Studio bietet KI-Sichtbarkeit (GEO/AEO), SEO, SEA, Social Media Marketing, Web Design, Content Creation, Produktfotografie, Branding und Software Development aus einer Hand an. Besonderheit: alle Leistungen werden remote und ganzheitlich abgedeckt — vom ersten Konzept bis zur laufenden Content-Produktion. Technologie: React, TypeScript, Tailwind CSS, Node.js. Hosting: Netlify/Vercel mit globalem CDN. DSGVO-konform.
 
 ---
 
@@ -14,6 +14,9 @@
 ---
 
 ## Leistungen im Detail
+
+### KI-Sichtbarkeit & SEO (USP / Differentiator)
+SEO, SEA, GEO und AEO als ein System: llms.txt & llms-full.txt, Schema.org-Markup (Organization, LocalBusiness, Service, FAQPage, Article, BreadcrumbList), Answer-First-Content, AI-Crawler-Optimierung (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Claude-SearchBot, CCBot, Google-Extended), Entity-Konsistenz, klassisches OnPage-/OffPage-SEO, Google Ads & Meta Ads, Conversion-Tracking und First-Touch-Attribution. Zielsysteme: Google, ChatGPT, Perplexity, Gemini, Google AI Overviews. Diese Website ist selbst der Live-Beweis: llms.txt unter /.well-known/llms.txt, Schema.org auf jeder Route, 42+ Answer-First-Blogartikel.
 
 ### Web Design
 Massgeschneiderte Websites, die nicht nur gut aussehen, sondern konvertieren. Schwerpunkte: Custom Development mit React & TypeScript, Responsive Design, E-Commerce, UI/UX Design, Performance-Optimierung (LCP < 1s, Lighthouse 95+), SEO-Grundlagen (semantisches HTML, Schema Markup, Sitemap), Headless CMS-Integration (Sanity, Strapi, Decap) und Conversion-Optimierung. Websites starten bei 2.500€.

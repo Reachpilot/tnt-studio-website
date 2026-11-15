@@ -4,8 +4,8 @@ import { locations } from '../data/locations'
 
 export default function LocationList() {
   const canonical = 'https://tnt-studio.de/standorte/'
-  const title = 'Standorte & Einzugsgebiet — TnT Studio Medienagentur'
-  const description = 'TnT Studio betreut Unternehmen in Wuppertal, Solingen, Remscheid, Leverkusen, Köln, Düsseldorf, Bonn, Mönchengladbach, Hagen und Witten — remote oder vor Ort.'
+  const title = 'Standorte & Einzugsgebiet, TnT Studio Medienagentur'
+  const description = 'TnT Studio betreut Unternehmen in Wuppertal, Solingen, Remscheid, Leverkusen, Köln, Düsseldorf, Bonn, Mönchengladbach, Hagen und Witten, remote oder vor Ort.'
 
   const breadcrumbSchema = JSON.stringify({
     '@context': 'https://schema.org',
@@ -35,12 +35,12 @@ export default function LocationList() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbSchema }} />
 
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
-        <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">Standorte</p>
+        <p className="mb-3 text-sm font-semibold tracking-widest text-neutral-500 uppercase">Standorte</p>
         <h1 className="text-balance text-4xl font-black tracking-tight text-neutral-900 sm:text-5xl">
           Wo wir arbeiten.
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-neutral-500">
-          TnT Studio ist im Bergischen Land zu Hause — und betreut Unternehmen in ganz NRW und darüber hinaus.
+          TnT Studio ist im Bergischen Land zu Hause, und betreut Unternehmen in ganz NRW und darüber hinaus.
           Remote ist Standard, vor Ort möglich.
         </p>
 
@@ -53,7 +53,7 @@ export default function LocationList() {
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h2 className="text-xl font-black text-neutral-900 group-hover:text-indigo-600 transition-colors">
+                  <h2 className="text-xl font-black text-neutral-900 group-hover:text-neutral-500 transition-colors">
                     {loc.name}
                   </h2>
                   <p className="mt-1 text-xs font-semibold tracking-widest text-neutral-400 uppercase">

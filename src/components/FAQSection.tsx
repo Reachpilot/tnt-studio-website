@@ -33,7 +33,7 @@ export default function FAQSection() {
       <div className="absolute inset-0 tnt-grid-bg opacity-30" />
       <div className="relative z-10 mx-auto max-w-4xl px-5 sm:px-6 lg:px-10">
         <div className="mb-10 text-center lg:mb-14">
-          <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">FAQ</p>
+          <p className="mb-3 text-sm font-semibold tracking-widest text-neutral-500 uppercase">FAQ</p>
           <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
             Häufige Fragen.
           </h2>

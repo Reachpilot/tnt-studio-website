@@ -6,7 +6,7 @@ export default function Portfolio() {
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
         <div className="mb-10 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end lg:mb-16">
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">Portfolio</p>
+            <p className="mb-3 text-sm font-semibold tracking-widest text-neutral-500 uppercase">Portfolio</p>
             <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
               Referenzen, die für sich sprechen.
             </h2>

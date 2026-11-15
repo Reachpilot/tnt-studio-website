@@ -5,13 +5,13 @@ export default function NotFound() {
   return (
     <>
       <Helmet>
-        <title>Seite nicht gefunden — TnT Studio</title>
+        <title>Seite nicht gefunden, TnT Studio</title>
         <meta name="description" content="Diese Seite existiert nicht. Zurück zur Startseite oder zum Blog." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <div className="flex min-h-screen items-center justify-center px-6">
         <div className="text-center">
-          <p className="text-sm font-semibold tracking-widest text-indigo-600 uppercase">404</p>
+          <p className="text-sm font-semibold tracking-widest text-neutral-500 uppercase">404</p>
           <h1 className="mt-2 text-4xl font-black text-neutral-900 sm:text-5xl">
             Seite nicht gefunden.
           </h1>

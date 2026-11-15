@@ -6,12 +6,12 @@ export default function LocalSEO() {
   return (
     <section id="wuppertal" className="relative overflow-hidden py-20 lg:py-32">
       <div className="absolute inset-0 tnt-grid-bg opacity-30" />
-      <div className="absolute -left-32 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-gradient-to-r from-indigo-100/20 to-transparent blur-3xl" />
+      <div className="absolute -left-32 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-gradient-to-r from-neutral-200/20 to-transparent blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">Standort</p>
+            <p className="mb-3 text-sm font-semibold tracking-widest text-neutral-500 uppercase">Standort</p>
             <h2 className="text-balance text-3xl font-black tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
               Medienagentur in Wuppertal.
               <br />
@@ -19,7 +19,7 @@ export default function LocalSEO() {
             </h2>
             <p className="mt-5 text-base leading-relaxed text-neutral-500 sm:text-lg">
               Wir sitzen in Wuppertal im Bergischen Land und betreuen Kunden vor Ort in Düsseldorf, Köln, Solingen,
-              Remscheid und ganz NRW — genauso wie remote in Deutschland, Europa und den USA.
+              Remscheid und ganz NRW, genauso wie remote in Deutschland, Europa und den USA.
             </p>
             <div className="mt-6 space-y-3 text-sm text-neutral-500">
               <p>
@@ -27,12 +27,12 @@ export default function LocalSEO() {
               </p>
               <p>
                 <strong className="text-neutral-900">E-Mail:</strong>{' '}
-                <a href="mailto:info@tnt-studio.de" className="text-indigo-600 hover:underline">
+                <a href="mailto:info@tnt-studio.de" className="text-neutral-900 hover:underline">
                   info@tnt-studio.de
                 </a>
               </p>
               <p>
-                <strong className="text-neutral-900">Erreichbarkeit:</strong> Mo–Fr, 09:00–18:00 Uhr
+                <strong className="text-neutral-900">Erreichbarkeit:</strong> Mo bis Fr, 09:00 bis 18:00 Uhr
               </p>
             </div>
             <a
@@ -75,7 +75,7 @@ export default function LocalSEO() {
               <div className="flex flex-wrap gap-2">
                 <Link
                   to="/standorte/"
-                  className="rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-semibold text-indigo-700 transition-colors hover:bg-indigo-100"
+                  className="rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 text-xs font-semibold text-neutral-700 transition-colors hover:bg-neutral-200"
                 >
                   Alle Standorte
                 </Link>
@@ -93,7 +93,7 @@ export default function LocalSEO() {
             <div className="mt-6 space-y-3">
               {servicesOffered.map((s) => (
                 <div key={s.name} className="flex items-start gap-3">
-                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-900">
                     <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>

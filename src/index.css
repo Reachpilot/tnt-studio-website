@@ -51,11 +51,11 @@
   }
 
   .tnt-accent {
-    background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+    background: linear-gradient(90deg, #ffffff, #a3a3a3, #ffffff);
   }
 
   .tnt-glow {
-    box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
   }
 
   .tnt-marquee {

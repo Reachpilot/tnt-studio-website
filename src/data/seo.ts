@@ -8,19 +8,19 @@ export interface FAQ {
 export const homeFAQs: FAQ[] = [
   {
     question: 'Was macht TnT Studio?',
-    answer: 'TnT Studio ist eine Medienagentur aus Wuppertal. Wir bieten Web Design, Social Media Marketing, Content Creation, Branding, Produktfotografie und Software Development aus einer Hand — und arbeiten dabei komplett remote für Kunden in Deutschland, Europa und den USA.',
+    answer: 'TnT Studio ist ein Design- und Marketing-Studio aus Wuppertal, gegründet von zwei Unternehmern und aufgebaut zu einer Plattform für digitale Sichtbarkeit. Wir machen Unternehmen gefunden, bei Google UND bei KI-Systemen wie ChatGPT, Perplexity und Gemini. Dafür verbinden wir KI-Sichtbarkeit (GEO/AEO), SEO/SEA, Social Media Marketing, Web Design (inkl. Branding), KI-Sichtbarkeit (GEO/AEO), SEO/SEA, Social Media Marketing und Software Development zu einem System, umgesetzt von Gründern und einem Netzwerk aus Designern, Entwicklern und Marketern. Ein fester Ansprechpartner, messbare Ergebnisse.'
   },
   {
     question: 'Für wen ist TnT Studio die richtige Agentur?',
-    answer: 'Für Unternehmen, Startups und Marken, die mehr wollen als einzelne Dienstleistungen. Wir verkaufen keine isolierten Produkte, sondern entwickeln ganzheitliche Business-Lösungen: von der Marke über die Website bis zum laufenden Content und Paid Social.',
+    answer: 'Für Unternehmen, Startups und Marken, die mehr wollen als einzelne Dienstleistungen. Wir verkaufen keine isolierten Produkte, sondern entwickeln ganzheitliche Business-Lösungen: von der Marke über die Website-zum laufenden Content und Paid Social.',
   },
   {
     question: 'Wie arbeitet TnT Studio mit Kunden zusammen?',
-    answer: 'Wir arbeiten remote — über Video-Calls, Figma, Slack und geteilte Projektboards. Das ist schneller, transparenter und effektiver als klassische Büro-Termine. Bei Bedarf kommen wir auch vor Ort in Wuppertal, Düsseldorf, Köln und dem gesamten Rheinland.',
+    answer: 'Wir arbeiten remote, über Video-Calls, Figma, Slack und geteilte Projektboards. Das ist schneller, transparenter und effektiver als klassische Büro-Termine. Bei Bedarf kommen wir auch vor Ort in Wuppertal, Düsseldorf, Köln und dem gesamten Rheinland.',
   },
   {
     question: 'Was kostet eine Website bei TnT Studio?',
-    answer: 'Projekt-Websites starten bei 2.500 €, E-Commerce-Plattformen ab 5.000 €, umfangreiche Softwarelösungen werden individell nach Aufwand kalkuliert. Jedes Projekt ist transparent — wir geben dir nach dem ersten kostenlosen Call ein Fixpreis-Angebot.',
+    answer: 'Projekt-Websites starten bei 2.500 €, E-Commerce-Plattformen ab 5.000 €, umfangreiche Softwarelösungen werden individell nach Aufwand kalkuliert. Jedes Projekt ist transparent, wir geben dir nach dem ersten kostenlosen Call ein Fixpreis-Angebot.',
   },
   {
     question: 'Wer sind die Gründer von TnT Studio?',
@@ -36,15 +36,15 @@ export const homeFAQs: FAQ[] = [
   },
   {
     question: 'Wie schnell ist eine neue Website online?',
-    answer: 'Eine typische Business-Website ist in 2–4 Wochen live. E-Commerce-Projekte dauern in der Regel 4–8 Wochen. Wir arbeiten mit klaren Meilensteinen, wöchentlichen Updates und einem strukturierten Launch-Prozess.',
+    answer: 'Eine typische Business-Website ist in 2 bis 4 Wochen live. E-Commerce-Projekte dauern in der Regel 4 bis 8 Wochen. Wir arbeiten mit klaren Meilensteinen, wöchentlichen Updates und einem strukturierten Launch-Prozess.',
   },
   {
     question: 'Was ist AEO und warum ist es wichtig?',
-    answer: 'AEO steht für Answer Engine Optimization. Wir strukturieren Inhalte so, dass Google, KI-Assistenten und Sprachsuche deine Antworten bevorzugen. Das bedeutet: klare FAQs, Schema Markup, semantisches HTML und lokal optimierte Inhalte.',
+    answer: 'AEO (Answer Engine Optimization) und GEO (Generative Engine Optimization) optimieren Ihre Website dafür, von Suchmaschinen UND KI-Systemen wie ChatGPT, Perplexity und Gemini empfohlen zu werden. Das bedeutet: llms.txt, Schema.org-Markup, Answer-First-Content, FAQs und semantisches HTML, bei TnT Studio Standard in jeder Website.'
   },
   {
     question: 'Kann ich Inhalte auf meiner Website selbst ändern?',
-    answer: 'Ja. Wir integrieren ein Headless CMS wie Sanity, Strapi oder Decap CMS. Damit kannst du Texte, Bilder und Blog-Beiträge selbst verwalten — ohne Programmierkenntnisse. Bei Bedarf schulen wir dein Team.',
+    answer: 'Ja. Wir integrieren ein Headless CMS wie Sanity, Strapi oder Decap CMS. Damit kannst du Texte, Bilder und Blog-Beiträge selbst verwalten, ohne Programmierkenntnisse. Bei Bedarf schulen wir dein Team.',
   },
 ]
 
@@ -71,20 +71,12 @@ export const servicesOffered = [
     description: 'Massgeschneiderte, conversion-optimierte Websites mit React, TypeScript und Tailwind CSS.',
   },
   {
+    name: 'KI-Sichtbarkeit & SEO',
+    description: 'SEO, SEA, GEO und AEO: Sichtbarkeit bei Google und KI-Systemen wie ChatGPT, Perplexity und Gemini.',
+  },
+  {
     name: 'Social Media Marketing',
     description: 'Strategie, Content-Produktion und Paid Social für Instagram, TikTok, LinkedIn und Meta.',
-  },
-  {
-    name: 'Content Creation',
-    description: 'Reels, Imagefilme, Produktvideos und Fotoshootings inklusive Schnitt und Color-Grading.',
-  },
-  {
-    name: 'Produktfotografie',
-    description: 'Professionelle Produktbilder für Online-Shops, Kataloge und Social Media.',
-  },
-  {
-    name: 'Branding',
-    description: 'Logos, Corporate Design, Markenstrategie und komplette Markenauftritte.',
   },
   {
     name: 'Software Development',

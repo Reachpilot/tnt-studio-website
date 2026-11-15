@@ -4,5 +4,5 @@ Disallow: /assets/
 
 Sitemap: https://tnt-studio.de/sitemap.xml
 
-# TnT Studio — Medienagentur Wuppertal
+# TnT Studio — Design- & Marketing-Studio Wuppertal für Unternehmen in ganz Deutschland
 # Crawl-Delay: 10

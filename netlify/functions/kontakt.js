@@ -36,6 +36,11 @@ function buildEmailHtml(d) {
     ['Leistungen', Array.isArray(d.service) ? d.service.join(', ') : d.service],
     ['Budget', d.budget],
     ['Zeitrahmen', d.timeline],
+    ['Quelle', d.utm_source],
+    ['Kampagne', d.utm_campaign],
+    ['Google-Klick-ID', d.gclid],
+    ['Referrer', d.referrer],
+    ['Landing', d.landing],
   ]
     .filter(([, v]) => v && String(v).trim() !== '')
     .map(([k, v]) => `<tr><td style="padding:8px 12px;color:#737373;font-size:13px;width:140px;vertical-align:top">${k}</td><td style="padding:8px 12px;color:#171717;font-size:14px;font-weight:600">${esc(v)}</td></tr>`)
@@ -109,6 +114,13 @@ export const handler = async (event) => {
 
   // Honeypot: unsichtbares Feld, das nur Bots ausfüllen
   if (d.fax && String(d.fax).trim() !== '') return respond(200, { ok: true })
+
+  // Time-Trap: legitime Nutzer brauchen >1.5s zum Ausfüllen.
+  // Zu schnelle Submits werden fake-akzeptiert, damit Bots nichts lernen.
+  const elapsed = Number(d.elapsed)
+  if (Number.isFinite(elapsed) && elapsed >= 0 && elapsed < 1500) {
+    return respond(200, { ok: true })
+  }
 
   const name = String(d.name || '').trim()
   const email = String(d.email || '').trim()

@@ -9,12 +9,12 @@ export default function BlogTeaser() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-16 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">Blog</p>
+            <p className="mb-3 text-sm font-semibold tracking-widest text-neutral-500 uppercase">Blog</p>
             <h2 className="text-balance text-4xl font-black tracking-tight text-neutral-900 sm:text-5xl">
               Wissen, das wir teilen.
             </h2>
             <p className="mt-4 max-w-md text-sm text-neutral-500">
-              Insights zu Web Design, Social Media, SEO, Content Creation und AI-Suchmaschinen — aus der Praxis einer Medienagentur in Wuppertal.
+              Insights zu Web Design, Social Media, SEO und AI-Suchmaschinen, aus der Praxis einer Medienagentur in Wuppertal.
             </p>
           </div>
           <Link
@@ -41,7 +41,7 @@ export default function BlogTeaser() {
                   {post.category}
                 </span>
               </div>
-              <h3 className="mb-3 text-lg font-bold tracking-tight text-neutral-900 group-hover:text-indigo-600 transition-colors">
+              <h3 className="mb-3 text-lg font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">
                 {post.title}
               </h3>
               <p className="mb-6 flex-1 text-sm leading-relaxed text-neutral-500">{post.excerpt}</p>

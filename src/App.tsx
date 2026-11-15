@@ -12,6 +12,11 @@ import Founders from './components/Founders'
 import Recruiting from './components/Recruiting'
 import Contact from './components/Contact'
 import FAQSection from './components/FAQSection'
+import AEOSection from './components/AEOSection'
+import ProcessSection from './components/ProcessSection'
+import Kurzantwort from './components/Kurzantwort'
+import TechnikSection from './components/TechnikSection'
+import PricingSection from './components/PricingSection'
 import LocalSEO from './components/LocalSEO'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
@@ -20,11 +25,13 @@ import BlogList from './pages/BlogList'
 import BlogPost from './pages/BlogPost'
 import LocationList from './pages/LocationList'
 import LocationDetail from './pages/LocationDetail'
+import IndustryList from './pages/IndustryList'
+import IndustryDetail from './pages/IndustryDetail'
 
 
 const homeMeta = {
-  title: 'TnT Studio — Medienagentur Wuppertal | Web Design, Social Media & Content',
-  description: 'TnT Studio ist die Medienagentur in Wuppertal für Web Design, Social Media Marketing, Content Creation, Branding & Produktfotografie. Zwei Gründer, eine Vision: Marken, die Eindruck hinterlassen. Jetzt kostenlos beraten lassen.',
+  title: 'TnT Studio, Design- & Marketing-Studio | Google + ChatGPT',
+  description: 'TnT Studio macht Unternehmen gefunden, bei Google UND ChatGPT. SEO, SEA, GEO/AEO, Social Media, Web Design & Content aus einer Hand. Gegründet von Tiago & Theo, umgesetzt von Designern, Entwicklern und Marketern. Jetzt kostenlos prüfen lassen.',
 }
 
 function Home() {
@@ -46,11 +53,16 @@ function Home() {
       </Helmet>
       <Hero />
       <LogoCarousel />
+      <AEOSection />
       <Services />
+      <PricingSection />
+      <ProcessSection />
       <Portfolio />
       <VideoSection />
       <Founders />
       <Recruiting />
+      <TechnikSection />
+      <Kurzantwort />
       <FAQSection />
       <LocalSEO />
       <Contact />
@@ -72,6 +84,8 @@ export default function App() {
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/standorte" element={<LocationList />} />
           <Route path="/standorte/:slug" element={<LocationDetail />} />
+          <Route path="/branchen" element={<IndustryList />} />
+          <Route path="/branchen/:slug" element={<IndustryDetail />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

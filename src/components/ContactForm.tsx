@@ -1,14 +1,26 @@
 import { useEffect, useState } from 'react'
 import { services } from '../data/services'
-import { trackLead } from '../lib/analytics'
+import { trackLead, trackGAEvent } from '../lib/analytics'
+import { getAttribution } from '../lib/attribution'
 
 const steps = ['Du', 'Projekt', 'Details', 'Fertig']
 
+const timelineOptions = ['Sofort / unklar', 'Innerhalb 1 Monat', '1 bis 3 Monate', 'Ab 3 Monate']
+
+const goalOptions = [
+  'Neue Website',
+  'Relaunch / Redesign',
+  'Mehr Kunden & Anfragen',
+  'Besser gefunden werden (Google & ChatGPT)',
+  'Social Media wachsen',
+  'Andere',
+]
+
 const budgetOptions = [
   '< 2.500 €',
-  '2.500 € – 5.000 €',
-  '5.000 € – 10.000 €',
-  '10.000 € – 25.000 €',
+  '2.500 € bis 5.000 €',
+  '5.000 € bis 10.000 €',
+  '10.000 € bis 25.000 €',
   '> 25.000 €',
   'Noch offen',
 ]
@@ -20,6 +32,7 @@ const initialData = {
   company: '',
   website: '',
   service: [] as string[],
+  goals: [] as string[],
   budget: '',
   timeline: '',
   message: '',
@@ -35,8 +48,6 @@ export default function ContactForm() {
   const [data, setData] = useState(initialData)
   const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [submitted, setSubmitted] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
-  const [submitError, setSubmitError] = useState<string | null>(null)
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
@@ -52,6 +63,21 @@ export default function ContactForm() {
     setData((d) => ({ ...d, [key]: value }))
   }
 
+  const toggleGoal = (goal: string) => {
+    setData((d) => ({
+      ...d,
+      goals: d.goals.includes(goal)
+        ? d.goals.filter((g) => g !== goal)
+        : [...d.goals, goal],
+    }))
+  }
+
+  // Funnel-Tracking: jeder Step-View feuert ein Event, Abbrueche sind
+  // in GA4 als Drop-off zwischen den Steps sichtbar.
+  useEffect(() => {
+    trackGAEvent('contact_form_step', { step: step + 1, step_name: steps[step] ?? 'unbekannt' })
+  }, [step])
+
   const toggleService = (title: string) => {
     setData((d) => ({
       ...d,
@@ -63,7 +89,7 @@ export default function ContactForm() {
 
   const step0Valid = data.name.trim().length >= 2 && validateEmail(data.email)
   const step1Valid = data.service.length > 0 && data.budget !== ''
-  const step2Valid = data.message.trim().length >= 10 && data.consent
+  const step2Valid = (data.goals.length > 0 || data.message.trim().length >= 10) && data.consent
 
   const canProceed = [step0Valid, step1Valid, step2Valid][step] ?? true
 
@@ -77,35 +103,42 @@ export default function ContactForm() {
 
   const prev = () => setStep((s) => Math.max(s - 1, 0))
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (!step2Valid) {
-      setTouched({ ...touched, [step]: true })
-      return
-    }
-    setSubmitting(true)
-    setSubmitError(null)
-    try {
-      const formData = new FormData(e.currentTarget)
-      const res = await fetch('/.netlify/functions/kontakt', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...data,
-          fax: String(formData.get('fax') || ''),
-        }),
-      })
-      const json = await res.json().catch(() => ({}))
-      if (!res.ok) throw new Error(json.error || 'Versand fehlgeschlagen.')
-      setSubmitted(true)
-      setStep(steps.length - 1)
-      trackLead()
-    } catch (err) {
-      setSubmitError(err instanceof Error ? err.message : 'Versand fehlgeschlagen. Bitte erneut versuchen.')
-    } finally {
-      setSubmitting(false)
-    }
+  const buildWhatsAppMessage = () => {
+    const parts = [
+      'Hallo TnT Studio,',
+      '',
+      `hier ist ${data.name}${data.company ? ` von ${data.company}` : ''}. Ich habe auf tnt-studio.de ein Projekt angefragt.`,
+      '',
+      `Gewünschte Leistungen: ${data.service.join(', ')}`,
+      `Budget: ${data.budget}`,
+    ]
+    if (data.timeline) parts.push(`Zeitrahmen: ${data.timeline}`)
+    if (data.website) parts.push(`Website: ${data.website}`)
+    if (data.phone) parts.push(`Telefon: ${data.phone}`)
+    if (data.goals.length > 0) parts.push(`Ziel: ${data.goals.join(', ')}`)
+    if (data.message.trim()) parts.push('', 'Details:', data.message.trim())
+    parts.push(`E-Mail: ${data.email}`)
+
+    // Attribution: woher kommt der Lead (UTM, gclid, Referrer)
+    const attr = getAttribution()
+    const sourceBits = [
+      attr.utm_source && `Quelle: ${attr.utm_source}`,
+      attr.utm_medium && `Kanal: ${attr.utm_medium}`,
+      attr.utm_campaign && `Kampagne: ${attr.utm_campaign}`,
+      attr.gclid && `Google-Klick-ID: ${attr.gclid}`,
+      attr.referrer && `Referrer: ${attr.referrer}`,
+      attr.landing && `Landing: ${attr.landing}`,
+    ].filter((b): b is string => Boolean(b))
+    if (sourceBits.length > 0) parts.push('', ...sourceBits)
+
+    return parts.join('\n')
   }
+
+  const whatsappUrl = `https://wa.me/4917722722211?text=${encodeURIComponent(buildWhatsAppMessage())}`
+
+  const handleWhatsAppClick = () => trackLead()
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => e.preventDefault()
 
   if (submitted) {
     return (
@@ -140,16 +173,6 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-2xl"
     >
-      {/* Honeypot — nur für Bots sichtbar */}
-      <input
-        type="text"
-        name="fax"
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-        className="hidden"
-      />
-
       {/* Progress */}
       <div className="border-b border-neutral-100 bg-neutral-50/50 px-6 py-6 sm:px-10">
         <div className="flex items-center justify-between">
@@ -195,7 +218,7 @@ export default function ContactForm() {
                   value={data.name}
                   onChange={(e) => update('name', e.target.value)}
                   placeholder="Max Mustermann"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
                 />
                 {touched[0] && data.name.trim().length < 2 && (
                   <p className="mt-1.5 text-xs text-red-500">Bitte gib deinen Namen ein.</p>
@@ -209,7 +232,7 @@ export default function ContactForm() {
                   value={data.email}
                   onChange={(e) => update('email', e.target.value)}
                   placeholder="max@firma.de"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
                 />
                 {touched[0] && !validateEmail(data.email) && (
                   <p className="mt-1.5 text-xs text-red-500">Gültige E-Mail-Adresse erforderlich.</p>
@@ -223,7 +246,7 @@ export default function ContactForm() {
                   value={data.phone}
                   onChange={(e) => update('phone', e.target.value)}
                   placeholder="+49 123 456789"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
                 />
               </div>
               <div>
@@ -234,7 +257,7 @@ export default function ContactForm() {
                   value={data.company}
                   onChange={(e) => update('company', e.target.value)}
                   placeholder="Musterfirma GmbH"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
                 />
               </div>
             </div>
@@ -246,7 +269,7 @@ export default function ContactForm() {
                 value={data.website}
                 onChange={(e) => update('website', e.target.value)}
                 placeholder="https://..."
-                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
               />
             </div>
           </div>
@@ -267,13 +290,13 @@ export default function ContactForm() {
                       onClick={() => toggleService(s.title)}
                       className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-all ${
                         active
-                          ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
+                          ? 'border-neutral-900 bg-neutral-100 text-neutral-700'
                           : 'border-neutral-200 bg-white text-neutral-700 hover:border-neutral-300'
                       }`}
                     >
                       <span
                         className={`flex h-5 w-5 shrink-0 items-center justify-center rounded border ${
-                          active ? 'border-indigo-500 bg-indigo-500' : 'border-neutral-300'
+                          active ? 'border-neutral-900 bg-neutral-1000' : 'border-neutral-300'
                         }`}
                       >
                         {active && (
@@ -321,38 +344,81 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-neutral-700">Zeitrahmen</label>
-              <select
-                name="timeline"
-                value={data.timeline}
-                onChange={(e) => update('timeline', e.target.value)}
-                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
-              >
-                <option value="">Sofort / unklar</option>
-                <option value="Innerhalb 1 Monat">Innerhalb 1 Monat</option>
-                <option value="1–3 Monate">1–3 Monate</option>
-                <option value="Ab 3 Monate">Ab 3 Monate</option>
-              </select>
+              <label className="mb-3 block text-sm font-semibold text-neutral-700">Zeitrahmen</label>
+              <div className="flex flex-wrap gap-2">
+                {timelineOptions.map((t) => {
+                  const active = data.timeline === t
+                  return (
+                    <button
+                      key={t}
+                      type="button"
+                      onClick={() => update('timeline', t)}
+                      className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${
+                        active
+                          ? 'bg-neutral-900 text-white'
+                          : 'border border-neutral-200 bg-white text-neutral-700 hover:border-neutral-400'
+                      }`}
+                    >
+                      {t}
+                    </button>
+                  )
+                })}
+              </div>
             </div>
           </div>
         )}
 
         {step === 2 && (
           <div className="space-y-5 animate-fade-up">
-            <h3 className="text-xl font-black text-neutral-900">Erzähl uns mehr.</h3>
+            <h3 className="text-xl font-black text-neutral-900">Was ist dein Ziel?</h3>
+            <p className="-mt-2 text-sm text-neutral-500">Ein Klick genügt. Details kannst du optional ergänzen.</p>
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-neutral-700">Projektbeschreibung *</label>
+              <label className="mb-3 block text-sm font-semibold text-neutral-700">Ziel *</label>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {goalOptions.map((g) => {
+                  const active = data.goals.includes(g)
+                  return (
+                    <button
+                      key={g}
+                      type="button"
+                      onClick={() => toggleGoal(g)}
+                      className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-all ${
+                        active
+                          ? 'border-neutral-900 bg-neutral-100 text-neutral-700'
+                          : 'border-neutral-200 bg-white text-neutral-700 hover:border-neutral-300'
+                      }`}
+                    >
+                      <span
+                        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded border ${
+                          active ? 'border-neutral-900 bg-neutral-900' : 'border-neutral-300'
+                        }`}
+                      >
+                        {active && (
+                          <svg className="h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </span>
+                      {g}
+                    </button>
+                  )
+                })}
+              </div>
+              {touched[2] && data.goals.length === 0 && data.message.trim().length < 10 && (
+                <p className="mt-2 text-xs text-red-500">Wähle mindestens ein Ziel oder beschreibe kurz dein Projekt.</p>
+              )}
+            </div>
+
+            <div>
+              <label className="mb-1.5 block text-sm font-semibold text-neutral-700">Details <span className="font-normal text-neutral-400">(optional)</span></label>
               <textarea
                 name="message"
                 value={data.message}
                 onChange={(e) => update('message', e.target.value)}
-                placeholder="Was ist dein Ziel? Was sollte das Ergebnis können?"
-                rows={5}
-                className="w-full resize-none rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+                placeholder="Worum geht es konkret? Link zur bestehenden Website? Besondere Wünsche?"
+                rows={3}
+                className="w-full resize-none rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-400 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
               />
-              {touched[2] && data.message.trim().length < 10 && (
-                <p className="mt-1.5 text-xs text-red-500">Bitte beschreibe dein Projekt kurz (min. 10 Zeichen).</p>
-              )}
             </div>
 
             <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-neutral-200 bg-white p-4 transition-all hover:border-neutral-300">
@@ -361,7 +427,7 @@ export default function ContactForm() {
                 type="checkbox"
                 checked={data.consent}
                 onChange={(e) => update('consent', e.target.checked)}
-                className="mt-0.5 h-5 w-5 rounded border-neutral-300 text-indigo-600 focus:ring-indigo-500"
+                className="mt-0.5 h-5 w-5 rounded border-neutral-300 text-neutral-900 focus:ring-neutral-900"
               />
               <span className="text-sm leading-relaxed text-neutral-600">
                 Ich stimme zu, dass meine Daten zur Bearbeitung der Anfrage gespeichert werden. *
@@ -376,30 +442,28 @@ export default function ContactForm() {
         {step === 3 && (
           <div className="space-y-5 animate-fade-up">
             <h3 className="text-xl font-black text-neutral-900">Fast geschafft.</h3>
+            <p className="-mt-2 text-sm text-neutral-500">Prüfe deine Angaben. Ein Klick öffnet WhatsApp mit deiner fertigen Nachricht.</p>
             <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5 text-sm">
               <div className="grid gap-3 sm:grid-cols-2">
                 <div><span className="text-neutral-400">Name:</span> <span className="font-medium text-neutral-900">{data.name}</span></div>
                 <div><span className="text-neutral-400">E-Mail:</span> <span className="font-medium text-neutral-900">{data.email}</span></div>
-                <div><span className="text-neutral-400">Telefon:</span> <span className="font-medium text-neutral-900">{data.phone || '—'}</span></div>
-                <div><span className="text-neutral-400">Firma:</span> <span className="font-medium text-neutral-900">{data.company || '—'}</span></div>
+                <div><span className="text-neutral-400">Telefon:</span> <span className="font-medium text-neutral-900">{data.phone || 'k. A.'}</span></div>
+                <div><span className="text-neutral-400">Firma:</span> <span className="font-medium text-neutral-900">{data.company || 'k. A.'}</span></div>
                 <div className="sm:col-span-2"><span className="text-neutral-400">Leistungen:</span> <span className="font-medium text-neutral-900">{data.service.join(', ')}</span></div>
+                <div className="sm:col-span-2"><span className="text-neutral-400">Ziel:</span> <span className="font-medium text-neutral-900">{data.goals.join(', ') || 's. Details'}</span></div>
                 <div><span className="text-neutral-400">Budget:</span> <span className="font-medium text-neutral-900">{data.budget}</span></div>
                 <div><span className="text-neutral-400">Zeitrahmen:</span> <span className="font-medium text-neutral-900">{data.timeline || 'Sofort / unklar'}</span></div>
               </div>
-              <div className="mt-4 border-t border-neutral-200 pt-4">
-                <span className="text-neutral-400">Nachricht:</span>
-                <p className="mt-1 font-medium text-neutral-900">{data.message}</p>
-              </div>
+              {data.message.trim() && (
+                <div className="mt-4 border-t border-neutral-200 pt-4">
+                  <span className="text-neutral-400">Details:</span>
+                  <p className="mt-1 font-medium text-neutral-900">{data.message}</p>
+                </div>
+              )}
             </div>
           </div>
         )}
       </div>
-
-      {submitError && (
-        <div className="border-t border-red-100 bg-red-50 px-6 py-4 sm:px-10">
-          <p className="text-sm font-medium text-red-700">{submitError}</p>
-        </div>
-      )}
 
       {/* Actions */}
       <div className="flex items-center justify-between border-t border-neutral-100 px-6 py-5 sm:px-10">
@@ -422,24 +486,25 @@ export default function ContactForm() {
           </button>
         ) : step === steps.length - 2 ? (
           <button
-            type="submit"
-            disabled={submitting}
-            className="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-8 py-2.5 text-sm font-semibold text-white transition-all hover:bg-neutral-700 hover:shadow-lg disabled:opacity-60"
+            type="button"
+            onClick={next}
+            className="rounded-full bg-neutral-900 px-8 py-2.5 text-sm font-semibold text-white transition-all hover:bg-neutral-700 hover:shadow-lg"
           >
-            {submitting ? (
-              <>
-                <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
-                Wird gesendet…
-              </>
-            ) : (
-              <>
-                Anfrage senden
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </>
-            )}
+            Weiter
           </button>
+        ) : step === steps.length - 1 ? (
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleWhatsAppClick}
+            className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-8 py-4 text-base font-bold text-white transition-all hover:bg-[#1eb856] hover:shadow-xl"
+          >
+            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+            Per WhatsApp senden
+          </a>
         ) : null}
       </div>
     </form>

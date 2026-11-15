@@ -33,6 +33,10 @@ The multi-step contact form (`src/components/ContactForm.tsx`) submits via `fetc
 
 Events: `generate_lead`/`Lead` on form success, `contact_click` on tel:/mailto:/WhatsApp links, Meta `PageView` on SPA route changes (`src/components/RouteTracker.tsx`). GA4 pageviews rely on enhanced measurement (browser-history events, on by default).
 
+## Attribution — First-Touch (UTM/gclid → Lead)
+
+`src/lib/attribution.ts` stores first-touch attribution (UTM params, gclid/gbraid/wbraid, landing page, referrer) in `sessionStorage` once per session. `main.tsx` calls `captureAttribution()` on load; `ContactForm.tsx` spreads `getAttribution()` into the POST body; `netlify/functions/kontakt.js` renders Quelle/Kampagne/Google-Klick-ID/Referrer/Landing rows into the lead email.
+
 ## SEO / AEO Strategy
 
 - Homepage includes Organization, LocalBusiness / ProfessionalService, FAQPage, WebSite and BreadcrumbList schema.
@@ -52,6 +56,8 @@ Events: `generate_lead`/`Lead` on form success, `contact_click` on tel:/mailto:/
 - Services: `/leistungen/:slug/`
 - Blog: `/blog/` and `/blog/:slug/`
 - Locations: `/standorte/` and `/standorte/:slug/`
+- Industries (pSEO): `/branchen/` and `/branchen/:slug/` — 5 industries in `src/data/industries.ts` (Handwerk, Gastronomie, Healthcare, Kanzleien, Retail) with Service + FAQPage + BreadcrumbList schema
+- Homepage includes a Kurzantwort (answer-first) block for AEO
 - Contact: `/#contact`
 - FAQ: `/#faq`
 - Local SEO section: `/#wuppertal`

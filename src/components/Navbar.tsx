@@ -69,29 +69,36 @@ export default function Navbar() {
     return location.pathname === href
   }
 
-  const navItemBase = 'rounded-full px-3.5 py-2 text-sm font-medium transition-all'
+  const navItemBase = 'rounded-full px-4 py-2.5 text-[15px] font-semibold transition-all'
   const navItemInactive = 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900'
   const navItemActive = 'bg-neutral-900 text-white shadow-md'
 
   return (
     <>
-      <div className="fixed top-3 left-0 right-0 z-50 flex justify-center px-3 sm:top-4 sm:px-4">
+      <header
+        className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
+          scrolled
+            ? 'border-neutral-200/70 bg-white/90 shadow-lg backdrop-blur-md'
+            : 'border-neutral-200/40 bg-white'
+        }`}
+      >
         <nav
-          aria-label="TnT Studio Medienagentur Wuppertal — Hauptnavigation"
-          className={`flex items-center justify-between gap-2 rounded-full py-2.5 pl-4 pr-2 transition-all duration-500 sm:gap-4 sm:pl-5 sm:pr-3 ${
-            scrolled
-              ? 'glass shadow-lg border border-neutral-200/60'
-              : 'bg-white/80 shadow-md border border-neutral-200/40 backdrop-blur-md'
-          }`}
+          aria-label="TnT Studio Medienagentur Wuppertal, Hauptnavigation"
+          className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8"
         >
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl font-black tracking-tighter text-neutral-900 sm:text-2xl">
-              TnT
-            </span>
+          <Link to="/" className="flex items-center gap-2.5" aria-label="TnT Studio, Startseite">
+            <img
+              src="/favicon.png"
+              alt="TnT Studio Logo"
+              className="h-14 w-14 rounded-2xl object-cover sm:h-16 sm:w-16"
+              width="64"
+              height="64"
+            />
+            <span className="hidden text-lg font-black leading-none tracking-tighter text-neutral-900 sm:inline">TnT Studio</span>
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden items-center gap-0.5 lg:flex">
+          <div className="hidden items-center gap-1 lg:flex">
             {links.map((l) =>
               l.label === 'Leistungen' ? (
                 <div
@@ -126,7 +133,7 @@ export default function Navbar() {
                       <div className="my-1 border-t border-neutral-100" />
                       <a
                         href="/#services"
-                        className="block rounded-xl px-4 py-2.5 text-sm font-medium text-indigo-600 transition-colors hover:bg-neutral-50"
+                        className="block rounded-xl px-4 py-2.5 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-50"
                       >
                         Alle Leistungen
                       </a>
@@ -157,14 +164,14 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <a
               href="/#contact"
-              className="hidden rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-neutral-700 hover:shadow-lg lg:inline-block"
+              className="hidden rounded-full bg-neutral-900 px-6 py-3 text-[15px] font-bold text-white transition-all hover:bg-neutral-700 hover:shadow-lg lg:inline-block"
             >
               Projekt anfragen
             </a>
 
-            {/* Mobile toggle — premium pill */}
+            {/* Mobile toggle, premium pill */}
             <button
-              className="group relative flex h-11 items-center gap-2 rounded-full bg-neutral-900 px-4 py-2 text-white shadow-lg shadow-neutral-900/20 transition-all hover:bg-neutral-800 hover:shadow-xl lg:hidden"
+              className="group relative flex h-12 items-center gap-2.5 rounded-full bg-neutral-900 px-5 py-2.5 text-white shadow-lg shadow-neutral-900/20 transition-all hover:bg-neutral-800 hover:shadow-xl lg:hidden"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? 'Menü schliessen' : 'Menü öffnen'}
             >
@@ -177,9 +184,9 @@ export default function Navbar() {
             </button>
           </div>
         </nav>
-      </div>
+      </header>
 
-      {/* Mobile menu — full-screen overlay */}
+      {/* Mobile menu, full-screen overlay */}
       <div
         className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -190,7 +197,7 @@ export default function Navbar() {
 
         <div className="relative z-10 flex h-full flex-col px-8 pt-28 pb-10">
           {/* Links */}
-          <nav aria-label="TnT Studio Medienagentur Wuppertal — Mobile Navigation" className="flex flex-1 flex-col justify-center gap-4">
+          <nav aria-label="TnT Studio Medienagentur Wuppertal, Mobile Navigation" className="flex flex-1 flex-col justify-center gap-4">
             {links.map((l, i) => {
               const isLinkActive = isActive(l.href, l.id)
               const baseClass = `group flex items-center justify-between rounded-2xl px-5 py-4 text-2xl font-black tracking-tight transition-all duration-300 ${
@@ -234,7 +241,7 @@ export default function Navbar() {
                         <a
                           href="/#services"
                           onClick={() => setMenuOpen(false)}
-                          className="block rounded-xl px-4 py-2 text-sm font-semibold text-indigo-600 transition-colors hover:bg-indigo-50"
+                          className="block rounded-xl px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-100"
                         >
                           Alle Leistungen
                         </a>

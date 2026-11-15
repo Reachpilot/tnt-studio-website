@@ -18,8 +18,8 @@ export default function BlogList() {
   const collectionSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Blog — TnT Studio',
-    description: 'Insights zu Web Design, Social Media, Content Creation, SEO und Branding aus der Praxis von TnT Studio — Medienagentur in Wuppertal.',
+    name: 'Blog, TnT Studio',
+    description: 'Insights zu Web Design, Social Media, Content Creation, SEO und Branding aus der Praxis von TnT Studio, Medienagentur in Wuppertal.',
     url: 'https://tnt-studio.de/blog/',
     hasPart: sorted.slice(0, 30).map((p) => ({
       '@type': 'BlogPosting',
@@ -43,14 +43,14 @@ export default function BlogList() {
   return (
     <div className="pt-32 pb-24">
       <Helmet>
-        <title>Blog — TnT Studio | Medienagentur Wuppertal</title>
+        <title>Blog, TnT Studio | Medienagentur Wuppertal</title>
         <meta name="description" content="Blog von TnT Studio: Insights zu Web Design, Social Media, Content Creation, SEO, Branding und AI-Suchmaschinen. Praxiswissen aus der Medienagentur Wuppertal." />
         <link rel="canonical" href="https://tnt-studio.de/blog/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://tnt-studio.de/blog/" />
-        <meta property="og:title" content="Blog — TnT Studio | Medienagentur Wuppertal" />
+        <meta property="og:title" content="Blog, TnT Studio | Medienagentur Wuppertal" />
         <meta property="og:description" content="Insights zu Web Design, Social Media, Content Creation, SEO, Branding und AI-Suchmaschinen aus der Medienagentur Wuppertal." />
-        <meta name="twitter:title" content="Blog — TnT Studio | Medienagentur Wuppertal" />
+        <meta name="twitter:title" content="Blog, TnT Studio | Medienagentur Wuppertal" />
         <meta name="twitter:description" content="Insights zu Web Design, Social Media, Content Creation, SEO, Branding und AI-Suchmaschinen aus der Medienagentur Wuppertal." />
         <meta property="og:image" content="https://tnt-studio.de/og-image.webp" />
         <meta name="twitter:image" content="https://tnt-studio.de/og-image.webp" />
@@ -65,12 +65,12 @@ export default function BlogList() {
       />
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
         <div className="mb-16 text-center">
-          <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">Blog</p>
+          <p className="mb-3 text-sm font-semibold tracking-widest text-neutral-500 uppercase">Blog</p>
           <h1 className="text-balance text-5xl font-black tracking-tight text-neutral-900 sm:text-6xl">
             Insights, die wir teilen.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-500">
-            Was wir in 2+ Jahren Agentur-Alltag gelernt haben — ehrlich, direkt, ohne Bullshit.
+            Was wir in 2+ Jahren Agentur-Alltag gelernt haben, ehrlich, direkt, ohne Bullshit.
             Strategien, die funktionieren. Trends, die nicht funktionieren. Und Geschichten, die zeigen, wie wir ticken.
           </p>
         </div>
@@ -101,12 +101,12 @@ export default function BlogList() {
           <div className="grid md:grid-cols-2">
             <div className="flex flex-col justify-center p-10">
               <div className="mb-4 flex items-center gap-3">
-                <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold text-indigo-700">
+                <span className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-700">
                   {featured.category}
                 </span>
                 <span className="text-xs text-neutral-400">{featured.readingTime} Lesezeit</span>
               </div>
-              <h2 className="mb-4 text-3xl font-black tracking-tight text-neutral-900 group-hover:text-indigo-600 transition-colors">
+              <h2 className="mb-4 text-3xl font-black tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">
                 {featured.title}
               </h2>
               <p className="mb-6 text-base leading-relaxed text-neutral-500">{featured.excerpt}</p>
@@ -138,7 +138,7 @@ export default function BlogList() {
                   {post.category}
                 </span>
               </div>
-              <h3 className="mb-3 text-xl font-bold tracking-tight text-neutral-900 group-hover:text-indigo-600 transition-colors">
+              <h3 className="mb-3 text-xl font-bold tracking-tight text-neutral-900 group-hover:text-neutral-500 transition-colors">
                 {post.title}
               </h3>
               <p className="mb-6 flex-1 text-sm leading-relaxed text-neutral-500">{post.excerpt}</p>

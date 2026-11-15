@@ -32,7 +32,7 @@ export default function CookieBanner() {
           <p className="text-sm text-neutral-600">
             Wir verwenden Cookies, um deine Erfahrung zu verbessern und Website-Traffic zu analysieren
             (Google Analytics, Meta Pixel). Du kannst optional zustimmen.
-            <a href="/privacy-policy.html" className="ml-1 font-medium text-indigo-600 hover:underline">
+            <a href="/privacy-policy.html" className="ml-1 font-medium text-neutral-900 hover:underline">
               Mehr erfahren
             </a>
           </p>

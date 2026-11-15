@@ -3,6 +3,36 @@
   command = "npm run build"
 
 [[redirects]]
+  from = "/leistungen/content-creation"
+  to = "/leistungen/social-media-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/leistungen/content-creation/*"
+  to = "/leistungen/social-media-marketing/"
+  status = 301
+
+[[redirects]]
+  from = "/leistungen/produktfotografie"
+  to = "/leistungen/web-design/"
+  status = 301
+
+[[redirects]]
+  from = "/leistungen/produktfotografie/*"
+  to = "/leistungen/web-design/"
+  status = 301
+
+[[redirects]]
+  from = "/leistungen/branding"
+  to = "/leistungen/web-design/"
+  status = 301
+
+[[redirects]]
+  from = "/leistungen/branding/*"
+  to = "/leistungen/web-design/"
+  status = 301
+
+[[redirects]]
   from = "/leistungen/:slug"
   to = "/leistungen/:slug/"
   status = 301
@@ -25,6 +55,16 @@
 [[redirects]]
   from = "/standorte"
   to = "/standorte/"
+
+[[redirects]]
+  from = "/branchen/:slug"
+  to = "/branchen/:slug/"
+  status = 301
+
+[[redirects]]
+  from = "/branchen"
+  to = "/branchen/"
+  status = 301
   status = 301
 
 [[redirects]]

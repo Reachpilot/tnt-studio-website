@@ -7,6 +7,20 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const { services } = await import('../src/data/services.ts')
 const { blogPosts } = await import('../src/data/blog.ts')
 const { locations } = await import('../src/data/locations.ts')
+const { industries } = await import('../src/data/industries.ts')
+
+// Echte Inhalts-Daten für die Sitemap — NIEMALS Build-Datum verwenden
+// (Google entwertet Sitemaps mit Fake-Freshness). Nur bei echter
+// Inhaltsänderung anheben.
+const contentUpdated = {
+  site: '2026-11-15',
+  services: '2026-11-15',
+  standorte: '2026-11-15',
+  branchen: '2026-11-15',
+  blogIndex: '2026-11-15',
+  legal: '2025-07-17',
+}
+const ORG_ID = 'https://tnt-studio.de/#organization'
 
 function slugify(title) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
@@ -52,10 +66,11 @@ function breadcrumb(items) {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': ORG_ID,
   name: 'TnT Studio',
   url: 'https://tnt-studio.de/',
   logo: 'https://tnt-studio.de/og-image.webp',
-  description: 'Medienagentur in Wuppertal für Web Design, Social Media Marketing, Content Creation, Branding und Produktfotografie.',
+  description: 'Design- & Marketing-Studio in Wuppertal für Web Design, KI-Sichtbarkeit, Social Media Marketing und Software Development.',
   founders: [
     { '@type': 'Person', name: 'Tiago Esteves', jobTitle: 'Founder & CEO' },
     { '@type': 'Person', name: 'Theo Spingys', jobTitle: 'Co-Founder & Marketing Lead' },
@@ -110,9 +125,7 @@ const localBusinessSchema = {
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Design', description: 'Massgeschneiderte, conversion-optimierte Websites mit React, TypeScript und Tailwind CSS.' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Marketing', description: 'Strategie, Content-Produktion und Paid Social für Instagram, TikTok, LinkedIn und Meta.' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Content Creation', description: 'Reels, Imagefilme, Produktvideos und Fotoshootings inklusive Schnitt und Color-Grading.' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Produktfotografie', description: 'Professionelle Produktbilder für Online-Shops, Kataloge und Social Media.' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding', description: 'Logos, Corporate Design, Markenstrategie und komplette Markenauftritte.' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'KI-Sichtbarkeit & SEO', description: 'SEO, SEA, GEO und AEO: Sichtbarkeit bei Google und KI-Systemen wie ChatGPT, Perplexity und Gemini.' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Software Development', description: 'Individuelle Web-Applikationen, Tools und Automatisierungen mit modernem Stack.' } },
     ],
   },
@@ -122,7 +135,7 @@ const faqPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'Was macht TnT Studio?', acceptedAnswer: { '@type': 'Answer', text: 'TnT Studio ist eine Medienagentur aus Wuppertal. Wir bieten Web Design, Social Media Marketing, Content Creation, Branding, Produktfotografie und Software Development aus einer Hand — und arbeiten dabei komplett remote für Kunden in Deutschland, Europa und den USA.' } },
+    { '@type': 'Question', name: 'Was macht TnT Studio?', acceptedAnswer: { '@type': 'Answer', text: 'TnT Studio ist ein Design- und Marketing-Studio aus Wuppertal. Wir bieten Web Design, KI-Sichtbarkeit, Social Media Marketing und Software Development aus einer Hand, für Unternehmen in ganz Deutschland und dem DACH-Raum.' } },
     { '@type': 'Question', name: 'Für wen ist TnT Studio die richtige Agentur?', acceptedAnswer: { '@type': 'Answer', text: 'Für Unternehmen, Startups und Marken, die mehr wollen als einzelne Dienstleistungen. Wir entwickeln ganzheitliche Business-Lösungen: von der Marke über die Website bis zum laufenden Content und Paid Social.' } },
     { '@type': 'Question', name: 'Wie arbeitet TnT Studio mit Kunden zusammen?', acceptedAnswer: { '@type': 'Answer', text: 'Wir arbeiten remote — über Video-Calls, Figma, Slack und geteilte Projektboards. Das ist schneller, transparenter und effektiver als klassische Büro-Termine. Bei Bedarf kommen wir auch vor Ort in Wuppertal, Düsseldorf, Köln und dem gesamten Rheinland.' } },
     { '@type': 'Question', name: 'Was kostet eine Website bei TnT Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Projekt-Websites starten bei 2.500 €, E-Commerce-Plattformen ab 5.000 €, umfangreiche Softwarelösungen werden individuell nach Aufwand kalkuliert. Jedes Projekt ist transparent — wir geben dir nach dem ersten kostenlosen Call ein Fixpreis-Angebot.' } },
@@ -150,9 +163,10 @@ const websiteSchema = {
 const routes = [
   {
     file: 'index.html',
-    title: 'TnT Studio — Medienagentur Wuppertal | Web Design, Social Media & Content',
-    description: 'TnT Studio ist die Medienagentur in Wuppertal für Web Design, Social Media Marketing, Content Creation, Branding & Produktfotografie. Zwei Gründer, eine Vision: Marken, die Eindruck hinterlassen.',
+    title: 'TnT Studio — Agentur für gefundene Unternehmen | Google + ChatGPT',
+    description: 'TnT Studio macht Unternehmen gefunden — bei Google UND ChatGPT. SEO, SEA, GEO/AEO, Social Media, Web Design & Content aus einer Hand. Zwei Gründer, ein Ansprechpartner, messbare Ergebnisse.',
     canonical: 'https://tnt-studio.de/',
+    lastmod: contentUpdated.site,
     jsonLd: [
       organizationSchema,
       localBusinessSchema,
@@ -164,15 +178,16 @@ const routes = [
   {
     file: 'blog/index.html',
     title: 'Blog — TnT Studio',
-    description: 'Insights zu Web Design, Social Media, Content Creation und Branding aus der Praxis von TnT Studio.',
+    description: 'Insights zu Web Design, Social Media, KI-Sichtbarkeit und Software aus der Praxis von TnT Studio.',
     canonical: 'https://tnt-studio.de/blog/',
+    lastmod: contentUpdated.blogIndex,
     jsonLd: [
       {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
         name: 'TnT Studio Blog',
         url: 'https://tnt-studio.de/blog/',
-        description: 'Insights zu Web Design, Social Media, Content Creation und Branding.',
+        description: 'Insights zu Web Design, Social Media, KI-Sichtbarkeit und Software.',
       },
       breadcrumb([
         { name: 'Startseite', item: 'https://tnt-studio.de/' },
@@ -190,6 +205,7 @@ for (const service of services) {
     title: service.metaTitle || `${service.title} — TnT Studio`,
     description: service.metaDescription || service.description,
     canonical,
+    lastmod: contentUpdated.services,
     jsonLd: [
       {
         '@context': 'https://schema.org',
@@ -198,6 +214,7 @@ for (const service of services) {
         description: service.description,
         provider: {
           '@type': 'Organization',
+          '@id': ORG_ID,
           name: 'TnT Studio',
           url: 'https://tnt-studio.de/',
         },
@@ -223,9 +240,10 @@ for (const service of services) {
 // pSEO: Standort-Seiten
 routes.push({
   file: 'standorte/index.html',
-  title: 'Standorte & Einzugsgebiet — TnT Studio Medienagentur',
+  title: 'Standorte & Einzugsgebiet | TnT Studio',
   description: 'TnT Studio betreut Unternehmen in Wuppertal, Solingen, Remscheid, Leverkusen, Köln, Düsseldorf, Bonn, Mönchengladbach, Hagen und Witten — remote oder vor Ort.',
   canonical: 'https://tnt-studio.de/standorte/',
+  lastmod: contentUpdated.standorte,
   jsonLd: [
     {
       '@context': 'https://schema.org',
@@ -245,9 +263,10 @@ for (const loc of locations) {
   const canonical = `https://tnt-studio.de/standorte/${loc.slug}/`
   routes.push({
     file: `standorte/${loc.slug}/index.html`,
-    title: `Medienagentur ${loc.name} — Webdesign, Social Media & Content | TnT Studio`,
-    description: `${loc.tagline} Web Design, Social Media Marketing, Content Creation, Branding & Software Development — remote oder vor Ort. Jetzt unverbindlich anfragen.`,
+    title: `Medienagentur ${loc.name}, Webdesign, KI-Sichtbarkeit & Social Media | TnT Studio`,
+    description: `${loc.tagline} Web Design, KI-Sichtbarkeit, Social Media Marketing & Software Development, remote für ganz Deutschland. Jetzt unverbindlich anfragen.`,
     canonical,
+    lastmod: contentUpdated.standorte,
     jsonLd: [
       {
         '@context': 'https://schema.org',
@@ -256,6 +275,7 @@ for (const loc of locations) {
         description: loc.tagline,
         provider: {
           '@type': 'Organization',
+          '@id': ORG_ID,
           name: 'TnT Studio',
           url: 'https://tnt-studio.de/',
           address: {
@@ -287,6 +307,68 @@ for (const loc of locations) {
   })
 }
 
+// pSEO: Branchen-Seiten
+routes.push({
+  file: 'branchen/index.html',
+  title: 'Branchen — TnT Studio | Webdesign, SEO & Social Media für Ihre Branche',
+  description: 'TnT Studio erstellt Websites, SEO, GEO/AEO und Social Media für Handwerk, Gastronomie, Healthcare, Kanzleien und Retail — branchenindividuell, messbar, aus einer Hand.',
+  canonical: 'https://tnt-studio.de/branchen/',
+  lastmod: contentUpdated.branchen,
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Branchen — TnT Studio',
+      url: 'https://tnt-studio.de/branchen/',
+      description: 'Branchen-individuelle digitale Präsenz von TnT Studio.',
+    },
+    breadcrumb([
+      { name: 'Startseite', item: 'https://tnt-studio.de/' },
+      { name: 'Branchen', item: 'https://tnt-studio.de/branchen/' },
+    ]),
+  ],
+})
+
+for (const ind of industries) {
+  const canonical = `https://tnt-studio.de/branchen/${ind.slug}/`
+  routes.push({
+    file: `branchen/${ind.slug}/index.html`,
+    title: `${ind.name} — Webdesign, SEO & Social Media | TnT Studio`,
+    description: `${ind.tagline} TnT Studio — Ihre Agentur für digitale Sichtbarkeit in dieser Branche.`,
+    canonical,
+    lastmod: contentUpdated.branchen,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: `TnT Studio für ${ind.name}`,
+        description: ind.tagline,
+        provider: {
+          '@type': 'Organization',
+          '@id': ORG_ID,
+          name: 'TnT Studio',
+          url: 'https://tnt-studio.de/',
+        },
+        areaServed: 'DE',
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: ind.faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer },
+        })),
+      },
+      breadcrumb([
+        { name: 'Startseite', item: 'https://tnt-studio.de/' },
+        { name: 'Branchen', item: 'https://tnt-studio.de/branchen/' },
+        { name: ind.name, item: canonical },
+      ]),
+    ],
+  })
+}
+
 for (const post of blogPosts) {
   const canonical = `https://tnt-studio.de/blog/${post.slug}/`
   routes.push({
@@ -294,6 +376,7 @@ for (const post of blogPosts) {
     title: `${post.title} — TnT Studio Blog`,
     description: post.excerpt,
     canonical,
+    lastmod: post.date,
     ogType: 'article',
     jsonLd: [
       {
@@ -304,10 +387,11 @@ for (const post of blogPosts) {
         author: {
           '@type': 'Person',
           name: post.author,
-          affiliation: { '@type': 'Organization', name: 'TnT Studio' },
+          affiliation: { '@type': 'Organization', '@id': ORG_ID, name: 'TnT Studio' },
         },
         publisher: {
           '@type': 'Organization',
+          '@id': ORG_ID,
           name: 'TnT Studio',
           url: 'https://tnt-studio.de/',
         },
@@ -337,6 +421,7 @@ for (const route of routes) {
 
 // Dynamische Sitemap: erzeugt sich aus allen prerendered Routen
 const today = new Date().toISOString().slice(0, 10)
+const sitemapDate = (route) => route.lastmod || today
 
 function fileToUrl(file) {
   if (file === 'index.html') return 'https://tnt-studio.de/'
@@ -355,7 +440,7 @@ function sitemapMeta(file) {
 
 const sitemapEntries = routes.map((route) => {
   const [changefreq, priority] = sitemapMeta(route.file)
-  return `  <url>\n    <loc>${fileToUrl(route.file)}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
+  return `  <url>\n    <loc>${fileToUrl(route.file)}</loc>\n    <lastmod>${sitemapDate(route)}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
 })
 
 // Statische Legal-Seiten aus public/ (werden von Vite nach dist kopiert)

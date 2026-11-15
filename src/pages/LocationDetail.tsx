@@ -93,8 +93,8 @@ export default function LocationDetail() {
     ],
   })
 
-  const title = `Medienagentur ${location.name} — Webdesign, Social Media & Content | TnT Studio`
-  const description = `${location.tagline} Web Design, Social Media Marketing, Content Creation, Branding & Software Development — remote oder vor Ort. Jetzt unverbindlich anfragen.`
+  const title = `Medienagentur ${location.name}, Webdesign, Social Media & Content | TnT Studio`
+  const description = `${location.tagline} Web Design, Social Media Marketing, Content Creation, Branding & Software Development, remote oder vor Ort. Jetzt unverbindlich anfragen.`
 
   return (
     <div className="pt-32 pb-24">
@@ -125,7 +125,7 @@ export default function LocationDetail() {
         </Link>
 
         {/* Hero */}
-        <p className="mb-3 text-sm font-semibold tracking-widest text-indigo-600 uppercase">
+        <p className="mb-3 text-sm font-semibold tracking-widest text-neutral-500 uppercase">
           {location.region} · {location.distance}
         </p>
         <h1 className="text-balance text-4xl font-black tracking-tight text-neutral-900 sm:text-5xl">
@@ -168,7 +168,7 @@ export default function LocationDetail() {
         <h2 className="mt-16 text-3xl font-black tracking-tight text-neutral-900">
           Leistungen für {location.name}
         </h2>
-        <p className="mt-3 text-neutral-500">Alle Services aus einer Hand — remote oder vor Ort.</p>
+        <p className="mt-3 text-neutral-500">Alle Services aus einer Hand, remote oder vor Ort.</p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {services.map((service) => (
             <Link
@@ -176,7 +176,7 @@ export default function LocationDetail() {
               to={`/leistungen/${serviceSlug(service.title)}/`}
               className="group rounded-2xl border border-neutral-200 bg-white p-6 transition-all hover:shadow-lg hover:border-neutral-900"
             >
-              <h3 className="text-base font-bold text-neutral-900 group-hover:text-indigo-600 transition-colors">
+              <h3 className="text-base font-bold text-neutral-900 group-hover:text-neutral-500 transition-colors">
                 {service.title}
               </h3>
               <p className="mt-2 text-sm text-neutral-500">{service.description}</p>
@@ -186,7 +186,7 @@ export default function LocationDetail() {
 
         {/* FAQ */}
         <h2 className="mt-16 text-3xl font-black tracking-tight text-neutral-900">
-          Häufige Fragen — {location.name}
+          Häufige Fragen, {location.name}
         </h2>
         <div className="mt-8 rounded-2xl border border-neutral-200 bg-white px-6">
           {location.faqs.map((faq) => (
@@ -197,7 +197,7 @@ export default function LocationDetail() {
         {/* CTA */}
         <div className="mt-16 rounded-3xl bg-neutral-900 p-10 text-center sm:p-12">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Projekt in {location.name}?</h2>
-          <p className="mt-3 text-neutral-400">Kostenlose Erstberatung — Antwort innerhalb von 24 Stunden.</p>
+          <p className="mt-3 text-neutral-400">Kostenlose Erstberatung, Antwort innerhalb von 24 Stunden.</p>
           <a
             href="/#contact"
             className="mt-6 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-neutral-900 transition-all hover:bg-neutral-100"
@@ -215,7 +215,7 @@ export default function LocationDetail() {
               to={`/standorte/${loc.slug}/`}
               className="group rounded-2xl border border-neutral-200 bg-white p-6 transition-all hover:shadow-lg hover:border-neutral-900"
             >
-              <h3 className="text-base font-bold text-neutral-900 group-hover:text-indigo-600 transition-colors">
+              <h3 className="text-base font-bold text-neutral-900 group-hover:text-neutral-500 transition-colors">
                 {loc.name}
               </h3>
               <p className="mt-1 text-xs font-medium tracking-wide text-neutral-400 uppercase">{loc.region}</p>
