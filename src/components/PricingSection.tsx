@@ -1,22 +1,22 @@
 import { serviceIcons } from './serviceIcons'
 
 const iconColorMap: Record<string, string> = {
-  'Webdesign & Relaunch': 'bg-gradient-to-br from-indigo-500 to-blue-600',
+  'Web Design': 'bg-gradient-to-br from-indigo-500 to-blue-600',
   'KI-Sichtbarkeit & SEO': 'bg-gradient-to-br from-cyan-500 to-sky-600',
   'Social Media Marketing': 'bg-gradient-to-br from-rose-500 to-pink-600',
-  'Software & Automatisierung': 'bg-gradient-to-br from-violet-500 to-purple-600',
+  'Software Development': 'bg-gradient-to-br from-violet-500 to-purple-600',
 }
 
 const iconKeyMap: Record<string, string> = {
-  'Webdesign & Relaunch': 'code',
+  'Web Design': 'code',
   'KI-Sichtbarkeit & SEO': 'terminal',
   'Social Media Marketing': 'social',
-  'Software & Automatisierung': 'cpu',
+  'Software Development': 'cpu',
 }
 
 const prices = [
   {
-    title: 'Webdesign & Relaunch',
+    title: 'Web Design',
     range: '500 bis 10.000 €',
     unit: 'je nach Umfang',
     text: 'Landingpage ab 500 €, Business-Website ab 2.500 €, E-Commerce ab 5.000 €. Festpreis nach dem kostenlosen Check.',
@@ -34,7 +34,7 @@ const prices = [
     text: 'Strategie, Content-Produktion, Ads und Reporting als Paket. Von der Einzelmaßnahme ab 1.200 €/Monat bis zur Full-Betreuung.',
   },
   {
-    title: 'Software & Automatisierung',
+    title: 'Software Development',
     range: '2.500 €+',
     unit: 'nach Aufwand',
     text: 'Individuelle Web-Apps, APIs, Dashboards und Automatisierungen. Kalkuliert nach Scope, nicht nach Stunden. Ab 2.500 €.',
@@ -63,19 +63,19 @@ export default function PricingSection() {
 
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {prices.map((p) => (
-            <div key={p.title} className={`rounded-3xl border p-7 transition-all ${p.title.startsWith('Webdesign') ? 'border-neutral-900 bg-neutral-900 text-white shadow-xl' : 'border-neutral-200 bg-white hover:border-neutral-900 hover:shadow-lg'}`}>
+            <div key={p.title} className={`rounded-3xl border p-7 transition-all ${p.title === 'Web Design' ? 'border-neutral-900 bg-neutral-900 text-white shadow-xl' : 'border-neutral-200 bg-white hover:border-neutral-900 hover:shadow-lg'}`}>
               <div className={`mb-5 flex h-12 w-12 items-center justify-center rounded-xl text-white shadow-md ${iconColorMap[p.title]}`}>
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
                   {serviceIcons[iconKeyMap[p.title] || 'code']}
                 </svg>
               </div>
               <div className="flex items-center justify-between gap-3">
-                <h3 className={`text-lg font-black ${p.title.startsWith('Webdesign') ? 'text-white' : 'text-neutral-900'}`}>{p.title}</h3>
-                {p.title.startsWith('Webdesign') && <span className="rounded-full bg-white px-2.5 py-0.5 text-[10px] font-bold tracking-widest text-neutral-900 uppercase">Fokus</span>}
+                <h3 className={`text-lg font-black ${p.title === 'Web Design' ? 'text-white' : 'text-neutral-900'}`}>{p.title}</h3>
+                {p.title === 'Web Design' && <span className="rounded-full bg-white px-2.5 py-0.5 text-[10px] font-bold tracking-widest text-neutral-900 uppercase">Fokus</span>}
               </div>
-              <p className={`mt-2 text-2xl font-black tracking-tight ${p.title.startsWith('Webdesign') ? 'text-white' : 'text-neutral-900'}`}>{p.range}</p>
-              <p className={`text-xs font-semibold tracking-wide uppercase ${p.title.startsWith('Webdesign') ? 'text-neutral-400' : 'text-neutral-500'}`}>{p.unit}</p>
-              <p className={`mt-4 text-sm leading-relaxed ${p.title.startsWith('Webdesign') ? 'text-neutral-300' : 'text-neutral-600'}`}>{p.text}</p>
+              <p className={`mt-2 text-2xl font-black tracking-tight ${p.title === 'Web Design' ? 'text-white' : 'text-neutral-900'}`}>{p.range}</p>
+              <p className={`text-xs font-semibold tracking-wide uppercase ${p.title === 'Web Design' ? 'text-neutral-400' : 'text-neutral-500'}`}>{p.unit}</p>
+              <p className={`mt-4 text-sm leading-relaxed ${p.title === 'Web Design' ? 'text-neutral-300' : 'text-neutral-600'}`}>{p.text}</p>
             </div>
           ))}
         </div>

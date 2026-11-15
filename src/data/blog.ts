@@ -2471,7 +2471,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'Das Standard-Kontaktformular der meisten Agenturen: ein form-Tag, das per fetch an FormSubmit, Basin oder Web3Forms postet. Kein Spam-Schutz, keine saubere Validierung, keine Attribution, und die Daten gehen an Dritte.',
           'Schlimmer: Manche Agenturen nutzen die Lead-Daten für eigene Zwecke. DSGVO-Fragezeichen inklusive.',
-          'Bei TnT Studio läuft das Formular über eine eigene Netlify Function zu Resend: Honeypot-Feld gegen Bots, serverseitige Validierung, E-Mail direkt an uns, keine Drittanbieter, die Ihre Anfrage sehen. Plus First-Touch-Attribution: UTM, gclid und Referrer werden gespeichert und in der Lead-Mail mitgeschickt.',
+          'Bei TnT Studio läuft das Formular komplett anders: Ein mehrstufiger WhatsApp-Flow generiert eine fertige Nachricht mit allen Angaben und öffnet direkt den WhatsApp-Chat, ohne dass Formulardaten jemals einen Server berühren. Keine Drittanbieter, keine Speicherung, DSGVO by Design. Plus First-Touch-Attribution: UTM, gclid und Referrer werden im Browser gespeichert und in die WhatsApp-Nachricht mitgeschickt.',
         ],
       },
       {
@@ -2500,7 +2500,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'Fehler 7: Keine Attribution, Sie wissen nicht, was funktioniert',
         paragraphs: [
           'Die meisten Agentur-Reports sagen: „Traffic plus 15 Prozent, Rankings besser." Aber: Welcher Euro hat welchen Kunden gebracht? Welche Kampagne? Welcher Blog-Post konvertiert? Die meisten wissen es nicht, weil sie nie Attribution eingebaut haben.',
-          'First-Touch-Attribution speichert UTM-Parameter, gclid und Referrer beim ersten Besuch und ordnet sie jeder Anfrage zu. Das ist kein Hexenwerk, es ist eine sessionStorage-Variable und ein POST-Feld. Wir haben es auf dieser Website implementiert: jede Anfrage, die über das Formular kommt, trägt ihre Kampagnen-Quelle in sich.',
+          'First-Touch-Attribution speichert UTM-Parameter, gclid und Referrer beim ersten Besuch und ordnet sie jeder späteren Anfrage zu. Das ist kein Hexenwerk, es ist eine sessionStorage-Variable. Wir haben es auf dieser Website implementiert: Jede Anfrage über unser Formular trägt ihre Kampagnen-Quelle in der WhatsApp-Nachricht in sich.',
         ],
       },
       {
@@ -2519,7 +2519,7 @@ export const blogPosts: BlogPost[] = [
       { question: 'Was ist First-Touch-Attribution?', answer: 'First-Touch-Attribution speichert den ersten Kontaktpunkt eines Besuchers (UTM-Parameter, gclid, Referrer) und ordnet ihn jeder späteren Anfrage zu. So wissen Sie, welche Kampagne den Kunden tatsächlich gebracht hat.' },
       { question: 'Was ist llms.txt?', answer: 'llms.txt ist eine Textdatei im Root-Verzeichnis, die KI-Crawlern einen strukturierten Überblick über Ihre Website gibt: Beschreibung, Services, URLs, FAQs. Vergleichbar mit sitemap.xml, aber für ChatGPT, Claude, Perplexity.' },
       { question: 'Warum sind große JavaScript-Bundles ein Problem?', answer: 'Große Bundles verlangsamen die Ladezeit, besonders auf Mobile. Das verschlechtert Core Web Vitals, erhöht Absprungraten und schadet dem Google-Ranking. Performance ist ein Ranking-Faktor, kein Luxus.' },
-      { question: 'Sind Kontaktformulare über FormSubmit DSGVO-konform?', answer: 'FormSubmit und ähnliche Dienste leiten Ihre Kundendaten an Dritte weiter, mit allen DSGVO-Konsequenzen. Eine eigene Serverless-API (Netlify Function zu Resend) hält die Daten in Ihrer Hand und ist die sauberere Lösung.' },
+      { question: 'Sind Kontaktformulare über FormSubmit DSGVO-konform?', answer: 'FormSubmit und ähnliche Dienste leiten Ihre Kundendaten an Dritte weiter, mit allen DSGVO-Konsequenzen. Die sauberste Lösung ist ein Formular, das gar keine Daten überträgt: Bei uns generiert der Multi-Step-Flow eine WhatsApp-Nachricht direkt im Browser, ohne Backend, ohne Speicherung, ohne Drittanbieter.' },
       { question: 'Wie erkenne ich, ob meine Website technisch SEO-fähig ist?', answer: 'Prüfen Sie: Wird der Seitenquelltext ohne JavaScript angezeigt? Enthält die Sitemap echte lastmod-Daten? Lädt Tracking erst nach Consent? Gibt es Schema.org-Markup? Wir bieten ein kostenloses technisches Audit an.' },
     ],
   },

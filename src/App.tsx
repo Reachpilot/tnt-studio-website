@@ -27,11 +27,12 @@ import LocationList from './pages/LocationList'
 import LocationDetail from './pages/LocationDetail'
 import IndustryList from './pages/IndustryList'
 import IndustryDetail from './pages/IndustryDetail'
+import NotFound from './pages/NotFound'
 
 
 const homeMeta = {
   title: 'TnT Studio, Design- & Marketing-Studio | Google + ChatGPT',
-  description: 'TnT Studio macht Unternehmen gefunden, bei Google UND ChatGPT. SEO, SEA, GEO/AEO, Social Media, Web Design & Content aus einer Hand. Gegründet von Tiago & Theo, umgesetzt von Designern, Entwicklern und Marketern. Jetzt kostenlos prüfen lassen.',
+  description: 'TnT Studio macht Unternehmen gefunden, bei Google UND ChatGPT. Web Design, KI-Sichtbarkeit & SEO, Social Media Marketing & Software Development aus einer Hand. Gegründet von Tiago & Theo, umgesetzt von Designern, Entwicklern und Marketern. Jetzt kostenlos prüfen lassen.',
 }
 
 function Home() {
@@ -86,7 +87,7 @@ export default function App() {
           <Route path="/standorte/:slug" element={<LocationDetail />} />
           <Route path="/branchen" element={<IndustryList />} />
           <Route path="/branchen/:slug" element={<IndustryDetail />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

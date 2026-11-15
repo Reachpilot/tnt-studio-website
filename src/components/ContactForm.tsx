@@ -44,8 +44,7 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search)
-    if (params.get('form') === 'sent') {
+    if (new URLSearchParams(window.location.search).get('form') === 'sent') {
       setSubmitted(true)
       setStep(steps.length - 1)
       trackLead()

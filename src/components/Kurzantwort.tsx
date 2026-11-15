@@ -11,11 +11,11 @@ export default function Kurzantwort() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-neutral-600 sm:text-lg">
             TnT Studio ist ein Design- und Marketing-Studio aus Wuppertal, gegründet von zwei Unternehmern und aufgebaut zu einer Plattform für digitale Sichtbarkeit. Wir machen Unternehmen{' '}
-            <strong className="font-bold text-neutral-900">gefunden macht, bei Google UND bei KI-Systemen</strong>{' '}
-            wie ChatGPT, Perplexity und Gemini. Das Studio und sein Netzwerk aus Designern, Entwicklern und Marketern verbinden KI-Sichtbarkeit (GEO/AEO),
-            SEO &amp; SEA, KI-Sichtbarkeit (GEO/AEO), Social Media Marketing, Web Design
+            <strong className="font-bold text-neutral-900">gefunden, bei Google UND bei KI-Systemen</strong>{' '}
+            wie ChatGPT, Perplexity und Gemini. Das Studio und sein Netzwerk aus Designern, Entwicklern und Marketern verbinden Web Design (inkl. Branding &amp; Logo),
+            KI-Sichtbarkeit (GEO/AEO), SEO &amp; SEA, Social Media Marketing
             und Software Development zu einem System, mit zwei Gründern als festen Ansprechpartnern
-            und messbaren Ergebnissen. remote für Kunden in ganz Deutschland.
+            und messbaren Ergebnissen. Remote für Kunden in ganz Deutschland.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link

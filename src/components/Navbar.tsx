@@ -94,7 +94,7 @@ export default function Navbar() {
               width="64"
               height="64"
             />
-            <span className="hidden text-lg font-black leading-none tracking-tighter text-neutral-900 sm:inline">TnT Studio</span>
+            <span className="hidden text-lg font-black leading-none tracking-tighter text-neutral-900 sm:inline">Studio</span>
           </Link>
 
           {/* Desktop nav */}

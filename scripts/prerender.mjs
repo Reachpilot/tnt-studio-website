@@ -164,7 +164,7 @@ const routes = [
   {
     file: 'index.html',
     title: 'TnT Studio — Agentur für gefundene Unternehmen | Google + ChatGPT',
-    description: 'TnT Studio macht Unternehmen gefunden — bei Google UND ChatGPT. SEO, SEA, GEO/AEO, Social Media, Web Design & Content aus einer Hand. Zwei Gründer, ein Ansprechpartner, messbare Ergebnisse.',
+    description: 'TnT Studio macht Unternehmen gefunden — bei Google UND ChatGPT. Web Design, KI-Sichtbarkeit & SEO, Social Media Marketing und Software Development aus einer Hand. Zwei Gründer, ein Ansprechpartner, messbare Ergebnisse.',
     canonical: 'https://tnt-studio.de/',
     lastmod: contentUpdated.site,
     jsonLd: [

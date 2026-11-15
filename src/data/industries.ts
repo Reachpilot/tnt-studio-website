@@ -34,7 +34,7 @@ export const industries: Industry[] = [
       { question: 'Braucht ein Handwerksbetrieb eine Website?', answer: 'Ja, 90% der Kunden suchen zuerst online, auch für Handwerker. Eine schnelle, mobile Website mit Leistungen, Referenzen und Terminbutton entscheidet, ob der Anruf kommt oder zur Konkurrenz geht.' },
       { question: 'Was bringt Local SEO für Handwerker?', answer: 'Local SEO stellt Sie in Google Maps und lokalen Suchergebnissen nach vorn, genau dort, wo Kunden „Elektriker in meiner Nähe" suchen. Google Business Profile, lokale Keywords und Bewertungen sind der entscheidende Faktor.' },
       { question: 'Lohnt sich Social Media für Handwerksbetriebe?', answer: 'Ja, besonders für Recruitings und Image: Vorher-Nachher-Projekte, Team-Vorstellung, echte Arbeit zeigen. Das schafft Vertrauen und spricht junge Fachkräfte an, doppelt wirksam.' },
-      { question: 'Was kostet eine Website für Handwerker?', answer: 'Bei TnT Studio starten Websites bei 2.500€. Für Handwerksbetriebe empfehlen wir oft eine schlanke Business-Website mit Termin-Link, kein überdimensioniertes Projekt, sondern das, was Anfragen bringt.' },
+      { question: 'Was kostet eine Website für Handwerker?', answer: 'Bei TnT Studio starten Websites bei 500€ (Landingpage), Business-Websites ab 2.500€. Für Handwerksbetriebe empfehlen wir oft eine schlanke Business-Website mit Termin-Link, kein überdimensioniertes Projekt, sondern das, was Anfragen bringt.' },
       { question: 'Wird mein Betrieb bei ChatGPT gefunden?', answer: 'Mit GEO/AEO-Optimierung ja, wir strukturieren Ihre Daten so, dass KI-Systeme Sie verstehen und empfehlen können. Das ist bei lokalen Dienstleistern besonders wirksam, weil KI-Systeme lokale, vertrauenswürdige Anbieter priorisieren.' },
     ],
   },
@@ -58,7 +58,7 @@ export const industries: Industry[] = [
       { question: 'Was bringt Local SEO für Restaurants?', answer: 'Local SEO bringt Sie in Google Maps und lokale Suchergebnisse, dort, wo Gäste „Restaurant in der Nähe" suchen. Optimiertes Google Business Profile mit Fotos, Bewertungen und aktuellen Daten ist der wichtigste Hebel.' },
       { question: 'Lohnt sich Instagram für Restaurants?', answer: 'Sehr. Gastronomie ist visuell, Gerichte, Atmosphäre, Events. Regelmäßige Posts und Reels mit echtem Content schaffen Appetit vor dem Besuch und werden von KI-Systemen als Vertrauenssignal gewertet.' },
       { question: 'Braucht ein Restaurant eine eigene Website?', answer: 'Nicht zwingend, aber sinnvoll: für Reservierungen, Event-Ankündigungen, Catering-Anfragen und eine konsistente Marke jenseits von Google Maps. Eine schlanke One-Page mit Menü-Link und Reservierungsbutton reicht oft.' },
-      { question: 'Was kostet Marketing für Restaurants?', answer: 'Das hängt vom Umfang ab: Google Business Profile Optimierung ist ein einmaliges Projekt, Social Media Betreuung ab ~800€/Monat, Websites ab 2.500€. Wir kalkulieren transparent nach Ihren Zielen.' },
+      { question: 'Was kostet Marketing für Restaurants?', answer: 'Das hängt vom Umfang ab: Google Business Profile Optimierung ist ein einmaliges Projekt, Social Media Betreuung ab 1.200€/Monat, Websites ab 500€ (Landingpage) bzw. 2.500€ (Business-Website). Wir kalkulieren transparent nach Ihren Zielen.' },
       { question: 'Wie schnell sehen Restaurants Ergebnisse?', answer: 'Google Business Profile Optimierung zeigt oft innerhalb von Wochen Wirkung. Social Media und SEO brauchen 2-3 Monate für messbare Effekte, aber Reservierungen und Anfragen sind sofort trackbar.' },
     ],
   },
@@ -92,7 +92,7 @@ export const industries: Industry[] = [
     tagline: 'Mandanten, die Sie finden, bevor der Wettbewerber sie hat.',
     intro: [
       'Kanzleien leben von Vertrauen, und Vertrauen beginnt vor dem ersten Gespräch. Wer bei „Steuerberater für Freiberufler" oder „Fachanwalt Arbeitsrecht Wuppertal" nicht gefunden wird, ist für potenzielle Mandanten unsichtbar.',
-      'Wir bauen für Kanzleien und Steuerkanzleien digitale Präsenz mit Substanz: expertische Inhalte, die bei Google und ChatGPT zitiert werden, klare Mandantengewinnung-Pfade, LinkedIn-Positionierung für die Partner und eine Website, die Seriosität und Kompetenz auf den ersten Blick vermittelt.',
+      'Wir bauen für Kanzleien und Steuerkanzleien digitale Präsenz mit Substanz: fachlich fundierte Inhalte, die bei Google und ChatGPT zitiert werden, klare Mandantengewinnung-Pfade, LinkedIn-Positionierung für die Partner und eine Website, die Seriosität und Kompetenz auf den ersten Blick vermittelt.',
     ],
     painPoints: [
       'Website von 2015, statisch, nicht mobil, kein Content',

@@ -10,9 +10,9 @@ const stack = [
     note: 'Jede Route wird als echtes HTML ausgeliefert, Google und KI-Crawler lesen alles, ohne JavaScript.',
   },
   {
-    title: 'Backend & APIs',
-    items: ['Netlify Functions', 'Resend API', 'Formular-Endpoint', 'Honeypot-Schutz'],
-    note: 'Kontaktformulare laufen über eigene Serverless-APIs, nicht über fertige Widgets, die Ihre Daten weiterverkaufen.',
+    title: 'Sicherheit & Datenschutz',
+    items: ['100% statisch', 'WhatsApp-Lead-Übergabe', 'Consent-gated Tracking', 'DSGVO by Design'],
+    note: 'Das Kontaktformular generiert einen fertigen WhatsApp-Chat: keine Formulardaten werden gespeichert oder an Dritte weitergegeben.',
   },
   {
     title: 'Tracking & Messung',
