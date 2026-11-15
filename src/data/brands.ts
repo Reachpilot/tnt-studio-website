@@ -7,7 +7,6 @@ export interface Brand {
 }
 
 export const brands: Brand[] = [
-  { name: 'Joyn', logo: '/marken/joyn.svg', service: 'Digitales Marketing', width: 1024, height: 445 },
   { name: 'Lackmann', logo: '/marken/All-In-One-Logo-Lackmann_Lackmann-Logo-komplett_normal.webp', service: 'Content Creation', width: 400, height: 129 },
   { name: 'Esteves Recruiting', logo: '/marken/Esteves-recruiting.webp', service: 'Komplettpaket: Marketing, SEO, Social Media', width: 400, height: 100 },
   { name: 'Cosi Brautmoden', logo: '/marken/cosi-brautmoden-logo-2.webp', service: 'Web Design', width: 400, height: 240 },

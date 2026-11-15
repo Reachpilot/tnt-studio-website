@@ -7,7 +7,7 @@ export default function LogoCarousel() {
     <section className="border-y border-neutral-100 py-16">
       <div className="mx-auto max-w-7xl px-6">
         <p className="mb-12 text-center text-sm font-semibold tracking-widest text-neutral-500 uppercase">
-          Von Joyn bis zum lokalen Handwerker
+          Marken &amp; Unternehmen, die uns vertrauen
         </p>
       </div>
 
