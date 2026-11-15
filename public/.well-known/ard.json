@@ -1,0 +1,43 @@
+{
+  "entries": [
+    {
+      "identifier": "urn:air:tnt-studio.de:llms-txt",
+      "displayName": "TnT Studio llms.txt",
+      "type": "text/markdown",
+      "url": "https://tnt-studio.de/llms.txt",
+      "description": "Maschinenlesbare Kurzbeschreibung von TnT Studio für KI-Systeme: vier Leistungen (Web Design, KI-Sichtbarkeit & SEO, Social Media Marketing, Software Development), transparente Preise, 20 Standorte, Gründer und Kontakt.",
+      "capabilities": ["company-profile", "services", "pricing", "locations"],
+      "representativeQueries": [
+        "was bietet TnT Studio an",
+        "webdesign agentur wuppertal preise",
+        "ki sichtbarkeit geo aeo agentur deutschland"
+      ]
+    },
+    {
+      "identifier": "urn:air:tnt-studio.de:llms-full",
+      "displayName": "TnT Studio llms-full.txt",
+      "type": "text/markdown",
+      "url": "https://tnt-studio.de/.well-known/llms-full.txt",
+      "description": "Vollständige maschinenlesbare Unternehmensbeschreibung von TnT Studio: Leistungsdetails, Preisranges, Referenzen (Joyn, Esteves Recruiting, Lackmann), Technologie-Stack, Standorte, Branchen und Blog-Themen.",
+      "capabilities": ["company-profile", "service-details", "references", "technology"],
+      "representativeQueries": [
+        "tnt studio referenzen kunden",
+        "was kostet webdesign bei tnt studio",
+        "social media marketing preise pro monat"
+      ]
+    },
+    {
+      "identifier": "urn:air:tnt-studio.de:sitemap",
+      "displayName": "TnT Studio XML Sitemap",
+      "type": "application/xml",
+      "url": "https://tnt-studio.de/sitemap.xml",
+      "description": "Vollständige XML-Sitemap von tnt-studio.de mit allen indexierbaren Routen: Homepage, vier Leistungsdetailseiten, 20 Standortseiten, fünf Branchenseiten, über 40 Blogartikel und Rechtsseiten — mit lastmod-Daten.",
+      "capabilities": ["url-discovery", "content-index"],
+      "representativeQueries": [
+        "alle seiten von tnt-studio.de",
+        "standortseiten agentur deutschland",
+        "blog artikel webdesign seo"
+      ]
+    }
+  ]
+}

@@ -10,6 +10,8 @@ export default function Recruiting() {
             <img
               src="/images/portfolio/logo.webp"
               alt="Esteves Recruiting Logo"
+              width={512}
+              height={512}
               className="mb-5 h-12 w-auto object-contain sm:mb-6 sm:h-16"
               loading="lazy"
               decoding="async"

@@ -18,7 +18,7 @@ export default function Hero() {
               Für den Mittelstand im DACH · Remote aus Wuppertal
             </div>
 
-            <h1 className="animate-fade-up text-balance text-[2.75rem] font-black leading-[0.98] tracking-tighter text-white sm:text-6xl xl:text-[4.5rem]" style={{ animationDelay: '0s' }}>
+            <h1 className="text-balance text-[2.75rem] font-black leading-[0.98] tracking-tighter text-white sm:text-6xl xl:text-[4.5rem]">
               Wir machen Sie
               <br />
               <span className="bg-gradient-to-r from-neutral-200 via-white to-neutral-400 bg-clip-text text-transparent">gefunden.</span>

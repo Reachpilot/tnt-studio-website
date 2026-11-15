@@ -459,4 +459,32 @@ await fs.copyFile(path.join(__dirname, '../public/llms.txt'), path.join(__dirnam
 await fs.copyFile(path.join(__dirname, '../public/llms-full.txt'), path.join(__dirname, '../dist/.well-known/llms-full.txt'))
 await fs.copyFile(path.join(__dirname, '../public/ai-catalog.json'), path.join(__dirname, '../dist/.well-known/ai-catalog.json'))
 
+// Inline the render-blocking stylesheet into every HTML file to remove it
+// from the critical path (Lighthouse "render-blocking requests")
+const assetsDir = path.join(__dirname, '../dist/assets')
+const cssName = (await fs.readdir(assetsDir)).find((f) => f.endsWith('.css'))
+if (cssName) {
+  const css = (await fs.readFile(path.join(assetsDir, cssName), 'utf8')).replace(/<\/style/gi, '<\\/style')
+  const distDir = path.join(__dirname, '../dist')
+  const htmlFiles = []
+  async function collectHtml(dir) {
+    for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+      const p = path.join(dir, entry.name)
+      if (entry.isDirectory()) await collectHtml(p)
+      else if (entry.name.endsWith('.html')) htmlFiles.push(p)
+    }
+  }
+  await collectHtml(distDir)
+  let inlined = 0
+  for (const file of htmlFiles) {
+    const html = await fs.readFile(file, 'utf8')
+    const next = html.replace(/<link rel="stylesheet"[^>]*>/, `<style>${css}</style>`)
+    if (next !== html) {
+      await fs.writeFile(file, next)
+      inlined++
+    }
+  }
+  console.log(`Inlined ${cssName} into ${inlined} HTML files`)
+}
+
 console.log(`Prerendered ${routes.length} routes into dist/`)
