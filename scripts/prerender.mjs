@@ -93,13 +93,13 @@ const localBusinessSchema = {
   name: 'TnT Studio',
   image: 'https://tnt-studio.de/og-image.webp',
   url: 'https://tnt-studio.de/',
-  telephone: '+49',
+  telephone: '+4917722722211',
   email: 'info@tnt-studio.de',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Julius-Lucas-Weg 90',
+    streetAddress: 'Mirker Straße 99',
     addressLocality: 'Wuppertal',
-    postalCode: '42113',
+    postalCode: '42105',
     addressCountry: 'DE',
   },
   geo: {
@@ -280,9 +280,9 @@ for (const loc of locations) {
           url: 'https://tnt-studio.de/',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Julius-Lucas-Weg 90',
+            streetAddress: 'Mirker Straße 99',
             addressLocality: 'Wuppertal',
-            postalCode: '42113',
+            postalCode: '42105',
             addressCountry: 'DE',
           },
         },

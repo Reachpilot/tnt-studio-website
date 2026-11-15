@@ -8,7 +8,7 @@ export interface FAQ {
 export const homeFAQs: FAQ[] = [
   {
     question: 'Was macht TnT Studio?',
-    answer: 'TnT Studio ist ein Design- und Marketing-Studio aus Wuppertal, gegründet von zwei Unternehmern und aufgebaut zu einer Plattform für digitale Sichtbarkeit. Wir machen Unternehmen gefunden, bei Google UND bei KI-Systemen wie ChatGPT, Perplexity und Gemini. Dafür verbinden wir KI-Sichtbarkeit (GEO/AEO), SEO/SEA, Social Media Marketing, Web Design (inkl. Branding), KI-Sichtbarkeit (GEO/AEO), SEO/SEA, Social Media Marketing und Software Development zu einem System, umgesetzt von Gründern und einem Netzwerk aus Designern, Entwicklern und Marketern. Ein fester Ansprechpartner, messbare Ergebnisse.'
+    answer: 'TnT Studio ist ein Design- und Marketing-Studio aus Wuppertal, gegründet von zwei Unternehmern und aufgebaut zu einer Plattform für digitale Sichtbarkeit. Wir machen Unternehmen gefunden, bei Google UND bei KI-Systemen wie ChatGPT, Perplexity und Gemini. Dafür verbinden wir Web Design (inkl. Branding & Logo), KI-Sichtbarkeit (GEO/AEO, SEO/SEA), Social Media Marketing und Software Development zu einem System, umgesetzt von Gründern und einem Netzwerk aus Designern, Entwicklern und Marketern. Ein fester Ansprechpartner, messbare Ergebnisse.'
   },
   {
     question: 'Für wen ist TnT Studio die richtige Agentur?',
@@ -53,9 +53,9 @@ export const localSEOKeywords = [
   'Webdesign Wuppertal',
   'Webagentur Wuppertal',
   'Social Media Agentur Wuppertal',
-  'Content Creation Wuppertal',
-  'Produktfotografie Wuppertal',
-  'Branding Agentur Wuppertal',
+  'KI-Sichtbarkeit Agentur Wuppertal',
+  'GEO AEO Optimierung',
+  'Software Agentur Wuppertal',
   'Software Entwicklung Wuppertal',
   'Online Marketing Wuppertal',
   'Werbeagentur Wuppertal',

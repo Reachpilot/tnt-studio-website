@@ -711,7 +711,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: 'Impressum: Was rein muss',
         paragraphs: [
-          'Das Impressum ist Pflicht für jede gewerbliche Website in Deutschland. Es muss folgende Informationen enthalten: Vollständiger Name des Betreibers, ladungsfähige Anschrift (Julius-Lucas-Weg 90, 42113 Wuppertal bei TnT Studio), Kontaktdaten (E-Mail, Telefon), Umsatzsteuer-Identifikationsnummer (falls vorhanden) und bei juristischen Personen: Rechtsform und Vertretungsberechtigter.',
+          'Das Impressum ist Pflicht für jede gewerbliche Website in Deutschland. Es muss folgende Informationen enthalten: Vollständiger Name des Betreibers, ladungsfähige Anschrift (Mirker Straße 99, 42105 Wuppertal bei TnT Studio), Kontaktdaten (E-Mail, Telefon), Umsatzsteuer-Identifikationsnummer (falls vorhanden) und bei juristischen Personen: Rechtsform und Vertretungsberechtigter.',
           'Das Impressum muss von jeder Seite der Website mit einem Klick erreichbar sein, typischerweise im Footer. Verstecke es nicht in einem Dropdown oder hinter drei Klicks.',
         ],
       },
@@ -827,7 +827,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'NAP-Konsistenz',
         paragraphs: [
           'NAP steht für Name, Address, Phone. Diese Informationen müssen auf deiner Website, in Google Business Profile, in Verzeichnissen (Yelp, Gelbe Seiten, Branchenbuch) und auf Social Media identisch sein. Jede Abweichung verwirrt Google und schwächt dein Local SEO.',
-          'Bei TnT Studio ist die NAP-Information: TnT Studio, Julius-Lucas-Weg 90, 42113 Wuppertal, info@tnt-studio.de. Diese Information steht im Footer, im Impressum und in Google Business Profile, überall identisch.',
+          'Bei TnT Studio ist die NAP-Information: TnT Studio, Mirker Straße 99, 42105 Wuppertal, info@tnt-studio.de. Diese Information steht im Footer, im Impressum und in Google Business Profile, überall identisch.',
         ],
       },
       {
@@ -2066,7 +2066,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'Lokale Voice Search',
         paragraphs: [
           'Voice Search ist besonders für lokale Suchen relevant. "Hey Google, finde eine Webdesign-Agentur in der Nähe", Google nutzt Local SEO (Google Business Profile, Bewertungen, NAP-Konsistenz), um die Antwort zu finden. Wenn dein Local SEO gut ist, wirst du von Voice Assistants eher genannt.',
-          'TnT Studio optimiert für lokale Voice Search: Google Business Profile mit vollständigen Informationen, lokale Keywords auf der Website, klare NAP-Information (Julius-Lucas-Weg 90, 42113 Wuppertal), FAQ-Seiten mit lokalen Fragen. Wenn jemand Siri nach einer Webdesign-Agentur in Wuppertal fragt, wollen wir genannt werden.',
+          'TnT Studio optimiert für lokale Voice Search: Google Business Profile mit vollständigen Informationen, lokale Keywords auf der Website, klare NAP-Information (Mirker Straße 99, 42105 Wuppertal), FAQ-Seiten mit lokalen Fragen. Wenn jemand Siri nach einer Webdesign-Agentur in Wuppertal fragt, wollen wir genannt werden.',
         ],
       },
     ],

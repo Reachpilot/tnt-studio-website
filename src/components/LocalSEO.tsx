@@ -23,7 +23,7 @@ export default function LocalSEO() {
             </p>
             <div className="mt-6 space-y-3 text-sm text-neutral-500">
               <p>
-                <strong className="text-neutral-900">Adresse:</strong> Julius-Lucas-Weg 90, 42113 Wuppertal
+                <strong className="text-neutral-900">Adresse:</strong> Mirker Straße 99, 42105 Wuppertal
               </p>
               <p>
                 <strong className="text-neutral-900">E-Mail:</strong>{' '}
@@ -36,7 +36,7 @@ export default function LocalSEO() {
               </p>
             </div>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Julius-Lucas-Weg+90,+42113+Wuppertal"
+              href="https://www.google.com/maps/search/?api=1&query=Mirker+Strasse+99,+42105+Wuppertal"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-neutral-700"

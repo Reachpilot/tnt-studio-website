@@ -75,7 +75,7 @@ export default function Footer() {
                   info@tnt-studio.de
                 </a>
               </li>
-              <li className="text-sm text-neutral-500">Julius-Lucas-Weg 90, 42113 Wuppertal</li>
+              <li className="text-sm text-neutral-500">Mirker Straße 99, 42105 Wuppertal</li>
             </ul>
           </div>
         </div>

@@ -29,7 +29,7 @@ export const locations: Location[] = [
     industries: ['Handwerk & Bau', 'Einzelhandel & E-Commerce', 'Dienstleister & Beratung', 'Kreativwirtschaft', 'Industrie & Produktion'],
     districts: ['Elberfeld', 'Barmen', 'Vohwinkel', 'Ronsdorf', 'Cronenberg', 'Langerfeld', 'Oberbarmen', 'Sudberg'],
     faqs: [
-      { question: 'Ist TnT Studio wirklich in Wuppertal ansässig?', answer: 'Ja. TnT Studio hat seinen Sitz in Wuppertal (Julius-Lucas-Weg 90, 42113 Wuppertal). Wir arbeiten remote-first, kommen aber bei Bedarf auch vor Ort, für Shootings, Meetings oder Drehs im Bergischen Land.' },
+      { question: 'Ist TnT Studio wirklich in Wuppertal ansässig?', answer: 'Ja. TnT Studio hat seinen Sitz in Wuppertal (Mirker Straße 99, 42105 Wuppertal). Wir arbeiten remote-first, kommen aber bei Bedarf auch vor Ort, für Shootings, Meetings oder Drehs im Bergischen Land.' },
       { question: 'Welche Leistungen bietet TnT Studio in Wuppertal an?', answer: 'Alle Leistungen aus einer Hand: Web Design (inkl. Branding & Logo), KI-Sichtbarkeit & SEO, Social Media Marketing und Software Development. Von der ersten Website-zum laufenden Social-Media-Betrieb.' },
       { question: 'Arbeitet TnT Studio nur für Unternehmen in Wuppertal?', answer: 'Nein. Wuppertal ist unser Zuhause, nicht unsere Grenze. Wir betreuen Kunden in ganz NRW, Deutschland, Europa und den USA, remote. Der lokale Fokus hilft uns, den Bergischen Markt besonders gut zu verstehen.' },
       { question: 'Was kostet eine Website bei TnT Studio in Wuppertal?', answer: 'Landingpages ab 500 €, Business-Websites ab 2.500 €, E-Commerce-Plattformen ab 5.000 €. Nach dem ersten kostenlosen Call bekommst du ein transparentes Fixpreis-Angebot, ohne versteckte Kosten.' },

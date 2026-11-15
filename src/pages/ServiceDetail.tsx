@@ -86,9 +86,9 @@ export default function ServiceDetail() {
           url: 'https://tnt-studio.de/',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Julius-Lucas-Weg 90',
+            streetAddress: 'Mirker Straße 99',
             addressLocality: 'Wuppertal',
-            postalCode: '42113',
+            postalCode: '42105',
             addressCountry: 'DE',
           },
         },
