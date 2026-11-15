@@ -27,8 +27,6 @@ const budgetOptions = [
 
 const initialData = {
   name: '',
-  email: '',
-  phone: '',
   company: '',
   website: '',
   service: [] as string[],
@@ -37,10 +35,6 @@ const initialData = {
   timeline: '',
   message: '',
   consent: false,
-}
-
-function validateEmail(email: string) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
 export default function ContactForm() {
@@ -87,7 +81,7 @@ export default function ContactForm() {
     }))
   }
 
-  const step0Valid = data.name.trim().length >= 2 && validateEmail(data.email)
+  const step0Valid = data.name.trim().length >= 2
   const step1Valid = data.service.length > 0 && data.budget !== ''
   const step2Valid = (data.goals.length > 0 || data.message.trim().length >= 10) && data.consent
 
@@ -114,10 +108,8 @@ export default function ContactForm() {
     ]
     if (data.timeline) parts.push(`Zeitrahmen: ${data.timeline}`)
     if (data.website) parts.push(`Website: ${data.website}`)
-    if (data.phone) parts.push(`Telefon: ${data.phone}`)
     if (data.goals.length > 0) parts.push(`Ziel: ${data.goals.join(', ')}`)
     if (data.message.trim()) parts.push('', 'Details:', data.message.trim())
-    parts.push(`E-Mail: ${data.email}`)
 
     // Attribution: woher kommt der Lead (UTM, gclid, Referrer)
     const attr = getAttribution()
@@ -180,10 +172,16 @@ export default function ContactForm() {
             <div key={label} className="flex flex-1 items-center">
               <div
                 className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-black transition-colors ${
-                  i <= step ? 'bg-neutral-900 text-white' : 'bg-neutral-200 text-neutral-500'
+                  i < step ? 'bg-[#25D366] text-white' : i === step ? 'bg-neutral-900 text-white' : 'bg-neutral-200 text-neutral-500'
                 }`}
               >
-                {i + 1}
+                {i < step ? (
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                ) : (
+                  i + 1
+                )}
               </div>
               <span
                 className={`ml-2 hidden text-xs font-semibold sm:inline ${
@@ -195,7 +193,7 @@ export default function ContactForm() {
               {i < steps.length - 1 && (
                 <div
                   className={`mx-3 h-0.5 flex-1 rounded-full transition-colors ${
-                    i < step ? 'bg-neutral-900' : 'bg-neutral-200'
+                    i < step ? 'bg-[#25D366]' : 'bg-neutral-200'
                   }`}
                 />
               )}
@@ -223,31 +221,6 @@ export default function ContactForm() {
                 {touched[0] && data.name.trim().length < 2 && (
                   <p className="mt-1.5 text-xs text-red-500">Bitte gib deinen Namen ein.</p>
                 )}
-              </div>
-              <div>
-                <label className="mb-1.5 block text-sm font-semibold text-neutral-700">E-Mail *</label>
-                <input
-                  name="email"
-                  type="email"
-                  value={data.email}
-                  onChange={(e) => update('email', e.target.value)}
-                  placeholder="max@firma.de"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
-                />
-                {touched[0] && !validateEmail(data.email) && (
-                  <p className="mt-1.5 text-xs text-red-500">Gültige E-Mail-Adresse erforderlich.</p>
-                )}
-              </div>
-              <div>
-                <label className="mb-1.5 block text-sm font-semibold text-neutral-700">Telefon</label>
-                <input
-                  name="phone"
-                  type="tel"
-                  value={data.phone}
-                  onChange={(e) => update('phone', e.target.value)}
-                  placeholder="+49 123 456789"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
-                />
               </div>
               <div>
                 <label className="mb-1.5 block text-sm font-semibold text-neutral-700">Firma</label>
@@ -290,13 +263,13 @@ export default function ContactForm() {
                       onClick={() => toggleService(s.title)}
                       className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-all ${
                         active
-                          ? 'border-neutral-900 bg-neutral-100 text-neutral-700'
+                          ? 'border-[#25D366] bg-green-50 text-neutral-900 shadow-sm'
                           : 'border-neutral-200 bg-white text-neutral-700 hover:border-neutral-300'
                       }`}
                     >
                       <span
-                        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded border ${
-                          active ? 'border-neutral-900 bg-neutral-1000' : 'border-neutral-300'
+                        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded border transition-colors ${
+                          active ? 'border-[#25D366] bg-[#25D366]' : 'border-neutral-300 bg-white'
                         }`}
                       >
                         {active && (
@@ -328,7 +301,7 @@ export default function ContactForm() {
                       onClick={() => update('budget', b)}
                       className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${
                         active
-                          ? 'bg-neutral-900 text-white'
+                          ? 'bg-[#25D366] text-white shadow-md'
                           : 'border border-neutral-200 bg-white text-neutral-700 hover:border-neutral-400'
                       }`}
                     >
@@ -355,7 +328,7 @@ export default function ContactForm() {
                       onClick={() => update('timeline', t)}
                       className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${
                         active
-                          ? 'bg-neutral-900 text-white'
+                          ? 'bg-[#25D366] text-white shadow-md'
                           : 'border border-neutral-200 bg-white text-neutral-700 hover:border-neutral-400'
                       }`}
                     >
@@ -384,13 +357,13 @@ export default function ContactForm() {
                       onClick={() => toggleGoal(g)}
                       className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-all ${
                         active
-                          ? 'border-neutral-900 bg-neutral-100 text-neutral-700'
+                          ? 'border-[#25D366] bg-green-50 text-neutral-900 shadow-sm'
                           : 'border-neutral-200 bg-white text-neutral-700 hover:border-neutral-300'
                       }`}
                     >
                       <span
-                        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded border ${
-                          active ? 'border-neutral-900 bg-neutral-900' : 'border-neutral-300'
+                        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded border transition-colors ${
+                          active ? 'border-[#25D366] bg-[#25D366]' : 'border-neutral-300 bg-white'
                         }`}
                       >
                         {active && (
@@ -427,7 +400,7 @@ export default function ContactForm() {
                 type="checkbox"
                 checked={data.consent}
                 onChange={(e) => update('consent', e.target.checked)}
-                className="mt-0.5 h-5 w-5 rounded border-neutral-300 text-neutral-900 focus:ring-neutral-900"
+                className="mt-0.5 h-5 w-5 rounded border-neutral-300 accent-[#25D366]"
               />
               <span className="text-sm leading-relaxed text-neutral-600">
                 Ich stimme zu, dass meine Daten zur Bearbeitung der Anfrage gespeichert werden. *
@@ -446,8 +419,6 @@ export default function ContactForm() {
             <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5 text-sm">
               <div className="grid gap-3 sm:grid-cols-2">
                 <div><span className="text-neutral-500">Name:</span> <span className="font-medium text-neutral-900">{data.name}</span></div>
-                <div><span className="text-neutral-500">E-Mail:</span> <span className="font-medium text-neutral-900">{data.email}</span></div>
-                <div><span className="text-neutral-500">Telefon:</span> <span className="font-medium text-neutral-900">{data.phone || 'k. A.'}</span></div>
                 <div><span className="text-neutral-500">Firma:</span> <span className="font-medium text-neutral-900">{data.company || 'k. A.'}</span></div>
                 <div className="sm:col-span-2"><span className="text-neutral-500">Leistungen:</span> <span className="font-medium text-neutral-900">{data.service.join(', ')}</span></div>
                 <div className="sm:col-span-2"><span className="text-neutral-500">Ziel:</span> <span className="font-medium text-neutral-900">{data.goals.join(', ') || 's. Details'}</span></div>

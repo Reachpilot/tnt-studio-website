@@ -12,17 +12,9 @@ Production deploy happens via Netlify from the GitHub repo `Reachpilot/tnt-studi
 Build command: `npm run build`
 Publish directory: `dist`
 
-## Contact Form — Resend API (Netlify Function)
+## Contact Form — WhatsApp-only
 
-The multi-step contact form (`src/components/ContactForm.tsx`) submits via `fetch()` to the Netlify Function `/.netlify/functions/kontakt` (`netlify/functions/kontakt.js`).
-
-- **Primary:** Resend API (`https://api.resend.com/emails`) — requires `RESEND_API_KEY` env var in Netlify.
-- **Fallback:** If `RESEND_API_KEY` is not set, the function forwards the submission to FormSubmit server-side, so the form keeps working until Resend is configured.
-- Optional env vars: `RESEND_FROM` (sender, e.g. `TnT Studio <kontakt@tnt-studio.de>`), `RESEND_TO` (defaults to `info@tnt-studio.de`).
-- For a custom sender address, the domain must be verified in Resend (DNS records). Until then use `onboarding@resend.dev` (delivers only to the Resend account email).
-- Spam protection: hidden `fax` honeypot field + server-side validation.
-- On success the form shows the success state directly and fires `trackLead()` (GA4 `generate_lead` + Meta Pixel `Lead`).
-- A fallback form for non-JS users is included in `index.html` and still posts to FormSubmit directly.
+The multi-step contact form (`src/components/ContactForm.tsx`) collects name, company, services, budget, timeline, goals and details, then generates a personalized `wa.me/4917722722211` link with the full lead message (including attribution). No email/phone fields — WhatsApp provides sender identity. No server-side submission; `netlify/functions/` was removed. Spam protection concept remains documented but the honeypot field is no longer wired to a backend.
 
 ## Analytics — Consent-gated (GA4 + Meta Pixel)
 
@@ -35,7 +27,7 @@ Events: `generate_lead`/`Lead` on form success, `contact_click` on tel:/mailto:/
 
 ## Attribution — First-Touch (UTM/gclid → Lead)
 
-`src/lib/attribution.ts` stores first-touch attribution (UTM params, gclid/gbraid/wbraid, landing page, referrer) in `sessionStorage` once per session. `main.tsx` calls `captureAttribution()` on load; `ContactForm.tsx` spreads `getAttribution()` into the POST body; `netlify/functions/kontakt.js` renders Quelle/Kampagne/Google-Klick-ID/Referrer/Landing rows into the lead email.
+`src/lib/attribution.ts` stores first-touch attribution (UTM params, gclid/gbraid/wbraid, landing page, referrer) in `sessionStorage` once per session. `main.tsx` calls `captureAttribution()` on load; `ContactForm.tsx` appends the attribution lines into the generated WhatsApp message.
 
 ## SEO / AEO Strategy
 
@@ -61,4 +53,4 @@ Events: `generate_lead`/`Lead` on form success, `contact_click` on tel:/mailto:/
 - Contact: `/#contact`
 - FAQ: `/#faq`
 - Local SEO section: `/#wuppertal`
-- Contact API: `/.netlify/functions/kontakt`
+- Contact: generated WhatsApp link (`wa.me/4917722722211`) from the multi-step form
