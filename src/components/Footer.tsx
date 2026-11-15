@@ -60,6 +60,7 @@ export default function Footer() {
               <li><a href="/#founders" className="text-sm text-neutral-500 hover:text-neutral-900">Team</a></li>
               <li><a href="/#recruiting" className="text-sm text-neutral-500 hover:text-neutral-900">Recruiting</a></li>
               <li><a href="/blog/" className="text-sm text-neutral-500 hover:text-neutral-900">Blog</a></li>
+              <li><a href="/standorte/" className="text-sm text-neutral-500 hover:text-neutral-900">Standorte</a></li>
               <li><a href="/#contact" className="text-sm text-neutral-500 hover:text-neutral-900">Kontakt</a></li>
             </ul>
           </div>

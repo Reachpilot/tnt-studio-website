@@ -18,6 +18,8 @@ import CookieBanner from './components/CookieBanner'
 import ServiceDetail from './pages/ServiceDetail'
 import BlogList from './pages/BlogList'
 import BlogPost from './pages/BlogPost'
+import LocationList from './pages/LocationList'
+import LocationDetail from './pages/LocationDetail'
 
 
 const homeMeta = {
@@ -68,6 +70,8 @@ export default function App() {
           <Route path="/leistungen/:slug" element={<ServiceDetail />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/standorte" element={<LocationList />} />
+          <Route path="/standorte/:slug" element={<LocationDetail />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

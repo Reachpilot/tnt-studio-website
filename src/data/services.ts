@@ -23,6 +23,8 @@ export interface ServiceCaseStudy {
 export interface Service {
   title: string
   description: string
+  metaTitle?: string
+  metaDescription?: string
   longDescription: string
   features: string[]
   icon: string
@@ -36,6 +38,8 @@ export const services: Service[] = [
   {
     title: 'Web Design',
     description: 'Massgeschneiderte Websites, die nicht nur gut aussehen, sondern auch konvertieren.',
+    metaTitle: 'Webdesign Wuppertal — Websites, die konvertieren | TnT Studio',
+    metaDescription: 'Individuelles Webdesign aus Wuppertal: React, TypeScript & Tailwind. Load Time unter 1s, Lighthouse 95+. Projekt-Websites ab 2.500 € — jetzt unverbindlich anfragen.',
     longDescription: 'Wir bauen Websites, die mehr sind als digitale Visitenkarten. Jedes Projekt startet mit einer tiefgehenden Analyse deiner Zielgruppe, deiner Wettbewerber und deiner Ziele. Dann entwickeln wir ein Design, das nicht nur modern aussieht, sondern auch funktioniert — auf jedem Gerät, in jeder Geschwindigkeit, für jeden User. Von der ersten Skizze bis zum Go-Live begleiten wir dich durch jeden Schritt und sorgen dafür, dass deine Website ein echtes Werkzeug für dein Business ist, kein Kostenfaktor.',
     features: ['Custom Development', 'Responsive Design', 'E-Commerce', 'UI/UX Design', 'Performance-Optimierung', 'SEO-Grundlagen', 'CMS-Integration', 'Conversion-Optimierung'],
     icon: 'code',
@@ -77,6 +81,8 @@ export const services: Service[] = [
   {
     title: 'Social Media Marketing',
     description: 'Strategische Social-Media-Präsenz, die deine Marke wachsen lässt.',
+    metaTitle: 'Social Media Agentur Wuppertal — Reels & Ads | TnT Studio',
+    metaDescription: 'Social Media Marketing für Wuppertal & NRW: Content-Produktion, Meta Ads, Community Management. Pakete ab 800 €/Monat — jetzt kostenlos beraten lassen.',
     longDescription: 'Social Media ist kein Bonus mehr — es ist das Schaufenster deiner Marke. Wir entwickeln Content-Strategien, die nicht nur Reichweite generieren, sondern echte Bindung aufbauen. Von der Content-Pillar-Definition über den Redaktionsplan bis hin zu Ad-Campaigns mit messbarem ROI. Wir posten nicht einfach drauf los — wir haben einen Plan, Daten und eine Strategie, die sich an deinen Business-Zielen orientiert, nicht an Vanity Metrics.',
     features: ['Content Strategy', 'Social Media Ads', 'Instagram & TikTok', 'Community Management', 'Influencer Marketing', 'Analytics & Reporting', 'A/B Testing', 'Hashtag-Strategie'],
     icon: 'social',
@@ -117,6 +123,8 @@ export const services: Service[] = [
   {
     title: 'Content Creation',
     description: 'Hochwertige Inhalte, die Geschichten erzählen und Aufmerksamkeit generieren.',
+    metaTitle: 'Content Creation Wuppertal — Reels, Imagefilme & Fotos | TnT Studio',
+    metaDescription: 'Professionelle Content-Produktion aus Wuppertal: Reels ab 300 €, Imagefilme ab 1.500 €. Video, Foto & Motion Design aus einer Hand — direkt anfragen.',
     longDescription: 'Content ist König — aber nur, wenn er gut ist. Wir produzieren Video-Content, der emotionalisiert, Fotos, die ins Auge springen, und Geschichten, die hängen bleiben. Ob Reel, Imagefilm, Produktvideo oder komplette Content-Serie: Wir haben die Equipment, das Auge und das Gespür für das, was heute funktioniert. Wir denken in Formaten, nicht in einzelnen Posts. Jedes Stück Content hat einen Zweck, eine Zielgruppe und eine Botschaft.',
     features: ['Video Content', 'Fotoshootings', 'Storytelling', 'Reels & TikToks', 'Explainer Videos', 'Imagefilme', 'Produktvideos', 'Behind-the-Scenes'],
     icon: 'video',
@@ -155,6 +163,8 @@ export const services: Service[] = [
   {
     title: 'Produktfotografie',
     description: 'Professionelle Produktbilder, die deine Produkte ins beste Licht rücken.',
+    metaTitle: 'Produktfotografie Wuppertal — Produktfotos ab 30 € | TnT Studio',
+    metaDescription: 'Professionelle Produktfotografie für Shop, Amazon & Social Media. White-Background- & Lifestyle-Shoots, Retusche inklusive — jetzt anfragen.',
     longDescription: 'Gute Produktfotos verkaufen. Schlechte Produktfotos kosten dich Kunden. Wir fotografieren deine Produkte mit professionellem Studio-Setup — perfekt ausgeleuchtet, gestochen scharf und ready für deinen Online-Shop, Amazon, eBay oder Print-Kataloge. Von weissen Hintergrund-Shots bis zu Lifestyle-Szenen mit Models: Wir wissen, wie Produkte aussehen müssen, um zu konvertieren. Jedes Bild wird retuschiert, farbkorrigiert und in allen benötigten Formaten geliefert.',
     features: ['E-Commerce Shots', 'White Background', 'Lifestyle Photography', '360° Views', 'Professional Editing', 'Amazon-optimiert', 'Print-ready', 'Bulk-Bearbeitung'],
     icon: 'camera',
@@ -193,6 +203,8 @@ export const services: Service[] = [
   {
     title: 'Branding',
     description: 'Starke Markenidentitäten, die im Gedächtnis bleiben.',
+    metaTitle: 'Branding Agentur Wuppertal — Logo, CI & Strategie | TnT Studio',
+    metaDescription: 'Markenidentität, die bleibt: Logo, Corporate Design, Brand Guidelines & Positionierung. Branding-Projekte ab 2.500 € — unverbindlich beraten lassen.',
     longDescription: 'Eine Marke ist mehr als ein Logo. Es ist das Gefühl, das Menschen haben, wenn sie an dich denken. Wir entwickeln Markenidentitäten, die konsistent, erkennbar und langlebig sind — vom Logo über die Farbwelt bis zur Tonalität. Wir denken nicht in Einzelteilen, sondern in Systemen. Eine Marke, die auf jeder Touchpoint stimmt — von der Visitenkarte bis zur Website, vom Instagram-Post bis zur Verpackung. Wir bauen Marken, die Menschen vertrauen.',
     features: ['Brand Strategy', 'Logo Design', 'Corporate Design', 'Brand Guidelines', 'Brand Positioning', 'Farbsysteme', 'Typografie', 'Verpackungsdesign'],
     icon: 'palette',
@@ -233,6 +245,8 @@ export const services: Service[] = [
   {
     title: 'Software Development',
     description: 'Massgeschneiderte Softwarelösungen — vom PDF-Generator bis zur API-Anbindung.',
+    metaTitle: 'Software Entwicklung Wuppertal — Individuelle Web-Apps | TnT Studio',
+    metaDescription: 'Individuelle Softwarelösungen: Web-Apps, APIs, Automatisierungen & Dashboards. Custom Code, DSGVO-konform, EU-Hosting — jetzt beraten lassen.',
     longDescription: 'Manchmal reicht eine Website nicht. Wenn du interne Prozesse digitalisieren, Daten automatisieren oder komplexe Workflows abbilden willst, bauen wir Software. Massgeschneidert, genau für deinen Use-Case. Wir entwickeln mit modernen Technologien — React, TypeScript, Node.js — und denken in Systemen, die skalieren. Ob PDF-Generatoren mit dynamischen Inhalten, API-Integrationen für CRM-Systeme oder komplette Plattformen: Wir bauen, was du brauchst, nicht was es fertig gibt.',
     features: ['Schadensreglementierung', 'Ausführbare PDFs (HTML/CSS)', 'API-Integrationen', 'DSGVO-konform', 'Google Maps & Analytics', 'CRM-Anbindungen', 'Automatisierungen', 'Dashboard-Entwicklung'],
     icon: 'terminal',

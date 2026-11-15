@@ -36,6 +36,7 @@ export default function ContactForm() {
   const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
@@ -76,14 +77,34 @@ export default function ContactForm() {
 
   const prev = () => setStep((s) => Math.max(s - 1, 0))
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     if (!step2Valid) {
-      e.preventDefault()
       setTouched({ ...touched, [step]: true })
       return
     }
-    // Valid: allow native submission to FormSubmit
     setSubmitting(true)
+    setSubmitError(null)
+    try {
+      const formData = new FormData(e.currentTarget)
+      const res = await fetch('/.netlify/functions/kontakt', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...data,
+          fax: String(formData.get('fax') || ''),
+        }),
+      })
+      const json = await res.json().catch(() => ({}))
+      if (!res.ok) throw new Error(json.error || 'Versand fehlgeschlagen.')
+      setSubmitted(true)
+      setStep(steps.length - 1)
+      trackLead()
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Versand fehlgeschlagen. Bitte erneut versuchen.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   if (submitted) {
@@ -116,14 +137,18 @@ export default function ContactForm() {
   return (
     <form
       name="kontakt"
-      method="POST"
-      action="https://formsubmit.co/info@tnt-studio.de"
       onSubmit={handleSubmit}
       className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-2xl"
     >
-      <input type="hidden" name="_next" value="https://tnt-studio.de/?form=sent#contact" />
-      <input type="hidden" name="_subject" value="Neue Projektanfrage via TnT Studio Website" />
-      <input type="hidden" name="_captcha" value="false" />
+      {/* Honeypot — nur für Bots sichtbar */}
+      <input
+        type="text"
+        name="fax"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
 
       {/* Progress */}
       <div className="border-b border-neutral-100 bg-neutral-50/50 px-6 py-6 sm:px-10">
@@ -369,6 +394,12 @@ export default function ContactForm() {
           </div>
         )}
       </div>
+
+      {submitError && (
+        <div className="border-t border-red-100 bg-red-50 px-6 py-4 sm:px-10">
+          <p className="text-sm font-medium text-red-700">{submitError}</p>
+        </div>
+      )}
 
       {/* Actions */}
       <div className="flex items-center justify-between border-t border-neutral-100 px-6 py-5 sm:px-10">

@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { localSEOKeywords, servicesOffered } from '../data/seo'
+import { locations } from '../data/locations'
 
 export default function LocalSEO() {
   return (
@@ -65,6 +67,28 @@ export default function LocalSEO() {
               <p className="text-sm leading-relaxed text-neutral-500">
                 {localSEOKeywords.join(' · ')}
               </p>
+            </div>
+            <div className="mt-6">
+              <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-neutral-400">
+                Standorte
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                <Link
+                  to="/standorte/"
+                  className="rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-semibold text-indigo-700 transition-colors hover:bg-indigo-100"
+                >
+                  Alle Standorte
+                </Link>
+                {locations.map((loc) => (
+                  <Link
+                    key={loc.slug}
+                    to={`/standorte/${loc.slug}/`}
+                    className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-xs font-semibold text-neutral-700 transition-colors hover:border-neutral-900 hover:text-neutral-900"
+                  >
+                    {loc.name}
+                  </Link>
+                ))}
+              </div>
             </div>
             <div className="mt-6 space-y-3">
               {servicesOffered.map((s) => (

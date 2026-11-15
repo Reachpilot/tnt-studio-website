@@ -125,6 +125,8 @@ export default function ServiceDetail() {
   const colors = colorMap[service.icon] || colorMap.code
   const otherServices = services.filter((s) => s.title !== service.title).slice(0, 3)
   const canonical = `https://tnt-studio.de/leistungen/${slugify(service.title)}/`
+  const metaTitle = service.metaTitle || `${service.title} — TnT Studio | Medienagentur Wuppertal`
+  const metaDescription = service.metaDescription || `${service.description} TnT Studio — Medienagentur in Wuppertal. Jetzt kostenlos beraten lassen.`
 
   const categoryMap: Record<string, string[]> = {
     'Web Design': ['Web Design', 'SEO'],
@@ -142,15 +144,15 @@ export default function ServiceDetail() {
   return (
     <div className="pt-32 pb-24">
       <Helmet>
-        <title>{`${service.title} — TnT Studio | Medienagentur Wuppertal`}</title>
-        <meta name="description" content={`${service.description} TnT Studio — Medienagentur in Wuppertal. Jetzt kostenlos beraten lassen.`} />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical} />
-        <meta property="og:title" content={`${service.title} — TnT Studio | Medienagentur Wuppertal`} />
-        <meta property="og:description" content={service.description} />
-        <meta name="twitter:title" content={`${service.title} — TnT Studio | Medienagentur Wuppertal`} />
-        <meta name="twitter:description" content={service.description} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
         <meta property="og:image" content="https://tnt-studio.de/og-image.webp" />
         <meta name="twitter:image" content="https://tnt-studio.de/og-image.webp" />
       </Helmet>

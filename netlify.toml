@@ -18,6 +18,16 @@
   status = 301
 
 [[redirects]]
+  from = "/standorte/:slug"
+  to = "/standorte/:slug/"
+  status = 301
+
+[[redirects]]
+  from = "/standorte"
+  to = "/standorte/"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

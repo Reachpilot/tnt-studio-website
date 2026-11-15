@@ -6,6 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const { services } = await import('../src/data/services.ts')
 const { blogPosts } = await import('../src/data/blog.ts')
+const { locations } = await import('../src/data/locations.ts')
 
 function slugify(title) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
@@ -92,7 +93,7 @@ const localBusinessSchema = {
     longitude: '7.1508',
   },
   areaServed: [
-    { '@type': 'City', name: 'Wuppertal' },
+    ...locations.map((loc) => ({ '@type': 'City', name: loc.name })),
     { '@type': 'AdministrativeArea', name: 'Nordrhein-Westfalen' },
     { '@type': 'Country', name: 'Deutschland' },
   ],
@@ -186,8 +187,8 @@ for (const service of services) {
   const canonical = `https://tnt-studio.de/leistungen/${slug}/`
   routes.push({
     file: `leistungen/${slug}/index.html`,
-    title: `${service.title} — TnT Studio`,
-    description: service.description,
+    title: service.metaTitle || `${service.title} — TnT Studio`,
+    description: service.metaDescription || service.description,
     canonical,
     jsonLd: [
       {
@@ -200,11 +201,87 @@ for (const service of services) {
           name: 'TnT Studio',
           url: 'https://tnt-studio.de/',
         },
-        areaServed: 'Wuppertal, NRW, Deutschland',
+        areaServed: locations.map((loc) => ({ '@type': 'City', name: loc.name })),
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: service.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
       },
       breadcrumb([
         { name: 'Startseite', item: 'https://tnt-studio.de/' },
         { name: service.title, item: canonical },
+      ]),
+    ],
+  })
+}
+
+// pSEO: Standort-Seiten
+routes.push({
+  file: 'standorte/index.html',
+  title: 'Standorte & Einzugsgebiet — TnT Studio Medienagentur',
+  description: 'TnT Studio betreut Unternehmen in Wuppertal, Solingen, Remscheid, Leverkusen, Köln, Düsseldorf, Bonn, Mönchengladbach, Hagen und Witten — remote oder vor Ort.',
+  canonical: 'https://tnt-studio.de/standorte/',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Standorte — TnT Studio',
+      url: 'https://tnt-studio.de/standorte/',
+      description: 'Einzugsgebiet der Medienagentur TnT Studio.',
+    },
+    breadcrumb([
+      { name: 'Startseite', item: 'https://tnt-studio.de/' },
+      { name: 'Standorte', item: 'https://tnt-studio.de/standorte/' },
+    ]),
+  ],
+})
+
+for (const loc of locations) {
+  const canonical = `https://tnt-studio.de/standorte/${loc.slug}/`
+  routes.push({
+    file: `standorte/${loc.slug}/index.html`,
+    title: `Medienagentur ${loc.name} — Webdesign, Social Media & Content | TnT Studio`,
+    description: `${loc.tagline} Web Design, Social Media Marketing, Content Creation, Branding & Software Development — remote oder vor Ort. Jetzt unverbindlich anfragen.`,
+    canonical,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: `Medienagentur für ${loc.name}`,
+        description: loc.tagline,
+        provider: {
+          '@type': 'Organization',
+          name: 'TnT Studio',
+          url: 'https://tnt-studio.de/',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Julius-Lucas-Weg 90',
+            addressLocality: 'Wuppertal',
+            postalCode: '42113',
+            addressCountry: 'DE',
+          },
+        },
+        areaServed: { '@type': 'City', name: loc.name },
+        url: canonical,
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: loc.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      },
+      breadcrumb([
+        { name: 'Startseite', item: 'https://tnt-studio.de/' },
+        { name: 'Standorte', item: 'https://tnt-studio.de/standorte/' },
+        { name: loc.name, item: canonical },
       ]),
     ],
   })
@@ -257,6 +334,39 @@ for (const route of routes) {
   await fs.mkdir(path.dirname(outPath), { recursive: true })
   await fs.writeFile(outPath, html)
 }
+
+// Dynamische Sitemap: erzeugt sich aus allen prerendered Routen
+const today = new Date().toISOString().slice(0, 10)
+
+function fileToUrl(file) {
+  if (file === 'index.html') return 'https://tnt-studio.de/'
+  return `https://tnt-studio.de/${file.replace(/index\.html$/, '')}`
+}
+
+function sitemapMeta(file) {
+  if (file === 'index.html') return ['weekly', '1.0']
+  if (file.startsWith('leistungen/')) return ['monthly', '0.9']
+  if (file === 'standorte/index.html') return ['monthly', '0.7']
+  if (file.startsWith('standorte/')) return ['monthly', '0.8']
+  if (file === 'blog/index.html') return ['weekly', '0.8']
+  if (file.startsWith('blog/')) return ['yearly', '0.7']
+  return ['yearly', '0.5']
+}
+
+const sitemapEntries = routes.map((route) => {
+  const [changefreq, priority] = sitemapMeta(route.file)
+  return `  <url>\n    <loc>${fileToUrl(route.file)}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
+})
+
+// Statische Legal-Seiten aus public/ (werden von Vite nach dist kopiert)
+for (const page of ['privacy-policy.html', 'terms.html', 'imprint.html', 'cookies.html']) {
+  sitemapEntries.push(
+    `  <url>\n    <loc>https://tnt-studio.de/${page}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n  </url>`,
+  )
+}
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries.join('\n')}\n</urlset>\n`
+await fs.writeFile(path.join(__dirname, '../dist/sitemap.xml'), sitemap)
 
 // Copy llms.txt into .well-known for GEO crawler discoverability
 await fs.mkdir(path.join(__dirname, '../dist/.well-known'), { recursive: true })
