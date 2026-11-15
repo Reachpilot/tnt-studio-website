@@ -26,7 +26,7 @@ export default function VideoSection() {
             poster="/founder/INTRO-TNT/INTRO-TNT-Cover.WEBP"
             className="w-full"
           >
-            <source src="/founder/INTRO-TNT/intro-tnt-final.mp4" type="video/mp4" />
+            <source src="/founder/INTRO-TNT/intro-tnt-final.webm" type="video/webm" />
             Dein Browser unterstützt dieses Video nicht.
           </video>
         </div>

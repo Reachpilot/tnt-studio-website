@@ -21,7 +21,7 @@ export const portfolioItems: PortfolioItem[] = [
     width: 640,
     height: 1138,
     mediaType: 'video',
-    videoSrc: '/videos/lackmann-review-web.mp4',
+    videoSrc: '/videos/lackmann-review-web.webm',
     size: 'large',
     fit: 'cover',
   },
