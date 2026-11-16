@@ -86,7 +86,7 @@ export default function Navbar() {
           aria-label="TnT Studio Medienagentur Wuppertal, Hauptnavigation"
           className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8"
         >
-          <Link to="/" className="flex items-center gap-2.5" aria-label="TnT Studio, Startseite">
+          <Link to="/" className="flex items-center" aria-label="TnT Studio, Startseite">
             <img
               src="/favicon.png"
               alt="TnT Studio Logo"
@@ -94,7 +94,6 @@ export default function Navbar() {
               width="64"
               height="64"
             />
-            <span className="hidden text-lg font-black leading-none tracking-tighter text-neutral-900 sm:inline">Studio</span>
           </Link>
 
           {/* Desktop nav */}
