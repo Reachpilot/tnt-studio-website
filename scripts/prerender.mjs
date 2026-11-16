@@ -411,9 +411,27 @@ for (const post of blogPosts) {
   })
 }
 
+// SSR-Render der React-App für echten Body-Content (SEO/GEO ohne JS)
+let renderRoute = null
+try {
+  const ssr = await import('../dist-ssr/entry-server.js')
+  renderRoute = ssr.render
+} catch (e) {
+  console.warn('SSR-Bundle nicht gefunden — Body bleibt leer:', e.message)
+}
+
 for (const route of routes) {
   let html = renderMeta(template, route)
   html = addJsonLd(html, route.jsonLd)
+  if (renderRoute) {
+    const url = new URL(route.canonical).pathname.replace(/\/$/, '') || '/'
+    try {
+      const body = renderRoute(url)
+      html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`)
+    } catch (e) {
+      console.warn(`SSR-Render fehlgeschlagen für ${url}:`, e.message)
+    }
+  }
   const outPath = path.join(__dirname, '../dist', route.file)
   await fs.mkdir(path.dirname(outPath), { recursive: true })
   await fs.writeFile(outPath, html)
@@ -457,7 +475,7 @@ await fs.writeFile(path.join(__dirname, '../dist/sitemap.xml'), sitemap)
 await fs.mkdir(path.join(__dirname, '../dist/.well-known'), { recursive: true })
 await fs.copyFile(path.join(__dirname, '../public/llms.txt'), path.join(__dirname, '../dist/.well-known/llms.txt'))
 await fs.copyFile(path.join(__dirname, '../public/llms-full.txt'), path.join(__dirname, '../dist/.well-known/llms-full.txt'))
-await fs.copyFile(path.join(__dirname, '../public/ai-catalog.json'), path.join(__dirname, '../dist/.well-known/ai-catalog.json'))
+await fs.copyFile(path.join(__dirname, '../public/.well-known/ai-catalog.json'), path.join(__dirname, '../dist/.well-known/ai-catalog.json'))
 
 // Inline the render-blocking stylesheet into every HTML file to remove it
 // from the critical path (Lighthouse "render-blocking requests")

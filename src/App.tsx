@@ -71,9 +71,9 @@ function Home() {
   )
 }
 
-export default function App() {
+function Shell() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <RouteTracker />
       <Navbar />
@@ -92,6 +92,18 @@ export default function App() {
       </main>
       <Footer />
       <CookieBanner />
+    </>
+  )
+}
+
+export function AppRoutes() {
+  return <Shell />
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Shell />
     </BrowserRouter>
   )
 }
