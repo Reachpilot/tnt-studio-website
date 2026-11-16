@@ -134,6 +134,75 @@ export const industries: Industry[] = [
       { question: 'Was kostet E-Commerce-SEO?', answer: 'Technische SEO ist ein einmaliges Projekt, Content- und Link-Building laufend. SEA-Management ist monatliches Honorar + Ad-Budget. Wir kalkulieren transparent, und zeigen ROI in Euro, nicht in Vanities.' },
     ],
   },
+  {
+    slug: 'immobilien',
+    name: 'Immobilien & Verwaltung',
+    tagline: 'Mehr Besichtigungen und Mandate durch digitale Sichtbarkeit.',
+    intro: [
+      'Immobilien werden heute online entschieden, lange bevor ein Makler angerufen wird. Wer bei „Wohnung mieten Wuppertal", „Haus kaufen Bergisches Land" oder „Immobilienmakler in der Nähe" nicht gefunden wird, verliert das Mandat an die Konkurrenz — oder an das Portal, das die Provision spart.',
+      'Wir helfen Maklern, Hausverwaltungen und Bauträgern, eigenständig sichtbar zu werden: mit Websites, die Objekte und Referenzen präsentieren, Local SEO für das Einzugsgebiet, KI-Sichtbarkeit, damit ChatGPT den richtigen Makler empfiehlt, und Social Media, das Vertrauen bei Eigentümern und Mietern schafft.',
+    ],
+    painPoints: [
+      'Keine eigene Website, Abhängigkeit von Portalen mit Provisionsdruck',
+      'Objektbilder auf Facebook, aber keine durchsuchbare Angebotsseite',
+      'Google Maps Profil dünn, Bewertungen fehlen oder sind veraltet',
+      'KI-Systeme kennen den Makler nicht und empfehlen Wettbewerber',
+      'Hausverwaltungen ohne digitale Mieter-Kommunikation',
+    ],
+    services: ['Web Design', 'KI-Sichtbarkeit & SEO', 'Social Media Marketing'],
+    faqs: [
+      { question: 'Braucht ein Immobilienmakler eine eigene Website?', answer: 'Ja, als Vertrauensanker jenseits der Portale: Referenzen, Team, Bewertungen, Objektpräsentation. Portale bringen Traffic, aber eine eigene Seite macht Sie zur Marke und senkt die Abhängigkeit von Provisionsmodellen.' },
+      { question: 'Was bringt Local SEO für Immobilien?', answer: 'Local SEO bringt Sie in Google Maps und lokale Suchergebnisse nach vorn, genau dort, wo Käufer und Mieter regional suchen. Ein gepflegtes Google Business Profile mit Objekten, Fotos und Bewertungen ist der wichtigste lokale Hebel.' },
+      { question: 'Wird mein Maklerbüro bei ChatGPT empfohlen?', answer: 'Mit GEO/AEO-Optimierung ja: Wir strukturieren Unternehmensdaten, Bewertungen und lokale Expertise so, dass KI-Systeme Sie als relevante Antwortquelle verstehen. Besonders bei lokalen Kaufentscheidungen gewichten KI-Systeme regionale Anbieter stark.' },
+      { question: 'Was kostet eine Immobilien-Website?', answer: 'Bei TnT Studio starten Landingpages bei 500€, Business-Websites mit Objektbereich ab 2.500€. Für Makler empfehlen wir eine schlanke Business-Website mit Angebotsliste, Kontakt und Termin-Link, kein überdimensioniertes Portal.' },      { question: 'Hilft Social Media bei Immobilien?', answer: 'Ja: Objekte als Reels und Karussells, Team-Vorstellung, Markt-Updates. Immobilien ist Vertrauensgeschäft, und Social Media ist der günstigste Vertrauensbeweis vor dem ersten Besichtigungstermin.' },
+    ],
+  },
+  {
+    slug: 'beauty-wellness',
+    name: 'Beauty, Wellness & Fitness',
+    tagline: 'Volle Terminkalender durch Online-Sichtbarkeit und Social Media.',
+    intro: [
+      'Friseure, Kosmetikstudios, Massagen und Fitnessstudios leben von lokalen Empfehlungen und spontanen Entscheidungen: „Friseur in der Nähe", „Nagelstudio um die Ecke", „Fitnessstudio mit Probetraining". Wer online nicht gefunden wird oder unscheinbar wirkt, verliert Kunden an die Konkurrenz.',
+      'Wir helfen Beauty- und Wellness-Betrieben, sichtbar zu werden, wo Kunden entscheiden: mit Websites, die Online-Termine und Preise klar zeigen, Local SEO für die Region, Instagram- und TikTok-Strategien, die Terminbuchungen bringen, und KI-Sichtbarkeit, damit auch ChatGPT den richtigen Betrieb kennt.',
+    ],
+    painPoints: [
+      'Keine Website oder nur Instagram-Profil ohne Preisliste und Buchungslink',
+      'Terminbuchung per Telefon, verpasste Anrufe außerhalb der Öffnungszeiten',
+      'Google Maps Profil ohne Fotos, Preise oder aktuelle Öffnungszeiten',
+      'Social Media postet unregelmäßig, kein System, kein ROI',
+      'Neue Öffnungen oder Angebote erreichen die Nachbarschaft nicht',
+    ],
+    services: ['Web Design', 'KI-Sichtbarkeit & SEO', 'Social Media Marketing'],
+    faqs: [
+      { question: 'Braucht ein Friseursalon eine Website?', answer: 'Nicht zwingend, aber ein Google Business Profile mit Fotos, Preisen und Online-Terminlink bringt messbar mehr Buchungen als ein reines Instagram-Profil. Eine schlanke One-Page mit Leistungen, Team und Buchungsbutton reicht.' },
+      { question: 'Was bringt Social Media für Beauty-Studios?', answer: 'Beauty ist visuell und emotional: Vorher-Nachher, Behandlungsvideos, Team-Content. Reels und Stories mit klaren Call-to-Actions („Termin buchen") wandeln Reichweite in Kalender.' },
+      { question: 'Lohnt sich Local SEO für ein Nagelstudio?', answer: 'Sehr: Suchanfragen wie „Nagelstudio in der Nähe" sind hyperlokal und kaufnah. Local SEO mit optimiertem Google Business Profile ist hier oft der billigste Kundengewinn-Kanal überhaupt.' },      { question: 'Was kostet Marketing für ein Beauty-Studio?', answer: 'Websites ab 500€ (Landingpage) oder 2.500€ (Business-Website), Social Media Betreuung ab 1.200€/Monat. Für viele Studios reicht zuerst ein optimiertes Google Profil plus ein paar Posts pro Woche.' },
+      { question: 'Kann ich Online-Termine über die Website buchen?', answer: 'Ja: Wir integrieren Buchungssysteme (z. B. Terminbuchungs-Tools) direkt in die Website, sodass Kunden 24/7 Termine buchen können, auch wenn das Studio geschlossen ist.' },
+    ],
+  },
+  {
+    slug: 'pflege',
+    name: 'Pflege & Senioren',
+    tagline: 'Vertrauen bei Familien schaffen, die einen Pflegedienst suchen.',
+    intro: [
+      'Die Suche nach einem Pflegedienst ist eine der emotionalsten und wichtigsten Entscheidungen einer Familie. Wer sie trifft, entscheidet oft innerhalb von Tagen: nach Empfehlung, nach Google, nach dem ersten Eindruck der Website. Fehlt die digitale Präsenz, gewinnt der Anbieter mit der besten sichtbaren Vertrauensbasis.',
+      'Wir helfen Pflegediensten, Betreuten-Wohnen-Anbietern und Seniorenbetreuungen, seriös und empathisch sichtbar zu werden: mit Websites, die Leistungen, Team und Qualität verständlich erklären, Local SEO für die Region, diskrete Social-Media-Präsenz und DSGVO-konforme Kontaktwege.',
+    ],
+    painPoints: [
+      'Keine Website oder veraltete Seite ohne Team-Vorstellung und Qualitätsnachweise',
+      'Google Maps Profil dünn, Zertifizierungen und Leistungen fehlen',
+      'Angehörige finden den Dienst nicht oder misstrauen dem ersten Eindruck',
+      'Keine Online-Beratung oder Kontaktformular mit DSGVO-konformer Datenverarbeitung',
+      'Pflegekräfte-Recruiting ohne digitale Arbeitgebermarke',
+    ],
+    services: ['Web Design', 'KI-Sichtbarkeit & SEO', 'Social Media Marketing'],
+    faqs: [
+      { question: 'Braucht ein Pflegedienst eine Website?', answer: 'Unbedingt. Angehörige recherchieren online, bevor sie anrufen. Eine Website mit Leistungen, Team, Zertifizierungen und echten Eindrücken entscheidet über Vertrauen und erste Kontaktaufnahme.' },
+      { question: 'Was bringt Local SEO für Pflegedienste?', answer: 'Local SEO bringt Sie in Google Maps und lokale Suchergebnisse nach vorn, bei Anfragen wie „Pflegedienst in der Nähe" oder „Betreuung für Senioren Wuppertal". Ein vollständiges Google Business Profile mit Fotos und Bewertungen ist essential.' },
+      { question: 'Wie wichtig ist DSGVO bei Pflege-Websites?', answer: 'Sehr: Patientendaten und Gesundheitsinformationen sind besonders schützenswert. Wir setzen auf DSGVO-konforme Kontaktformulare, minimierte Datenverarbeitung und transparente Datenschutzhinweise, kein Tracking ohne Einwilligung.' },      { question: 'Hilft Social Media bei der Pflege-Recruiting?', answer: 'Ja: Pflegekräfte wählen Arbeitgeber nach Kultur und Wertschätzung. Team-Content, Einblicke in den Arbeitsalltag und Benefits-Posts sprechen Pflegekräfte an, die aktiv suchen.' },
+      { question: 'Was kostet eine Website für einen Pflegedienst?', answer: 'Business-Websites ab 2.500€, Landingpages ab 500€. Für Pflegedienste empfehlen wir eine seriöse Business-Website mit Team, Leistungen und Kontaktmöglichkeit, plus Local SEO für die Region.' },
+    ],
+  },
 ]
 
 export const industryBySlug = (slug: string) => industries.find((i) => i.slug === slug)
