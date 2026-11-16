@@ -83,7 +83,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-500 hover:text-neutral-900"
                 >
-                  0177 2272211 (WhatsApp)
+                  177 2272211 (WhatsApp)
                 </a>
               </li>
               <li className="text-sm text-neutral-500">Mirker Straße 99, 42105 Wuppertal</li>

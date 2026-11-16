@@ -21,7 +21,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="font-semibold text-neutral-900 hover:underline"
             >
-              0177 2272211
+              177 2272211
             </a>{' '}
             per WhatsApp
           </p>

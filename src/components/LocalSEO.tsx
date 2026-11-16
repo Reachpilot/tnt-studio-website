@@ -39,7 +39,7 @@ export default function LocalSEO() {
                   rel="noopener noreferrer"
                   className="text-neutral-900 hover:underline"
                 >
-                  0177 2272211
+                  177 2272211
                 </a>
               </p>
               <p>
