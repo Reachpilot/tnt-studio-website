@@ -55,13 +55,14 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-sm font-semibold text-neutral-900">Navigation</h3>
             <ul className="space-y-3">
-              <li><a href="/#services" className="text-sm text-neutral-500 hover:text-neutral-900">Leistungen</a></li>
+              <li><a href="/leistungen/" className="text-sm text-neutral-500 hover:text-neutral-900">Leistungen</a></li>
               <li><a href="/#portfolio" className="text-sm text-neutral-500 hover:text-neutral-900">Portfolio</a></li>
               <li><a href="/#founders" className="text-sm text-neutral-500 hover:text-neutral-900">Team</a></li>
               <li><a href="/#recruiting" className="text-sm text-neutral-500 hover:text-neutral-900">Recruiting</a></li>
               <li><a href="/blog/" className="text-sm text-neutral-500 hover:text-neutral-900">Blog</a></li>
               <li><a href="/standorte/" className="text-sm text-neutral-500 hover:text-neutral-900">Standorte</a></li>
               <li><a href="/branchen/" className="text-sm text-neutral-500 hover:text-neutral-900">Branchen</a></li>
+              <li><a href="/vergleich/" className="text-sm text-neutral-500 hover:text-neutral-900">Vergleich</a></li>
               <li><a href="/#contact" className="text-sm text-neutral-500 hover:text-neutral-900">Kontakt</a></li>
             </ul>
           </div>

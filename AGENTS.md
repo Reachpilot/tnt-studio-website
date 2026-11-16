@@ -48,7 +48,8 @@ Events: `generate_lead`/`Lead` on form success, `contact_click` on tel:/mailto:/
 - Services: `/leistungen/:slug/`
 - Blog: `/blog/` and `/blog/:slug/`
 - Locations: `/standorte/` and `/standorte/:slug/`
-- Industries (pSEO): `/branchen/` and `/branchen/:slug/` — 5 industries in `src/data/industries.ts` (Handwerk, Gastronomie, Healthcare, Kanzleien, Retail) with Service + FAQPage + BreadcrumbList schema
+- Industries (pSEO): `/branchen/` and `/branchen/:slug/` — 8 industries in `src/data/industries.ts` (Handwerk, Gastronomie, Healthcare, Kanzleien, Retail, Immobilien, Beauty/Wellness, Pflege) with Service + FAQPage + BreadcrumbList schema
+- Comparisons: `/vergleich/` and `/vergleich/:slug/` — in `src/data/comparisons.ts` (Agentur vs. Baukasten, Agentur vs. Freelancer) with Article + FAQPage + BreadcrumbList schema
 - Homepage includes a Kurzantwort (answer-first) block for AEO
 - Contact: `/#contact`
 - FAQ: `/#faq`

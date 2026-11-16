@@ -8,6 +8,7 @@ const { services } = await import('../src/data/services.ts')
 const { blogPosts } = await import('../src/data/blog.ts')
 const { locations } = await import('../src/data/locations.ts')
 const { industries } = await import('../src/data/industries.ts')
+const { comparisons } = await import('../src/data/comparisons.ts')
 
 // Echte Inhalts-Daten für die Sitemap — NIEMALS Build-Datum verwenden
 // (Google entwertet Sitemaps mit Fake-Freshness). Nur bei echter
@@ -17,6 +18,7 @@ const contentUpdated = {
   services: '2026-11-15',
   standorte: '2026-11-15',
   branchen: '2026-11-15',
+  vergleich: '2026-11-15',
   blogIndex: '2026-11-15',
   legal: '2025-07-17',
 }
@@ -331,7 +333,7 @@ for (const loc of locations) {
 routes.push({
   file: 'branchen/index.html',
   title: 'Branchen — TnT Studio | Webdesign, SEO & Social Media für Ihre Branche',
-  description: 'TnT Studio erstellt Websites, SEO, GEO/AEO und Social Media für Handwerk, Gastronomie, Healthcare, Kanzleien und Retail — branchenindividuell, messbar, aus einer Hand.',
+  description: 'TnT Studio erstellt Websites, SEO, GEO/AEO und Social Media für Handwerk, Gastronomie, Healthcare, Kanzleien, Retail, Immobilien, Beauty, Pflege und mehr — branchenindividuell, messbar, aus einer Hand.',
   canonical: 'https://tnt-studio.de/branchen/',
   lastmod: contentUpdated.branchen,
   jsonLd: [
@@ -384,6 +386,63 @@ for (const ind of industries) {
         { name: 'Startseite', item: 'https://tnt-studio.de/' },
         { name: 'Branchen', item: 'https://tnt-studio.de/branchen/' },
         { name: ind.name, item: canonical },
+      ]),
+    ],
+  })
+}
+
+// pSEO: Vergleichs-Seiten (Agentur vs. Alternativen)
+routes.push({
+  file: 'vergleich/index.html',
+  title: 'Vergleich: Agentur vs. Baukasten vs. Freelancer | TnT Studio',
+  description: 'Ehrliche Vergleiche für KMU: Agentur vs. Website-Baukasten und Agentur vs. Freelancer. Wann sich was lohnt — transparent, ohne Marketing-Vernebelung.',
+  canonical: 'https://tnt-studio.de/vergleich/',
+  lastmod: contentUpdated.vergleich,
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Vergleich — TnT Studio',
+      url: 'https://tnt-studio.de/vergleich/',
+      description: 'Ehrliche Vergleiche: Agentur vs. Baukasten, Agentur vs. Freelancer.',
+    },
+    breadcrumb([
+      { name: 'Startseite', item: 'https://tnt-studio.de/' },
+      { name: 'Vergleich', item: 'https://tnt-studio.de/vergleich/' },
+    ]),
+  ],
+})
+
+for (const cmp of comparisons) {
+  const canonical = `https://tnt-studio.de/vergleich/${cmp.slug}/`
+  routes.push({
+    file: `vergleich/${cmp.slug}/index.html`,
+    title: `${cmp.title}: ${cmp.alternative} im Vergleich | TnT Studio`,
+    description: cmp.tagline,
+    canonical,
+    lastmod: contentUpdated.vergleich,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: `${cmp.title}: ${cmp.alternative} im Vergleich`,
+        description: cmp.tagline,
+        author: { '@type': 'Organization', '@id': ORG_ID, name: 'TnT Studio' },
+        publisher: { '@type': 'Organization', '@id': ORG_ID, name: 'TnT Studio' },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: cmp.faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer },
+        })),
+      },
+      breadcrumb([
+        { name: 'Startseite', item: 'https://tnt-studio.de/' },
+        { name: 'Vergleich', item: 'https://tnt-studio.de/vergleich/' },
+        { name: cmp.title, item: canonical },
       ]),
     ],
   })
@@ -471,6 +530,10 @@ function sitemapMeta(file) {
   if (file.startsWith('leistungen/')) return ['monthly', '0.9']
   if (file === 'standorte/index.html') return ['monthly', '0.7']
   if (file.startsWith('standorte/')) return ['monthly', '0.8']
+  if (file === 'branchen/index.html') return ['monthly', '0.7']
+  if (file.startsWith('branchen/')) return ['monthly', '0.8']
+  if (file === 'vergleich/index.html') return ['monthly', '0.6']
+  if (file.startsWith('vergleich/')) return ['yearly', '0.6']
   if (file === 'blog/index.html') return ['weekly', '0.8']
   if (file.startsWith('blog/')) return ['yearly', '0.7']
   return ['yearly', '0.5']

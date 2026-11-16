@@ -28,6 +28,8 @@ import LocationList from './pages/LocationList'
 import LocationDetail from './pages/LocationDetail'
 import IndustryList from './pages/IndustryList'
 import IndustryDetail from './pages/IndustryDetail'
+import ComparisonList from './pages/ComparisonList'
+import ComparisonDetail from './pages/ComparisonDetail'
 import NotFound from './pages/NotFound'
 
 
@@ -89,6 +91,8 @@ function Shell() {
           <Route path="/standorte/:slug" element={<LocationDetail />} />
           <Route path="/branchen" element={<IndustryList />} />
           <Route path="/branchen/:slug" element={<IndustryDetail />} />
+          <Route path="/vergleich" element={<ComparisonList />} />
+          <Route path="/vergleich/:slug" element={<ComparisonDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
