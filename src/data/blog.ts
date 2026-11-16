@@ -2523,4 +2523,70 @@ export const blogPosts: BlogPost[] = [
       { question: 'Wie erkenne ich, ob meine Website technisch SEO-fähig ist?', answer: 'Prüfen Sie: Wird der Seitenquelltext ohne JavaScript angezeigt? Enthält die Sitemap echte lastmod-Daten? Lädt Tracking erst nach Consent? Gibt es Schema.org-Markup? Wir bieten ein kostenloses technisches Audit an.' },
     ],
   },
+  {
+    slug: 'ki-sichtbarkeit-vs-klassisches-seo',
+    title: 'KI-Sichtbarkeit vs. klassisches SEO: Was der Unterschied ist (und warum beides zählt)',
+    excerpt: 'Google-Ranking ist nicht mehr alles. Kunden fragen ChatGPT, Perplexity und Gemini — und bekommen Antworten, in denen Ihre Konkurrenz steht. KI-Sichtbarkeit ist die neue Disziplin, die SEO ergänzt statt ersetzt.',
+    date: '2026-02-01',
+    author: 'Tiago Esteves',
+    readingTime: '7 min',
+    category: 'AI & SEO',
+    emoji: '🤖',
+    sections: [
+      {
+        heading: 'Das Problem: Kunden fragen nicht mehr nur Google',
+        paragraphs: [
+          'Die Suchlandschaft hat sich verschoben. Vor fünf Jahren suchte ein Kunde „Webdesign Agentur Wuppertal" bei Google und klickte die ersten drei Ergebnisse. Heute tippt derselbe Kunde die Frage in ChatGPT: „Welche Webdesign-Agentur in Wuppertal ist gut und günstig?" Und bekommt eine Antwort, in der zwei, drei Namen stehen — oft nicht Ihrer.',
+          'Diese Antworten kommen nicht aus dem Nichts. KI-Systeme wie ChatGPT, Perplexity und Gemini trainieren auf dem Web und zitieren Quellen live. Wenn Ihre Website für sie unlesbar, unstrukturiert oder unsichtbar ist, existieren Sie für diese Systeme nicht. Für eine wachsende Zahl von Käufern bedeutet das: Sie sind nicht auf dem Schirm.',
+        ],
+      },
+      {
+        heading: 'Was klassisches SEO macht — und was es nicht mehr reicht',
+        paragraphs: [
+          'SEO optimiert für klassische Suchmaschinen: Keywords, Backlinks, technische Grundlagen, Core Web Vitals. Das funktioniert weiter und bleibt die Basis. Wer bei Google nicht rankt, wird auch von KI-Systemen selten zitiert, denn viele zitieren Google-Ergebnisse als Quelle.',
+          'Aber: SEO allein optimiert für den blauen Link in Position 1. KI-Sichtbarkeit optimiert für die Antwort selbst — dafür, dass ein System Ihre Expertise versteht, Ihre Daten korrekt interpretiert und Sie als vertrauenswürdige Quelle benennt. Das ist ein anderes Spiel mit anderen Regeln.',
+        ],
+      },
+      {
+        heading: 'Die drei Ebenen der KI-Sichtbarkeit',
+        paragraphs: [
+          'KI-Sichtbarkeit funktioniert auf drei Ebenen, und alle drei müssen stimmen:',
+        ],
+        list: [
+          'GEO (Generative Engine Optimization): Strukturierte Daten, llms.txt, AI-Crawler-optimierter Content — damit KI-Systeme Ihre Website überhaupt lesen und verstehen können',
+          'AEO (Answer Engine Optimization): Answer-First-Content — direkte Antworten auf Fragen, FAQ-Strukturen, definierte Entity-Beziehungen, damit KI-Systeme Ihre Inhalte zitieren können',
+          'Authority-Signale: Erwähnungen in vertrauenswürdigen Quellen, konsistente Unternehmensdaten (NAP), Bewertungen, Presse — KI-Systeme gewichten Quellen nach Reputation',
+        ],
+      },
+      {
+        heading: 'Konkrete Unterschiede: SEO vs. KI-Sichtbarkeit',
+        paragraphs: [
+          'Klassisches SEO fragt: „Rankt diese Seite für dieses Keyword?" KI-Sichtbarkeit fragt: „Versteht die KI, wer wir sind, was wir tun und warum wir die richtige Antwort sind?" Die technischen Grundlagen überschneiden sich — sauberes HTML, Schema.org, Performance — aber die Content-Strategie unterscheidet sich fundamental.',
+          'Ein Blog-Artikel für SEO ist auf Keywords optimiert. Ein Blog-Artikel für AEO beantwortet eine konkrete Frage in den ersten zwei Sätzen, strukturiert mit Überschriften, die KI-Systeme als Antwort-Extraktions-Punkte nutzen können. Schema.org ist bei beiden wichtig, aber für KI-Sichtbarkeit kommen Entity-Relationships, sameAs-Verknüpfungen und llms.txt dazu — Dateien, die fast keine klassische SEO-Agentur anfasst.',
+        ],
+      },
+      {
+        heading: 'Warum beides zusammen funktioniert',
+        paragraphs: [
+          'Die besten Ergebnisse erzielen Unternehmen, die SEO und KI-Sichtbarkeit als ein System behandeln. KI-Systeme zitieren preferentially Quellen, die bei Google bereits Autorität haben. Wer klassisch rankt, hat die Trust-Basis, die KI-Systeme brauchen, um zu zitieren.',
+          'Umgekehrt verstärkt KI-Sichtbarkeit SEO: Wer in ChatGPT-Antworten genannt wird, bekommt Markensuchanfragen, die dann bei Google konvertieren. Die Kanäle verstärken sich gegenseitig — aber nur, wenn beide optimiert werden.',
+        ],
+      },
+      {
+        heading: 'Das Fazit',
+        paragraphs: [
+          'KI-Sichtbarkeit ist kein Hype, sie ist die logische Weiterentwicklung von SEO in eine Welt, in der Antworten statt Links gefragt sind. Wer heute nur für Google optimiert, erreicht die Hälfte des Marktes — und die wachsendere Hälfte.',
+          'Bei TnT Studio behandeln wir KI-Sichtbarkeit und klassisches SEO als ein System: llms.txt, Schema.org, Answer-First-Content, AI-Crawler-Optimierung und bewährte SEO-Grundlagen in einem Paket. Diese Website ist der Beweis — Sie lesen gerade einen Blog-Artikel, der für beides optimiert ist.',
+        ],
+      },
+    ],
+    faqs: [
+      { question: 'Was ist KI-Sichtbarkeit konkret?', answer: 'KI-Sichtbarkeit (GEO/AEO) ist die Optimierung Ihrer Website und Ihrer Online-Präsenz dafür, dass KI-Systeme wie ChatGPT, Perplexity, Gemini und Google AI Overviews Sie verstehen, zitieren und empfehlen. Es umfasst llms.txt, strukturierte Daten, Answer-First-Content und Authority-Signale.' },
+      { question: 'Ersetzt KI-Sichtbarkeit klassisches SEO?', answer: 'Nein, es ergänzt es. KI-Systeme zitieren preferentially Quellen mit Google-Autorität. SEO baut die Trust-Basis, KI-Sichtbarkeit sorgt dafür, dass KI-Systeme Sie als Quelle erkennen und zitieren. Wer nur eines macht, verschenkt die Hälfte.' },
+      { question: 'Was ist llms.txt und brauche ich es?', answer: 'llms.txt ist eine Textdatei im Root-Verzeichnis Ihrer Website, die KI-Crawlern einen strukturierten Überblick gibt: Beschreibung, Services, FAQs, Kontakt. Es ist der Standard für KI-Lesbarkeit, vergleichbar mit sitemap.xml für Suchmaschinen. Fast keine Agentur setzt es um — wir schon.' },
+      { question: 'Was ist GEO und was ist AEO?', answer: 'GEO (Generative Engine Optimization) optimiert für KI-Systeme: strukturierte Daten, llms.txt, crawlbare Inhalte. AEO (Answer Engine Optimization) optimiert für direkte Antworten: FAQ-Strukturen, Answer-First-Content, definierte Fakten. Beide zusammen ergeben KI-Sichtbarkeit.' },
+      { question: 'Kann ich KI-Sichtbarkeit selbst machen?', answer: 'Die Grundlagen ja: llms.txt anlegen, Schema.org prüfen, Content in Answer-First-Struktur bringen. Die strategische Ebene — welche Fragen Ihre Zielgruppe KI-Systemen stellt, welche Authority-Signale zählen, wie Entity-Beziehungen aufgebaut werden — erfordert SEO-Expertise und ist genau das, was wir machen.' },
+      { question: 'Was kostet KI-Sichtbarkeit?', answer: 'Bei TnT Studio ist KI-Sichtbarkeit Teil unserer SEO-Leistung ab 1.500 € — als System mit klassischem SEO, nicht als Add-on. Es umfasst llms.txt, Schema.org, AI-Crawler-Optimierung und Answer-First-Content-Strategie.' },
+    ],
+  },
 ]
