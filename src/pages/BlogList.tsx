@@ -160,10 +160,10 @@ export default function BlogList() {
             Genug gelesen. Lass uns über dein Projekt sprechen.
           </p>
           <a
-            href="mailto:info@tnt-studio.de"
+            href="/#contact"
             className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-neutral-900 transition-all hover:bg-neutral-100"
           >
-            info@tnt-studio.de
+            Jetzt per WhatsApp anfragen
           </a>
         </div>
       </div>

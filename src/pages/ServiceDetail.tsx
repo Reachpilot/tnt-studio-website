@@ -283,12 +283,12 @@ export default function ServiceDetail() {
         {/* CTA */}
         <div className="mt-16 rounded-3xl bg-neutral-900 p-10 text-center sm:p-12">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Ready für {service.title}?</h2>
-          <p className="mt-3 text-neutral-400">Lass uns über dein Projekt sprechen. Antwort innerhalb von 24 Stunden.</p>
+          <p className="mt-3 text-neutral-400">Lass uns über dein Projekt sprechen — per WhatsApp, Antwort innerhalb von 24 Stunden.</p>
           <a
-            href="mailto:info@tnt-studio.de"
+            href="/#contact"
             className="mt-6 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-neutral-900 transition-all hover:bg-neutral-100"
           >
-            info@tnt-studio.de
+            Jetzt per WhatsApp anfragen
           </a>
         </div>
 
@@ -340,6 +340,40 @@ export default function ServiceDetail() {
             </div>
           </div>
         )}
+
+        {/* Internal links: industries + comparisons */}
+        <div className="mt-16 grid gap-4 sm:grid-cols-2">
+          <Link
+            to="/branchen/"
+            className="group rounded-2xl border border-neutral-200 bg-white p-6 transition-all hover:border-neutral-900 hover:shadow-lg"
+          >
+            <h3 className="text-base font-bold text-neutral-900">Branchen-Lösungen</h3>
+            <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+              Websites, SEO und Social Media für Handwerk, Gastronomie, Immobilien, Pflege und mehr.
+            </p>
+            <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-neutral-900">
+              Branche entdecken
+              <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </Link>
+          <Link
+            to="/vergleich/"
+            className="group rounded-2xl border border-neutral-200 bg-white p-6 transition-all hover:border-neutral-900 hover:shadow-lg"
+          >
+            <h3 className="text-base font-bold text-neutral-900">Agentur oder Alternative?</h3>
+            <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+              Ehrliche Vergleiche: Agentur vs. Baukasten, Agentur vs. Freelancer — inklusive Fazit.
+            </p>
+            <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-neutral-900">
+              Vergleich lesen
+              <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   )
