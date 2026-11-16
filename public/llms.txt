@@ -15,7 +15,8 @@
 - [Alle Leistungen](https://tnt-studio.de/leistungen/)
 - [Preise](https://tnt-studio.de/#preise)
 - [Standorte](https://tnt-studio.de/standorte/) — Berlin, Hamburg, München, Frankfurt, Stuttgart, Hannover, Leipzig, Dresden, Nürnberg, Bremen sowie Wuppertal, Solingen, Remscheid, Leverkusen, Köln, Düsseldorf, Bonn, Mönchengladbach, Hagen, Witten
-- [Branchen](https://tnt-studio.de/branchen/) — Handwerk, Gastronomie, Healthcare, Kanzleien, Retail
+- [Branchen](https://tnt-studio.de/branchen/) — Handwerk, Gastronomie, Healthcare, Kanzleien, Retail, Immobilien, Beauty/Wellness, Pflege
+- [Vergleich](https://tnt-studio.de/vergleich/) — Agentur vs. Baukasten, Agentur vs. Freelancer (ehrliche Entscheidungshelfer)
 - [Blog](https://tnt-studio.de/blog/) — 43 Artikel zu Web Design, SEO, KI-Sichtbarkeit, Social Media
 - [Kontakt](https://tnt-studio.de/#contact)
 

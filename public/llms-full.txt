@@ -65,9 +65,15 @@ Remote-Erbringung für Unternehmen in ganz Deutschland; lokales SEO und große S
 
 ## Branchen (pSEO)
 
-Branchen-spezifische Landingpages mit eigenem Content, Pain Points und FAQs: Handwerk, Gastronomie, Healthcare, Kanzleien und Retail.
+Branchen-spezifische Landingpages mit eigenem Content, Pain Points und FAQs: Handwerk, Gastronomie, Healthcare, Kanzleien, Retail, Immobilien, Beauty/Wellness und Pflege.
 
 Übersicht: https://tnt-studio.de/branchen/
+
+## Vergleich (Entscheidungshilfe)
+
+Ehrliche Vergleichsseiten für KMU-Entscheider: TnT Studio (Agentur) vs. Website-Baukasten (WordPress, Wix, Jimdo) und Agentur vs. Freelancer — mit Feature-Matrix, „wann die Alternative besser ist" und transparentem Fazit.
+
+Übersicht: https://tnt-studio.de/vergleich/
 
 ---
 
@@ -89,8 +95,8 @@ Branchen-spezifische Landingpages mit eigenem Content, Pain Points und FAQs: Han
 ## Technologie-Stack
 
 - Frontend: React, TypeScript, Tailwind CSS
-- SEO-Infrastruktur: Prerendering, Schema.org JSON-LD, dynamische Sitemap, llms.txt/llms-full.txt, robots.txt
-- Backend & APIs: Netlify Functions, Resend, Form-Schutz (Honeypot, Time-Trap)
+- SEO-Infrastruktur: SSR-Prerendering, Schema.org JSON-LD, dynamische Sitemap, llms.txt/llms-full.txt, robots.txt, ARD-Katalog
+- Kontakt: WhatsApp-only Multi-Step-Formular (generiert persönliche wa.me-Nachricht, keine E-Mail)
 - Analytics: consent-gated GA4 + Meta Pixel, First-Touch-Attribution (UTM, gclid)
 - Hosting: Netlify mit globalem CDN
 
