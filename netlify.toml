@@ -33,6 +33,11 @@
   status = 301
 
 [[redirects]]
+  from = "/leistungen"
+  to = "/leistungen/"
+  status = 301
+
+[[redirects]]
   from = "/leistungen/:slug"
   to = "/leistungen/:slug/"
   status = 301

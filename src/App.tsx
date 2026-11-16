@@ -21,6 +21,7 @@ import LocalSEO from './components/LocalSEO'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
 import ServiceDetail from './pages/ServiceDetail'
+import ServicesIndex from './pages/ServicesIndex'
 import BlogList from './pages/BlogList'
 import BlogPost from './pages/BlogPost'
 import LocationList from './pages/LocationList'
@@ -80,6 +81,7 @@ function Shell() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/leistungen" element={<ServicesIndex />} />
           <Route path="/leistungen/:slug" element={<ServiceDetail />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />

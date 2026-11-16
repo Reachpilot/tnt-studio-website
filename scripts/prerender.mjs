@@ -195,6 +195,26 @@ const routes = [
       ]),
     ],
   },
+  {
+    file: 'leistungen/index.html',
+    title: 'Leistungen — Web Design, KI-Sichtbarkeit, Social Media & Software | TnT Studio',
+    description: 'Vier Leistungen aus einer Hand: Web Design ab 500 €, KI-Sichtbarkeit & SEO (Google + ChatGPT), Social Media Marketing ab 1.200 €/Monat und Software Development. Aus Wuppertal, remote für ganz Deutschland.',
+    canonical: 'https://tnt-studio.de/leistungen/',
+    lastmod: contentUpdated.services,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'TnT Studio Leistungen',
+        url: 'https://tnt-studio.de/leistungen/',
+        description: 'Web Design, KI-Sichtbarkeit & SEO, Social Media Marketing und Software Development.',
+      },
+      breadcrumb([
+        { name: 'Startseite', item: 'https://tnt-studio.de/' },
+        { name: 'Leistungen', item: 'https://tnt-studio.de/leistungen/' },
+      ]),
+    ],
+  },
 ]
 
 for (const service of services) {
