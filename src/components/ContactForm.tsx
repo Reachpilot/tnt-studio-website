@@ -165,7 +165,7 @@ export default function ContactForm() {
       className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-2xl"
     >
       {/* Progress */}
-      <div className="border-b border-neutral-100 bg-neutral-50/50 px-6 py-6 sm:px-10">
+      <div className="border-b border-neutral-100 bg-neutral-50/50 px-4 py-4 sm:px-10 sm:py-6">
         <div className="flex items-center justify-between">
           {steps.map((label, i) => (
             <div key={label} className="flex flex-1 items-center">
@@ -201,11 +201,11 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Content */}
-      <div className="px-6 py-8 sm:px-10 sm:py-10">
+      {/* Content — min-height verhindert Layout-Sprung zwischen Steps */}
+      <div className="min-h-[600px] px-4 py-6 sm:min-h-[460px] sm:px-10 sm:py-10">
         {step === 0 && (
-          <div className="space-y-5 animate-fade-up">
-            <h3 className="text-xl font-black text-neutral-900">Erstmal zu dir.</h3>
+          <div className="space-y-4 animate-fade-up sm:space-y-5">
+            <h3 className="text-lg font-black text-neutral-900 sm:text-xl">Erstmal zu dir.</h3>
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <label className="mb-1.5 block text-sm font-semibold text-neutral-700">Name *</label>
@@ -215,7 +215,7 @@ export default function ContactForm() {
                   value={data.name}
                   onChange={(e) => update('name', e.target.value)}
                   placeholder="Max Mustermann"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-3.5 py-2.5 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10 sm:px-4 sm:py-3"
                 />
                 {touched[0] && data.name.trim().length < 2 && (
                   <p className="mt-1.5 text-xs text-red-500">Bitte gib deinen Namen ein.</p>
@@ -229,7 +229,7 @@ export default function ContactForm() {
                   value={data.company}
                   onChange={(e) => update('company', e.target.value)}
                   placeholder="Musterfirma GmbH"
-                  className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                  className="w-full rounded-xl border border-neutral-200 bg-white px-3.5 py-2.5 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10 sm:px-4 sm:py-3"
                 />
               </div>
             </div>
@@ -241,15 +241,15 @@ export default function ContactForm() {
                 value={data.website}
                 onChange={(e) => update('website', e.target.value)}
                 placeholder="https://..."
-                className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                className="w-full rounded-xl border border-neutral-200 bg-white px-3.5 py-2.5 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10 sm:px-4 sm:py-3"
               />
             </div>
           </div>
         )}
 
         {step === 1 && (
-          <div className="space-y-5 animate-fade-up">
-            <h3 className="text-xl font-black text-neutral-900">Womit können wir helfen?</h3>
+          <div className="space-y-4 animate-fade-up sm:space-y-5">
+            <h3 className="text-lg font-black text-neutral-900 sm:text-xl">Womit können wir helfen?</h3>
             <div>
               <label className="mb-3 block text-sm font-semibold text-neutral-700">Leistungen *</label>
               <div className="grid gap-3 sm:grid-cols-2">
@@ -260,7 +260,7 @@ export default function ContactForm() {
                       key={s.title}
                       type="button"
                       onClick={() => toggleService(s.title)}
-                      className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-all ${
+                      className={`flex items-center gap-3 rounded-xl border px-3 py-2.5 text-left text-sm font-semibold transition-all sm:px-4 sm:py-3 ${
                         active
                           ? 'border-[#25D366] bg-green-50 text-neutral-900 shadow-sm'
                           : 'border-neutral-200 bg-white text-neutral-700 hover:border-neutral-300'
@@ -298,7 +298,7 @@ export default function ContactForm() {
                       key={b}
                       type="button"
                       onClick={() => update('budget', b)}
-                      className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${
+                      className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition-all sm:px-4 sm:py-2 ${
                         active
                           ? 'bg-[#25D366] text-white shadow-md'
                           : 'border border-neutral-200 bg-white text-neutral-700 hover:border-neutral-400'
@@ -325,7 +325,7 @@ export default function ContactForm() {
                       key={t}
                       type="button"
                       onClick={() => update('timeline', t)}
-                      className={`rounded-full px-4 py-2 text-sm font-semibold transition-all ${
+                      className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition-all sm:px-4 sm:py-2 ${
                         active
                           ? 'bg-[#25D366] text-white shadow-md'
                           : 'border border-neutral-200 bg-white text-neutral-700 hover:border-neutral-400'
@@ -341,8 +341,8 @@ export default function ContactForm() {
         )}
 
         {step === 2 && (
-          <div className="space-y-5 animate-fade-up">
-            <h3 className="text-xl font-black text-neutral-900">Was ist dein Ziel?</h3>
+          <div className="space-y-4 animate-fade-up sm:space-y-5">
+            <h3 className="text-lg font-black text-neutral-900 sm:text-xl">Was ist dein Ziel?</h3>
             <p className="-mt-2 text-sm text-neutral-500">Ein Klick genügt. Details kannst du optional ergänzen.</p>
             <div>
               <label className="mb-3 block text-sm font-semibold text-neutral-700">Ziel *</label>
@@ -354,7 +354,7 @@ export default function ContactForm() {
                       key={g}
                       type="button"
                       onClick={() => toggleGoal(g)}
-                      className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-all ${
+                      className={`flex items-center gap-3 rounded-xl border px-3 py-2.5 text-left text-sm font-semibold transition-all sm:px-4 sm:py-3 ${
                         active
                           ? 'border-[#25D366] bg-green-50 text-neutral-900 shadow-sm'
                           : 'border-neutral-200 bg-white text-neutral-700 hover:border-neutral-300'
@@ -389,11 +389,11 @@ export default function ContactForm() {
                 onChange={(e) => update('message', e.target.value)}
                 placeholder="Worum geht es konkret? Link zur bestehenden Website? Besondere Wünsche?"
                 rows={3}
-                className="w-full resize-none rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10"
+                className="w-full resize-none rounded-xl border border-neutral-200 bg-white px-3.5 py-2.5 text-sm text-neutral-900 outline-none transition-all placeholder:text-neutral-500 focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10 sm:px-4 sm:py-3"
               />
             </div>
 
-            <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-neutral-200 bg-white p-4 transition-all hover:border-neutral-300">
+            <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-neutral-200 bg-white p-3 transition-all hover:border-neutral-300 sm:p-4">
               <input
                 name="consent"
                 type="checkbox"
@@ -412,10 +412,10 @@ export default function ContactForm() {
         )}
 
         {step === 3 && (
-          <div className="space-y-5 animate-fade-up">
-            <h3 className="text-xl font-black text-neutral-900">Fast geschafft.</h3>
+          <div className="space-y-4 animate-fade-up sm:space-y-5">
+            <h3 className="text-lg font-black text-neutral-900 sm:text-xl">Fast geschafft.</h3>
             <p className="-mt-2 text-sm text-neutral-500">Prüfe deine Angaben. Ein Klick öffnet WhatsApp mit deiner fertigen Nachricht.</p>
-            <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5 text-sm">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm sm:p-5">
               <div className="grid gap-3 sm:grid-cols-2">
                 <div><span className="text-neutral-500">Name:</span> <span className="font-medium text-neutral-900">{data.name}</span></div>
                 <div><span className="text-neutral-500">Firma:</span> <span className="font-medium text-neutral-900">{data.company || 'k. A.'}</span></div>
@@ -436,7 +436,7 @@ export default function ContactForm() {
       </div>
 
       {/* Actions */}
-      <div className="flex items-center justify-between border-t border-neutral-100 px-6 py-5 sm:px-10">
+      <div className="flex items-center justify-between border-t border-neutral-100 px-4 py-4 sm:px-10">
         <button
           type="button"
           onClick={prev}
@@ -450,7 +450,7 @@ export default function ContactForm() {
           <button
             type="button"
             onClick={next}
-            className="rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-neutral-700 hover:shadow-lg"
+            className="rounded-full bg-neutral-900 px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-neutral-700 hover:shadow-lg sm:px-6 sm:py-2.5"
           >
             Weiter
           </button>
@@ -468,7 +468,7 @@ export default function ContactForm() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}
-            className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-8 py-4 text-base font-bold text-white transition-all hover:bg-[#1eb856] hover:shadow-xl"
+            className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white transition-all hover:bg-[#1eb856] hover:shadow-xl sm:px-8 sm:py-4 sm:text-base"
           >
             <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
