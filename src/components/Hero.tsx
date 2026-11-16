@@ -5,27 +5,27 @@ function NeonMark({ children, delay = 0 }: { children: ReactNode; delay?: number
     <span className="relative inline-block">
       {children}
       <svg
-        className="tnt-neon-glow pointer-events-none absolute -bottom-[0.14em] left-0 h-[0.32em] w-full overflow-visible"
-        viewBox="0 0 100 12"
+        className="tnt-neon-glow pointer-events-none absolute -bottom-[0.28em] left-0 h-[0.5em] w-full overflow-visible"
+        viewBox="0 0 100 14"
         preserveAspectRatio="none"
         fill="none"
         aria-hidden="true"
         style={{ ['--neon-delay' as string]: `${delay}s` }}
       >
         <path
-          d="M2 8 Q 14 2 28 7 T 55 5 T 82 8 T 98 6"
+          d="M2 9 Q 20 5 40 8 T 70 7 T 98 9"
           stroke="#ff2d92"
-          strokeWidth="6"
+          strokeWidth="9"
           strokeLinecap="round"
-          opacity="0.22"
+          opacity="0.3"
           pathLength={100}
           vectorEffect="non-scaling-stroke"
           className="tnt-neon-draw"
         />
         <path
-          d="M2 8 Q 14 2 28 7 T 55 5 T 82 8 T 98 6"
+          d="M2 9 Q 20 5 40 8 T 70 7 T 98 9"
           stroke="#ff2d92"
-          strokeWidth="2.4"
+          strokeWidth="3.4"
           strokeLinecap="round"
           pathLength={100}
           vectorEffect="non-scaling-stroke"
