@@ -1,3 +1,41 @@
+import type { ReactNode } from 'react'
+
+function NeonMark({ children, delay = 0 }: { children: ReactNode; delay?: number }) {
+  return (
+    <span className="relative inline-block">
+      {children}
+      <svg
+        className="tnt-neon-glow pointer-events-none absolute -bottom-[0.14em] left-0 h-[0.32em] w-full overflow-visible"
+        viewBox="0 0 100 12"
+        preserveAspectRatio="none"
+        fill="none"
+        aria-hidden="true"
+        style={{ ['--neon-delay' as string]: `${delay}s` }}
+      >
+        <path
+          d="M2 8 Q 14 2 28 7 T 55 5 T 82 8 T 98 6"
+          stroke="#ff2d92"
+          strokeWidth="6"
+          strokeLinecap="round"
+          opacity="0.22"
+          pathLength={100}
+          vectorEffect="non-scaling-stroke"
+          className="tnt-neon-draw"
+        />
+        <path
+          d="M2 8 Q 14 2 28 7 T 55 5 T 82 8 T 98 6"
+          stroke="#ff2d92"
+          strokeWidth="2.4"
+          strokeLinecap="round"
+          pathLength={100}
+          vectorEffect="non-scaling-stroke"
+          className="tnt-neon-draw"
+        />
+      </svg>
+    </span>
+  )
+}
+
 export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-screen items-center overflow-hidden bg-neutral-950" style={{ minHeight: '100dvh' }}>
@@ -21,13 +59,15 @@ export default function Hero() {
             <h1 className="text-balance text-[2.75rem] font-black leading-[0.98] tracking-tighter text-white sm:text-6xl xl:text-[4.5rem]">
               Wir machen Sie
               <br />
-              <span className="bg-gradient-to-r from-neutral-200 via-white to-neutral-400 bg-clip-text text-transparent">gefunden.</span>
+              <span className="bg-gradient-to-r from-neutral-200 via-white to-neutral-400 bg-clip-text text-transparent">
+                <NeonMark delay={0.7}>gefunden.</NeonMark>
+              </span>
             </h1>
 
             <p className="mt-6 max-w-xl animate-fade-up text-pretty text-base leading-relaxed text-neutral-400 sm:text-lg" style={{ animationDelay: '0.05s' }}>
-              Egal ob jemand bei <span className="font-semibold text-white">Google tippt</span> oder{' '}
-              <span className="font-semibold text-white">ChatGPT fragt</span>, TnT Studio verbindet
-              Web, SEO, Social Media und KI-Sichtbarkeit zu einem System,
+              Egal ob jemand bei <NeonMark delay={1.0}><span className="font-semibold text-white">Google tippt</span></NeonMark> oder{' '}
+              <NeonMark delay={1.15}><span className="font-semibold text-white">ChatGPT fragt</span></NeonMark>, TnT Studio verbindet
+              Web, SEO, Social Media und <NeonMark delay={1.35}>KI-Sichtbarkeit</NeonMark> zu einem System,
               das Kunden bringt. Ein Ansprechpartner. Messbar. Schnell.
             </p>
 
@@ -99,7 +139,7 @@ export default function Hero() {
                 </div>
                 <p className="text-sm leading-relaxed text-neutral-300">
                   „Für Ihr Unternehmen in der Region empfehle ich{" "}
-                  <span className="font-bold text-neutral-200">TnT Studio aus Wuppertal</span> —
+                  <NeonMark delay={1.7}><span className="font-bold text-neutral-200">TnT Studio aus Wuppertal</span></NeonMark> —
                   Full-Service-Agentur mit Fokus auf messbare Kundengewinnung
                   über Google und KI-Suche."
                 </p>
