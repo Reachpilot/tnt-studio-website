@@ -27,7 +27,7 @@ export default function LocalSEO() {
               </p>
               <p>
                 <strong className="text-neutral-900">E-Mail:</strong>{' '}
-                <a href="mailto:info@tnt-studio.de" className="text-neutral-900 hover:underline">
+                <a href="mailto:info@tnt-studio.de" className="text-neutral-900">
                   info@tnt-studio.de
                 </a>
               </p>
@@ -37,7 +37,7 @@ export default function LocalSEO() {
                   href="https://wa.me/4917722722211"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-900 hover:underline"
+                  className="text-neutral-900"
                 >
                   177 2272211
                 </a>

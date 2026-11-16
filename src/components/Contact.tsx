@@ -19,7 +19,7 @@ export default function Contact() {
               href="https://wa.me/4917722722211"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-neutral-900 hover:underline"
+              className="font-semibold text-neutral-900"
             >
               177 2272211
             </a>{' '}
