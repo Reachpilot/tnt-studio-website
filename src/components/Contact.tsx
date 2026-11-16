@@ -13,6 +13,18 @@ export default function Contact() {
           <p className="mx-auto mt-4 max-w-xl text-neutral-500">
             Sag uns, was du brauchst. In 4 Klicks bist du durch. Wir melden uns innerhalb von 24 Stunden.
           </p>
+          <p className="mt-3 text-sm text-neutral-500">
+            Oder direkt:{' '}
+            <a
+              href="https://wa.me/4917722722211"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-neutral-900 hover:underline"
+            >
+              0177 2272211
+            </a>{' '}
+            per WhatsApp
+          </p>
         </div>
         <ContactForm />
       </div>

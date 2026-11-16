@@ -32,6 +32,17 @@ export default function LocalSEO() {
                 </a>
               </p>
               <p>
+                <strong className="text-neutral-900">Telefon:</strong>{' '}
+                <a
+                  href="https://wa.me/4917722722211"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-900 hover:underline"
+                >
+                  0177 2272211
+                </a>
+              </p>
+              <p>
                 <strong className="text-neutral-900">Erreichbarkeit:</strong> Mo bis Fr, 09:00 bis 18:00 Uhr
               </p>
             </div>

@@ -76,6 +76,16 @@ export default function Footer() {
                   info@tnt-studio.de
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://wa.me/4917722722211"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-neutral-500 hover:text-neutral-900"
+                >
+                  0177 2272211 (WhatsApp)
+                </a>
+              </li>
               <li className="text-sm text-neutral-500">Mirker Straße 99, 42105 Wuppertal</li>
             </ul>
           </div>
